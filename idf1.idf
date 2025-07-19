@@ -30,6 +30,272 @@ ScheduleTypeLimits,
 !-   ============== SCHEDULES ==============
 
 
+Schedule:Constant,
+ Seated Adult Activity,    !- schedule name
+ Activity Level,           !- schedule type limits
+ 120.0;                    !- value
+
+Schedule:Year,
+ Generic Office Occupancy, !- schedule name
+ Fractional,               !- schedule type limits
+ Generic Office Occupancy_Week 1, !- week schedule name 1
+ 1,                        !- start month 1
+ 1,                        !- start day 1
+ 12,                       !- end month 1
+ 31;                       !- end day 1
+
+Schedule:Week:Daily,
+ Generic Office Occupancy_Week 1, !- name
+ OfficeMedium BLDG_OCC_SCH_Default, !- sunday
+ OfficeMedium BLDG_OCC_SCH_Wkdy, !- monday
+ OfficeMedium BLDG_OCC_SCH_Wkdy, !- tuesday
+ OfficeMedium BLDG_OCC_SCH_Wkdy, !- wednesday
+ OfficeMedium BLDG_OCC_SCH_Wkdy, !- thursday
+ OfficeMedium BLDG_OCC_SCH_Wkdy, !- friday
+ OfficeMedium BLDG_OCC_SCH_Sat, !- saturday
+ OfficeMedium BLDG_OCC_SCH_Default, !- holiday
+ OfficeMedium BLDG_OCC_SCH_SmrDsn, !- summer design day
+ OfficeMedium BLDG_OCC_SCH_WntrDsn, !- winter design day
+ OfficeMedium BLDG_OCC_SCH_Default, !- custom day 1
+ OfficeMedium BLDG_OCC_SCH_Default; !- custom day 2
+
+Schedule:Day:Interval,
+ OfficeMedium BLDG_OCC_SCH_Default, !- schedule name
+ Fractional,               !- schedule type limits
+ No,                       !- interpolate to timestep
+ 06:00,                    !- time 1 {hh:mm}
+ 0.0,                      !- value until time 1
+ 18:00,                    !- time 2 {hh:mm}
+ 0.05,                     !- value until time 2
+ 24:00,                    !- time 3 {hh:mm}
+ 0.0;                      !- value until time 3
+
+Schedule:Day:Interval,
+ OfficeMedium BLDG_OCC_SCH_SmrDsn, !- schedule name
+ Fractional,               !- schedule type limits
+ No,                       !- interpolate to timestep
+ 06:00,                    !- time 1 {hh:mm}
+ 0.0,                      !- value until time 1
+ 22:00,                    !- time 2 {hh:mm}
+ 1.0,                      !- value until time 2
+ 24:00,                    !- time 3 {hh:mm}
+ 0.05;                     !- value until time 3
+
+Schedule:Day:Interval,
+ OfficeMedium BLDG_OCC_SCH_WntrDsn, !- schedule name
+ Fractional,               !- schedule type limits
+ No,                       !- interpolate to timestep
+ 24:00,                    !- time 1 {hh:mm}
+ 0.0;                      !- value until time 1
+
+Schedule:Day:Interval,
+ OfficeMedium BLDG_OCC_SCH_Wkdy, !- schedule name
+ Fractional,               !- schedule type limits
+ No,                       !- interpolate to timestep
+ 06:00,                    !- time 1 {hh:mm}
+ 0.0,                      !- value until time 1
+ 07:00,                    !- time 2 {hh:mm}
+ 0.1,                      !- value until time 2
+ 08:00,                    !- time 3 {hh:mm}
+ 0.2,                      !- value until time 3
+ 12:00,                    !- time 4 {hh:mm}
+ 0.95,                     !- value until time 4
+ 13:00,                    !- time 5 {hh:mm}
+ 0.5,                      !- value until time 5
+ 17:00,                    !- time 6 {hh:mm}
+ 0.95,                     !- value until time 6
+ 18:00,                    !- time 7 {hh:mm}
+ 0.3,                      !- value until time 7
+ 22:00,                    !- time 8 {hh:mm}
+ 0.1,                      !- value until time 8
+ 24:00,                    !- time 9 {hh:mm}
+ 0.05;                     !- value until time 9
+
+Schedule:Day:Interval,
+ OfficeMedium BLDG_OCC_SCH_Sat, !- schedule name
+ Fractional,               !- schedule type limits
+ No,                       !- interpolate to timestep
+ 06:00,                    !- time 1 {hh:mm}
+ 0.0,                      !- value until time 1
+ 08:00,                    !- time 2 {hh:mm}
+ 0.1,                      !- value until time 2
+ 12:00,                    !- time 3 {hh:mm}
+ 0.3,                      !- value until time 3
+ 17:00,                    !- time 4 {hh:mm}
+ 0.1,                      !- value until time 4
+ 19:00,                    !- time 5 {hh:mm}
+ 0.05,                     !- value until time 5
+ 24:00,                    !- time 6 {hh:mm}
+ 0.0;                      !- value until time 6
+
+Schedule:Year,
+ Generic Office Equipment, !- schedule name
+ Fractional,               !- schedule type limits
+ Generic Office Equipment_Week 1, !- week schedule name 1
+ 1,                        !- start month 1
+ 1,                        !- start day 1
+ 12,                       !- end month 1
+ 31;                       !- end day 1
+
+Schedule:Week:Daily,
+ Generic Office Equipment_Week 1, !- name
+ OfficeMedium BLDG_EQUIP_SCH_2013_Sun, !- sunday
+ OfficeMedium BLDG_EQUIP_SCH_2013_Wkdy, !- monday
+ OfficeMedium BLDG_EQUIP_SCH_2013_Wkdy, !- tuesday
+ OfficeMedium BLDG_EQUIP_SCH_2013_Wkdy, !- wednesday
+ OfficeMedium BLDG_EQUIP_SCH_2013_Wkdy, !- thursday
+ OfficeMedium BLDG_EQUIP_SCH_2013_Wkdy, !- friday
+ OfficeMedium BLDG_EQUIP_SCH_2013_Sat, !- saturday
+ OfficeMedium BLDG_EQUIP_SCH_2013_Sat, !- holiday
+ OfficeMedium BLDG_EQUIP_SCH_2013_SmrDsn, !- summer design day
+ OfficeMedium BLDG_EQUIP_SCH_2013_WntrDsn, !- winter design day
+ OfficeMedium BLDG_EQUIP_SCH_2013_Sun, !- custom day 1
+ OfficeMedium BLDG_EQUIP_SCH_2013_Sun; !- custom day 2
+
+Schedule:Day:Interval,
+ OfficeMedium BLDG_EQUIP_SCH_2013_Sun, !- schedule name
+ Fractional,               !- schedule type limits
+ No,                       !- interpolate to timestep
+ 06:00,                    !- time 1 {hh:mm}
+ 0.2307553806,             !- value until time 1
+ 18:00,                    !- time 2 {hh:mm}
+ 0.288107175,              !- value until time 2
+ 24:00,                    !- time 3 {hh:mm}
+ 0.2307553806;             !- value until time 3
+
+Schedule:Day:Interval,
+ OfficeMedium BLDG_EQUIP_SCH_2013_SmrDsn, !- schedule name
+ Fractional,               !- schedule type limits
+ No,                       !- interpolate to timestep
+ 24:00,                    !- time 1 {hh:mm}
+ 1.0;                      !- value until time 1
+
+Schedule:Day:Interval,
+ OfficeMedium BLDG_EQUIP_SCH_2013_WntrDsn, !- schedule name
+ Fractional,               !- schedule type limits
+ No,                       !- interpolate to timestep
+ 24:00,                    !- time 1 {hh:mm}
+ 0.0;                      !- value until time 1
+
+Schedule:Day:Interval,
+ OfficeMedium BLDG_EQUIP_SCH_2013_Sat, !- schedule name
+ Fractional,               !- schedule type limits
+ No,                       !- interpolate to timestep
+ 06:00,                    !- time 1 {hh:mm}
+ 0.2307553806,             !- value until time 1
+ 08:00,                    !- time 2 {hh:mm}
+ 0.381234796,              !- value until time 2
+ 12:00,                    !- time 3 {hh:mm}
+ 0.476543495,              !- value until time 3
+ 17:00,                    !- time 4 {hh:mm}
+ 0.3335804465,             !- value until time 4
+ 19:00,                    !- time 5 {hh:mm}
+ 0.285926097,              !- value until time 5
+ 24:00,                    !- time 6 {hh:mm}
+ 0.2307553806;             !- value until time 6
+
+Schedule:Day:Interval,
+ OfficeMedium BLDG_EQUIP_SCH_2013_Wkdy, !- schedule name
+ Fractional,               !- schedule type limits
+ No,                       !- interpolate to timestep
+ 06:00,                    !- time 1 {hh:mm}
+ 0.3076738408,             !- value until time 1
+ 08:00,                    !- time 2 {hh:mm}
+ 0.381234796,              !- value until time 2
+ 12:00,                    !- time 3 {hh:mm}
+ 0.857778291,              !- value until time 3
+ 13:00,                    !- time 4 {hh:mm}
+ 0.762469592,              !- value until time 4
+ 17:00,                    !- time 5 {hh:mm}
+ 0.857778291,              !- value until time 5
+ 18:00,                    !- time 6 {hh:mm}
+ 0.476543495,              !- value until time 6
+ 24:00,                    !- time 7 {hh:mm}
+ 0.381234796;              !- value until time 7
+
+Schedule:Year,
+ Generic Office Cooling,   !- schedule name
+ Temperature,              !- schedule type limits
+ Generic Office Cooling_Week 1, !- week schedule name 1
+ 1,                        !- start month 1
+ 1,                        !- start day 1
+ 12,                       !- end month 1
+ 31;                       !- end day 1
+
+Schedule:Week:Daily,
+ Generic Office Cooling_Week 1, !- name
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default, !- sunday
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Wkdy, !- monday
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Wkdy, !- tuesday
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Wkdy, !- wednesday
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Wkdy, !- thursday
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Wkdy, !- friday
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Sat, !- saturday
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default, !- holiday
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_SmrDsn, !- summer design day
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default_WntrDsn, !- winter design day
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default, !- custom day 1
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default; !- custom day 2
+
+Schedule:Day:Interval,
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default, !- schedule name
+ Temperature,              !- schedule type limits
+ No,                       !- interpolate to timestep
+ 24:00,                    !- time 1 {hh:mm}
+ 26.7;                     !- value until time 1
+
+Schedule:Day:Interval,
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_SmrDsn, !- schedule name
+ Temperature,              !- schedule type limits
+ No,                       !- interpolate to timestep
+ 05:00,                    !- time 1 {hh:mm}
+ 26.7,                     !- value until time 1
+ 06:00,                    !- time 2 {hh:mm}
+ 25.7,                     !- value until time 2
+ 07:00,                    !- time 3 {hh:mm}
+ 25.0,                     !- value until time 3
+ 22:00,                    !- time 4 {hh:mm}
+ 24.0,                     !- value until time 4
+ 24:00,                    !- time 5 {hh:mm}
+ 26.7;                     !- value until time 5
+
+Schedule:Day:Interval,
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default_WntrDsn, !- schedule name
+ Temperature,              !- schedule type limits
+ No,                       !- interpolate to timestep
+ 24:00,                    !- time 1 {hh:mm}
+ 26.7;                     !- value until time 1
+
+Schedule:Day:Interval,
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Wkdy, !- schedule name
+ Temperature,              !- schedule type limits
+ No,                       !- interpolate to timestep
+ 05:00,                    !- time 1 {hh:mm}
+ 26.7,                     !- value until time 1
+ 06:00,                    !- time 2 {hh:mm}
+ 25.6,                     !- value until time 2
+ 07:00,                    !- time 3 {hh:mm}
+ 25.0,                     !- value until time 3
+ 22:00,                    !- time 4 {hh:mm}
+ 24.0,                     !- value until time 4
+ 24:00,                    !- time 5 {hh:mm}
+ 26.7;                     !- value until time 5
+
+Schedule:Day:Interval,
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Sat, !- schedule name
+ Temperature,              !- schedule type limits
+ No,                       !- interpolate to timestep
+ 05:00,                    !- time 1 {hh:mm}
+ 26.7,                     !- value until time 1
+ 06:00,                    !- time 2 {hh:mm}
+ 25.7,                     !- value until time 2
+ 07:00,                    !- time 3 {hh:mm}
+ 25.0,                     !- value until time 3
+ 17:00,                    !- time 4 {hh:mm}
+ 24.0,                     !- value until time 4
+ 24:00,                    !- time 5 {hh:mm}
+ 26.7;                     !- value until time 5
+
 Schedule:Year,
  Generic Office Infiltration, !- schedule name
  Fractional,               !- schedule type limits
@@ -197,96 +463,6 @@ Schedule:Day:Interval,
  0.04311628;               !- value until time 10
 
 Schedule:Year,
- Generic Office Equipment, !- schedule name
- Fractional,               !- schedule type limits
- Generic Office Equipment_Week 1, !- week schedule name 1
- 1,                        !- start month 1
- 1,                        !- start day 1
- 12,                       !- end month 1
- 31;                       !- end day 1
-
-Schedule:Week:Daily,
- Generic Office Equipment_Week 1, !- name
- OfficeMedium BLDG_EQUIP_SCH_2013_Sun, !- sunday
- OfficeMedium BLDG_EQUIP_SCH_2013_Wkdy, !- monday
- OfficeMedium BLDG_EQUIP_SCH_2013_Wkdy, !- tuesday
- OfficeMedium BLDG_EQUIP_SCH_2013_Wkdy, !- wednesday
- OfficeMedium BLDG_EQUIP_SCH_2013_Wkdy, !- thursday
- OfficeMedium BLDG_EQUIP_SCH_2013_Wkdy, !- friday
- OfficeMedium BLDG_EQUIP_SCH_2013_Sat, !- saturday
- OfficeMedium BLDG_EQUIP_SCH_2013_Sat, !- holiday
- OfficeMedium BLDG_EQUIP_SCH_2013_SmrDsn, !- summer design day
- OfficeMedium BLDG_EQUIP_SCH_2013_WntrDsn, !- winter design day
- OfficeMedium BLDG_EQUIP_SCH_2013_Sun, !- custom day 1
- OfficeMedium BLDG_EQUIP_SCH_2013_Sun; !- custom day 2
-
-Schedule:Day:Interval,
- OfficeMedium BLDG_EQUIP_SCH_2013_Sun, !- schedule name
- Fractional,               !- schedule type limits
- No,                       !- interpolate to timestep
- 06:00,                    !- time 1 {hh:mm}
- 0.2307553806,             !- value until time 1
- 18:00,                    !- time 2 {hh:mm}
- 0.288107175,              !- value until time 2
- 24:00,                    !- time 3 {hh:mm}
- 0.2307553806;             !- value until time 3
-
-Schedule:Day:Interval,
- OfficeMedium BLDG_EQUIP_SCH_2013_SmrDsn, !- schedule name
- Fractional,               !- schedule type limits
- No,                       !- interpolate to timestep
- 24:00,                    !- time 1 {hh:mm}
- 1.0;                      !- value until time 1
-
-Schedule:Day:Interval,
- OfficeMedium BLDG_EQUIP_SCH_2013_WntrDsn, !- schedule name
- Fractional,               !- schedule type limits
- No,                       !- interpolate to timestep
- 24:00,                    !- time 1 {hh:mm}
- 0.0;                      !- value until time 1
-
-Schedule:Day:Interval,
- OfficeMedium BLDG_EQUIP_SCH_2013_Sat, !- schedule name
- Fractional,               !- schedule type limits
- No,                       !- interpolate to timestep
- 06:00,                    !- time 1 {hh:mm}
- 0.2307553806,             !- value until time 1
- 08:00,                    !- time 2 {hh:mm}
- 0.381234796,              !- value until time 2
- 12:00,                    !- time 3 {hh:mm}
- 0.476543495,              !- value until time 3
- 17:00,                    !- time 4 {hh:mm}
- 0.3335804465,             !- value until time 4
- 19:00,                    !- time 5 {hh:mm}
- 0.285926097,              !- value until time 5
- 24:00,                    !- time 6 {hh:mm}
- 0.2307553806;             !- value until time 6
-
-Schedule:Day:Interval,
- OfficeMedium BLDG_EQUIP_SCH_2013_Wkdy, !- schedule name
- Fractional,               !- schedule type limits
- No,                       !- interpolate to timestep
- 06:00,                    !- time 1 {hh:mm}
- 0.3076738408,             !- value until time 1
- 08:00,                    !- time 2 {hh:mm}
- 0.381234796,              !- value until time 2
- 12:00,                    !- time 3 {hh:mm}
- 0.857778291,              !- value until time 3
- 13:00,                    !- time 4 {hh:mm}
- 0.762469592,              !- value until time 4
- 17:00,                    !- time 5 {hh:mm}
- 0.857778291,              !- value until time 5
- 18:00,                    !- time 6 {hh:mm}
- 0.476543495,              !- value until time 6
- 24:00,                    !- time 7 {hh:mm}
- 0.381234796;              !- value until time 7
-
-Schedule:Constant,
- Seated Adult Activity,    !- schedule name
- Activity Level,           !- schedule type limits
- 120.0;                    !- value
-
-Schedule:Year,
  Generic Office Heating,   !- schedule name
  Temperature,              !- schedule type limits
  Generic Office Heating_Week 1, !- week schedule name 1
@@ -369,182 +545,6 @@ Schedule:Day:Interval,
  24:00,                    !- time 5 {hh:mm}
  15.6;                     !- value until time 5
 
-Schedule:Year,
- Generic Office Cooling,   !- schedule name
- Temperature,              !- schedule type limits
- Generic Office Cooling_Week 1, !- week schedule name 1
- 1,                        !- start month 1
- 1,                        !- start day 1
- 12,                       !- end month 1
- 31;                       !- end day 1
-
-Schedule:Week:Daily,
- Generic Office Cooling_Week 1, !- name
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default, !- sunday
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Wkdy, !- monday
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Wkdy, !- tuesday
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Wkdy, !- wednesday
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Wkdy, !- thursday
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Wkdy, !- friday
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Sat, !- saturday
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default, !- holiday
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_SmrDsn, !- summer design day
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default_WntrDsn, !- winter design day
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default, !- custom day 1
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default; !- custom day 2
-
-Schedule:Day:Interval,
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default, !- schedule name
- Temperature,              !- schedule type limits
- No,                       !- interpolate to timestep
- 24:00,                    !- time 1 {hh:mm}
- 26.7;                     !- value until time 1
-
-Schedule:Day:Interval,
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_SmrDsn, !- schedule name
- Temperature,              !- schedule type limits
- No,                       !- interpolate to timestep
- 05:00,                    !- time 1 {hh:mm}
- 26.7,                     !- value until time 1
- 06:00,                    !- time 2 {hh:mm}
- 25.7,                     !- value until time 2
- 07:00,                    !- time 3 {hh:mm}
- 25.0,                     !- value until time 3
- 22:00,                    !- time 4 {hh:mm}
- 24.0,                     !- value until time 4
- 24:00,                    !- time 5 {hh:mm}
- 26.7;                     !- value until time 5
-
-Schedule:Day:Interval,
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default_WntrDsn, !- schedule name
- Temperature,              !- schedule type limits
- No,                       !- interpolate to timestep
- 24:00,                    !- time 1 {hh:mm}
- 26.7;                     !- value until time 1
-
-Schedule:Day:Interval,
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Wkdy, !- schedule name
- Temperature,              !- schedule type limits
- No,                       !- interpolate to timestep
- 05:00,                    !- time 1 {hh:mm}
- 26.7,                     !- value until time 1
- 06:00,                    !- time 2 {hh:mm}
- 25.6,                     !- value until time 2
- 07:00,                    !- time 3 {hh:mm}
- 25.0,                     !- value until time 3
- 22:00,                    !- time 4 {hh:mm}
- 24.0,                     !- value until time 4
- 24:00,                    !- time 5 {hh:mm}
- 26.7;                     !- value until time 5
-
-Schedule:Day:Interval,
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Sat, !- schedule name
- Temperature,              !- schedule type limits
- No,                       !- interpolate to timestep
- 05:00,                    !- time 1 {hh:mm}
- 26.7,                     !- value until time 1
- 06:00,                    !- time 2 {hh:mm}
- 25.7,                     !- value until time 2
- 07:00,                    !- time 3 {hh:mm}
- 25.0,                     !- value until time 3
- 17:00,                    !- time 4 {hh:mm}
- 24.0,                     !- value until time 4
- 24:00,                    !- time 5 {hh:mm}
- 26.7;                     !- value until time 5
-
-Schedule:Year,
- Generic Office Occupancy, !- schedule name
- Fractional,               !- schedule type limits
- Generic Office Occupancy_Week 1, !- week schedule name 1
- 1,                        !- start month 1
- 1,                        !- start day 1
- 12,                       !- end month 1
- 31;                       !- end day 1
-
-Schedule:Week:Daily,
- Generic Office Occupancy_Week 1, !- name
- OfficeMedium BLDG_OCC_SCH_Default, !- sunday
- OfficeMedium BLDG_OCC_SCH_Wkdy, !- monday
- OfficeMedium BLDG_OCC_SCH_Wkdy, !- tuesday
- OfficeMedium BLDG_OCC_SCH_Wkdy, !- wednesday
- OfficeMedium BLDG_OCC_SCH_Wkdy, !- thursday
- OfficeMedium BLDG_OCC_SCH_Wkdy, !- friday
- OfficeMedium BLDG_OCC_SCH_Sat, !- saturday
- OfficeMedium BLDG_OCC_SCH_Default, !- holiday
- OfficeMedium BLDG_OCC_SCH_SmrDsn, !- summer design day
- OfficeMedium BLDG_OCC_SCH_WntrDsn, !- winter design day
- OfficeMedium BLDG_OCC_SCH_Default, !- custom day 1
- OfficeMedium BLDG_OCC_SCH_Default; !- custom day 2
-
-Schedule:Day:Interval,
- OfficeMedium BLDG_OCC_SCH_Default, !- schedule name
- Fractional,               !- schedule type limits
- No,                       !- interpolate to timestep
- 06:00,                    !- time 1 {hh:mm}
- 0.0,                      !- value until time 1
- 18:00,                    !- time 2 {hh:mm}
- 0.05,                     !- value until time 2
- 24:00,                    !- time 3 {hh:mm}
- 0.0;                      !- value until time 3
-
-Schedule:Day:Interval,
- OfficeMedium BLDG_OCC_SCH_SmrDsn, !- schedule name
- Fractional,               !- schedule type limits
- No,                       !- interpolate to timestep
- 06:00,                    !- time 1 {hh:mm}
- 0.0,                      !- value until time 1
- 22:00,                    !- time 2 {hh:mm}
- 1.0,                      !- value until time 2
- 24:00,                    !- time 3 {hh:mm}
- 0.05;                     !- value until time 3
-
-Schedule:Day:Interval,
- OfficeMedium BLDG_OCC_SCH_WntrDsn, !- schedule name
- Fractional,               !- schedule type limits
- No,                       !- interpolate to timestep
- 24:00,                    !- time 1 {hh:mm}
- 0.0;                      !- value until time 1
-
-Schedule:Day:Interval,
- OfficeMedium BLDG_OCC_SCH_Wkdy, !- schedule name
- Fractional,               !- schedule type limits
- No,                       !- interpolate to timestep
- 06:00,                    !- time 1 {hh:mm}
- 0.0,                      !- value until time 1
- 07:00,                    !- time 2 {hh:mm}
- 0.1,                      !- value until time 2
- 08:00,                    !- time 3 {hh:mm}
- 0.2,                      !- value until time 3
- 12:00,                    !- time 4 {hh:mm}
- 0.95,                     !- value until time 4
- 13:00,                    !- time 5 {hh:mm}
- 0.5,                      !- value until time 5
- 17:00,                    !- time 6 {hh:mm}
- 0.95,                     !- value until time 6
- 18:00,                    !- time 7 {hh:mm}
- 0.3,                      !- value until time 7
- 22:00,                    !- time 8 {hh:mm}
- 0.1,                      !- value until time 8
- 24:00,                    !- time 9 {hh:mm}
- 0.05;                     !- value until time 9
-
-Schedule:Day:Interval,
- OfficeMedium BLDG_OCC_SCH_Sat, !- schedule name
- Fractional,               !- schedule type limits
- No,                       !- interpolate to timestep
- 06:00,                    !- time 1 {hh:mm}
- 0.0,                      !- value until time 1
- 08:00,                    !- time 2 {hh:mm}
- 0.1,                      !- value until time 2
- 12:00,                    !- time 3 {hh:mm}
- 0.3,                      !- value until time 3
- 17:00,                    !- time 4 {hh:mm}
- 0.1,                      !- value until time 4
- 19:00,                    !- time 5 {hh:mm}
- 0.05,                     !- value until time 5
- 24:00,                    !- time 6 {hh:mm}
- 0.0;                      !- value until time 6
-
 Schedule:Constant,
  Always On,                !- schedule name
  Fractional,               !- schedule type limits
@@ -560,6 +560,50 @@ Material,
  0.556,                    !- conductivity {W/m-K}
  1.28,                     !- density {kg/m3}
  1000.0,                   !- specific heat {J/kg-K}
+ 0.9,                      !- thermal absorptance
+ 0.7,                      !- solar absorptance
+ 0.7;                      !- visible absorptance
+
+Material,
+ Generic Acoustic Tile,    !- name
+ MediumSmooth,             !- roughness
+ 0.02,                     !- thickness {m}
+ 0.06,                     !- conductivity {W/m-K}
+ 368.0,                    !- density {kg/m3}
+ 590.0,                    !- specific heat {J/kg-K}
+ 0.9,                      !- thermal absorptance
+ 0.2,                      !- solar absorptance
+ 0.2;                      !- visible absorptance
+
+Material,
+ Generic 50mm Insulation,  !- name
+ MediumRough,              !- roughness
+ 0.05,                     !- thickness {m}
+ 0.03,                     !- conductivity {W/m-K}
+ 43.0,                     !- density {kg/m3}
+ 1210.0,                   !- specific heat {J/kg-K}
+ 0.9,                      !- thermal absorptance
+ 0.7,                      !- solar absorptance
+ 0.7;                      !- visible absorptance
+
+Material,
+ Generic Painted Metal,    !- name
+ Smooth,                   !- roughness
+ 0.0015,                   !- thickness {m}
+ 45.0,                     !- conductivity {W/m-K}
+ 7690.0,                   !- density {kg/m3}
+ 410.0,                    !- specific heat {J/kg-K}
+ 0.9,                      !- thermal absorptance
+ 0.5,                      !- solar absorptance
+ 0.5;                      !- visible absorptance
+
+Material,
+ Generic 25mm Insulation,  !- name
+ MediumRough,              !- roughness
+ 0.025,                    !- thickness {m}
+ 0.03,                     !- conductivity {W/m-K}
+ 43.0,                     !- density {kg/m3}
+ 1210.0,                   !- specific heat {J/kg-K}
  0.9,                      !- thermal absorptance
  0.7,                      !- solar absorptance
  0.7;                      !- visible absorptance
@@ -583,12 +627,12 @@ WindowMaterial:Glazing,
  No;                       !- solar diffusing
 
 Material,
- Generic 25mm Wood,        !- name
+ Generic Gypsum Board,     !- name
  MediumSmooth,             !- roughness
- 0.0254,                   !- thickness {m}
- 0.15,                     !- conductivity {W/m-K}
- 608.0,                    !- density {kg/m3}
- 1630.0,                   !- specific heat {J/kg-K}
+ 0.0127,                   !- thickness {m}
+ 0.16,                     !- conductivity {W/m-K}
+ 800.0,                    !- density {kg/m3}
+ 1090.0,                   !- specific heat {J/kg-K}
  0.9,                      !- thermal absorptance
  0.5,                      !- solar absorptance
  0.5;                      !- visible absorptance
@@ -603,6 +647,28 @@ Material,
  0.9,                      !- thermal absorptance
  0.8,                      !- solar absorptance
  0.8;                      !- visible absorptance
+
+Material,
+ Generic Brick,            !- name
+ MediumRough,              !- roughness
+ 0.1,                      !- thickness {m}
+ 0.9,                      !- conductivity {W/m-K}
+ 1920.0,                   !- density {kg/m3}
+ 790.0,                    !- specific heat {J/kg-K}
+ 0.9,                      !- thermal absorptance
+ 0.65,                     !- solar absorptance
+ 0.65;                     !- visible absorptance
+
+Material,
+ Generic 25mm Wood,        !- name
+ MediumSmooth,             !- roughness
+ 0.0254,                   !- thickness {m}
+ 0.15,                     !- conductivity {W/m-K}
+ 608.0,                    !- density {kg/m3}
+ 1630.0,                   !- specific heat {J/kg-K}
+ 0.9,                      !- thermal absorptance
+ 0.5,                      !- solar absorptance
+ 0.5;                      !- visible absorptance
 
 WindowMaterial:Glazing,
  Generic Low-e Glass,      !- name
@@ -622,54 +688,16 @@ WindowMaterial:Glazing,
  1.0,                      !- dirt correction factor
  No;                       !- solar diffusing
 
-WindowMaterial:Gas,
- Generic Window Air Gap,   !- name
- Air,                      !- gas type
- 0.0127;                   !- thickness {m}
-
 Material,
- Generic Painted Metal,    !- name
- Smooth,                   !- roughness
- 0.0015,                   !- thickness {m}
- 45.0,                     !- conductivity {W/m-K}
- 7690.0,                   !- density {kg/m3}
- 410.0,                    !- specific heat {J/kg-K}
- 0.9,                      !- thermal absorptance
- 0.5,                      !- solar absorptance
- 0.5;                      !- visible absorptance
-
-Material,
- Generic Gypsum Board,     !- name
- MediumSmooth,             !- roughness
- 0.0127,                   !- thickness {m}
- 0.16,                     !- conductivity {W/m-K}
- 800.0,                    !- density {kg/m3}
- 1090.0,                   !- specific heat {J/kg-K}
- 0.9,                      !- thermal absorptance
- 0.5,                      !- solar absorptance
- 0.5;                      !- visible absorptance
-
-Material,
- Generic Brick,            !- name
+ Generic Roof Membrane,    !- name
  MediumRough,              !- roughness
- 0.1,                      !- thickness {m}
- 0.9,                      !- conductivity {W/m-K}
- 1920.0,                   !- density {kg/m3}
- 790.0,                    !- specific heat {J/kg-K}
+ 0.01,                     !- thickness {m}
+ 0.16,                     !- conductivity {W/m-K}
+ 1120.0,                   !- density {kg/m3}
+ 1460.0,                   !- specific heat {J/kg-K}
  0.9,                      !- thermal absorptance
  0.65,                     !- solar absorptance
  0.65;                     !- visible absorptance
-
-Material,
- Generic 50mm Insulation,  !- name
- MediumRough,              !- roughness
- 0.05,                     !- thickness {m}
- 0.03,                     !- conductivity {W/m-K}
- 43.0,                     !- density {kg/m3}
- 1210.0,                   !- specific heat {J/kg-K}
- 0.9,                      !- thermal absorptance
- 0.7,                      !- solar absorptance
- 0.7;                      !- visible absorptance
 
 Material,
  Generic Wall Air Gap,     !- name
@@ -682,16 +710,10 @@ Material,
  0.7,                      !- solar absorptance
  0.7;                      !- visible absorptance
 
-Material,
- Generic 25mm Insulation,  !- name
- MediumRough,              !- roughness
- 0.025,                    !- thickness {m}
- 0.03,                     !- conductivity {W/m-K}
- 43.0,                     !- density {kg/m3}
- 1210.0,                   !- specific heat {J/kg-K}
- 0.9,                      !- thermal absorptance
- 0.7,                      !- solar absorptance
- 0.7;                      !- visible absorptance
+WindowMaterial:Gas,
+ Generic Window Air Gap,   !- name
+ Air,                      !- gas type
+ 0.0127;                   !- thickness {m}
 
 Material,
  Generic HW Concrete,      !- name
@@ -704,64 +726,8 @@ Material,
  0.8,                      !- solar absorptance
  0.8;                      !- visible absorptance
 
-Material,
- Generic Acoustic Tile,    !- name
- MediumSmooth,             !- roughness
- 0.02,                     !- thickness {m}
- 0.06,                     !- conductivity {W/m-K}
- 368.0,                    !- density {kg/m3}
- 590.0,                    !- specific heat {J/kg-K}
- 0.9,                      !- thermal absorptance
- 0.2,                      !- solar absorptance
- 0.2;                      !- visible absorptance
-
-Material,
- Generic Roof Membrane,    !- name
- MediumRough,              !- roughness
- 0.01,                     !- thickness {m}
- 0.16,                     !- conductivity {W/m-K}
- 1120.0,                   !- density {kg/m3}
- 1460.0,                   !- specific heat {J/kg-K}
- 0.9,                      !- thermal absorptance
- 0.65,                     !- solar absorptance
- 0.65;                     !- visible absorptance
-
 !-   ============ CONSTRUCTIONS ============
 
-
-Construction,
- Generic Roof,             !- name
- Generic Roof Membrane,    !- layer 1
- Generic 50mm Insulation,  !- layer 2
- Generic LW Concrete,      !- layer 3
- Generic Ceiling Air Gap,  !- layer 4
- Generic Acoustic Tile;    !- layer 5
-
-Construction,
- Generic Single Pane,      !- name
- Generic Clear Glass;      !- layer 1
-
-Construction,
- Generic Interior Ceiling, !- name
- Generic LW Concrete,      !- layer 1
- Generic Ceiling Air Gap,  !- layer 2
- Generic Acoustic Tile;    !- layer 3
-
-Construction,
- Generic Interior Floor,   !- name
- Generic Acoustic Tile,    !- layer 1
- Generic Ceiling Air Gap,  !- layer 2
- Generic LW Concrete;      !- layer 3
-
-Construction,
- Generic Interior Wall,    !- name
- Generic Gypsum Board,     !- layer 1
- Generic Wall Air Gap,     !- layer 2
- Generic Gypsum Board;     !- layer 3
-
-Construction:AirBoundary,
- Generic Air Boundary,     !- construction name
- None;                     !- air exchange method
 
 Construction,
  Generic Ground Slab,      !- name
@@ -769,25 +735,10 @@ Construction,
  Generic HW Concrete;      !- layer 2
 
 Construction,
- Generic Double Pane,      !- name
- Generic Low-e Glass,      !- layer 1
- Generic Window Air Gap,   !- layer 2
- Generic Clear Glass;      !- layer 3
-
-Construction,
- Generic Exposed Floor,    !- name
+ Generic Exterior Door,    !- name
  Generic Painted Metal,    !- layer 1
- Generic Ceiling Air Gap,  !- layer 2
- Generic 50mm Insulation,  !- layer 3
- Generic LW Concrete;      !- layer 4
-
-Construction,
- Generic Exterior Wall,    !- name
- Generic Brick,            !- layer 1
- Generic LW Concrete,      !- layer 2
- Generic 50mm Insulation,  !- layer 3
- Generic Wall Air Gap,     !- layer 4
- Generic Gypsum Board;     !- layer 5
+ Generic 25mm Insulation,  !- layer 2
+ Generic Painted Metal;    !- layer 3
 
 Construction,
  Generic Underground Wall, !- name
@@ -797,6 +748,57 @@ Construction,
  Generic Gypsum Board;     !- layer 4
 
 Construction,
+ Generic Double Pane,      !- name
+ Generic Low-e Glass,      !- layer 1
+ Generic Window Air Gap,   !- layer 2
+ Generic Clear Glass;      !- layer 3
+
+Construction,
+ Generic Interior Wall,    !- name
+ Generic Gypsum Board,     !- layer 1
+ Generic Wall Air Gap,     !- layer 2
+ Generic Gypsum Board;     !- layer 3
+
+Construction,
+ Generic Exposed Floor,    !- name
+ Generic Painted Metal,    !- layer 1
+ Generic Ceiling Air Gap,  !- layer 2
+ Generic 50mm Insulation,  !- layer 3
+ Generic LW Concrete;      !- layer 4
+
+Construction,
+ Generic Interior Floor,   !- name
+ Generic Acoustic Tile,    !- layer 1
+ Generic Ceiling Air Gap,  !- layer 2
+ Generic LW Concrete;      !- layer 3
+
+Construction,
+ Generic Single Pane,      !- name
+ Generic Clear Glass;      !- layer 1
+
+Construction,
+ Generic Roof,             !- name
+ Generic Roof Membrane,    !- layer 1
+ Generic 50mm Insulation,  !- layer 2
+ Generic LW Concrete,      !- layer 3
+ Generic Ceiling Air Gap,  !- layer 4
+ Generic Acoustic Tile;    !- layer 5
+
+Construction:AirBoundary,
+ Generic Air Boundary,     !- construction name
+ None;                     !- air exchange method
+
+Construction,
+ Generic Interior Door,    !- name
+ Generic 25mm Wood;        !- layer 1
+
+Construction,
+ Generic Interior Ceiling, !- name
+ Generic LW Concrete,      !- layer 1
+ Generic Ceiling Air Gap,  !- layer 2
+ Generic Acoustic Tile;    !- layer 3
+
+Construction,
  Generic Underground Roof, !- name
  Generic 50mm Insulation,  !- layer 1
  Generic HW Concrete,      !- layer 2
@@ -804,17 +806,143 @@ Construction,
  Generic Acoustic Tile;    !- layer 4
 
 Construction,
- Generic Interior Door,    !- name
- Generic 25mm Wood;        !- layer 1
-
-Construction,
- Generic Exterior Door,    !- name
- Generic Painted Metal,    !- layer 1
- Generic 25mm Insulation,  !- layer 2
- Generic Painted Metal;    !- layer 3
+ Generic Exterior Wall,    !- name
+ Generic Brick,            !- layer 1
+ Generic LW Concrete,      !- layer 2
+ Generic 50mm Insulation,  !- layer 3
+ Generic Wall Air Gap,     !- layer 4
+ Generic Gypsum Board;     !- layer 5
 
 !-   ============ HVAC SYSTEMS ============
 
+
+HVACTemplate:Zone:IdealLoadsAirSystem,
+ Office1,                  !- zone name
+ Generic Office Setpoints..Office1, !- template thermostat name
+ ,                         !- availability schedule
+ 50.0,                     !- heating supply air temp {C}
+ 13.0,                     !- cooling supply air temp {C}
+ ,                         !- max heating supply air hr {kg-H2O/kg-air}
+ ,                         !- min cooling supply air hr {kg-H2O/kg-air}
+ LimitCapacity,            !- heating limit
+ ,                         !- max heating fow rate {m3/s}
+ Autosize,                 !- max sensible heat capacity
+ LimitFlowRateAndCapacity, !- cooling limit
+ Autosize,                 !- max cooling fow rate {m3/s}
+ Autosize,                 !- max total cooling capacity
+ ,                         !- heating availability schedule
+ ,                         !- cooling availability schedule
+ None,                     !- dehumidification type
+ ,                         !- cooling shr
+ ,                         !- dehumidification setpoint
+ None,                     !- humidification type
+ ,                         !- humidification setpoint
+ DetailedSpecification,    !- outdoor air method
+ ,                         !- oa per person
+ ,                         !- oa per area
+ ,                         !- oa per zone
+ Generic Office Ventilation..Office1, !- outdoor air object name
+ None,                     !- demand controlled vent type
+ DifferentialDryBulb,      !- economizer type
+ None,                     !- heat recovery type
+ 0.0,                      !- sensible heat recovery effectiveness
+ 0.0;                      !- latent heat recovery effectiveness
+
+HVACTemplate:Zone:IdealLoadsAirSystem,
+ Office2,                  !- zone name
+ Generic Office Setpoints..Office2, !- template thermostat name
+ ,                         !- availability schedule
+ 50.0,                     !- heating supply air temp {C}
+ 13.0,                     !- cooling supply air temp {C}
+ ,                         !- max heating supply air hr {kg-H2O/kg-air}
+ ,                         !- min cooling supply air hr {kg-H2O/kg-air}
+ LimitCapacity,            !- heating limit
+ ,                         !- max heating fow rate {m3/s}
+ Autosize,                 !- max sensible heat capacity
+ LimitFlowRateAndCapacity, !- cooling limit
+ Autosize,                 !- max cooling fow rate {m3/s}
+ Autosize,                 !- max total cooling capacity
+ ,                         !- heating availability schedule
+ ,                         !- cooling availability schedule
+ None,                     !- dehumidification type
+ ,                         !- cooling shr
+ ,                         !- dehumidification setpoint
+ None,                     !- humidification type
+ ,                         !- humidification setpoint
+ DetailedSpecification,    !- outdoor air method
+ ,                         !- oa per person
+ ,                         !- oa per area
+ ,                         !- oa per zone
+ Generic Office Ventilation..Office2, !- outdoor air object name
+ None,                     !- demand controlled vent type
+ DifferentialDryBulb,      !- economizer type
+ None,                     !- heat recovery type
+ 0.0,                      !- sensible heat recovery effectiveness
+ 0.0;                      !- latent heat recovery effectiveness
+
+HVACTemplate:Zone:IdealLoadsAirSystem,
+ Office3,                  !- zone name
+ Generic Office Setpoints..Office3, !- template thermostat name
+ ,                         !- availability schedule
+ 50.0,                     !- heating supply air temp {C}
+ 13.0,                     !- cooling supply air temp {C}
+ ,                         !- max heating supply air hr {kg-H2O/kg-air}
+ ,                         !- min cooling supply air hr {kg-H2O/kg-air}
+ LimitCapacity,            !- heating limit
+ ,                         !- max heating fow rate {m3/s}
+ Autosize,                 !- max sensible heat capacity
+ LimitFlowRateAndCapacity, !- cooling limit
+ Autosize,                 !- max cooling fow rate {m3/s}
+ Autosize,                 !- max total cooling capacity
+ ,                         !- heating availability schedule
+ ,                         !- cooling availability schedule
+ None,                     !- dehumidification type
+ ,                         !- cooling shr
+ ,                         !- dehumidification setpoint
+ None,                     !- humidification type
+ ,                         !- humidification setpoint
+ DetailedSpecification,    !- outdoor air method
+ ,                         !- oa per person
+ ,                         !- oa per area
+ ,                         !- oa per zone
+ Generic Office Ventilation..Office3, !- outdoor air object name
+ None,                     !- demand controlled vent type
+ DifferentialDryBulb,      !- economizer type
+ None,                     !- heat recovery type
+ 0.0,                      !- sensible heat recovery effectiveness
+ 0.0;                      !- latent heat recovery effectiveness
+
+HVACTemplate:Zone:IdealLoadsAirSystem,
+ Office4,                  !- zone name
+ Generic Office Setpoints..Office4, !- template thermostat name
+ ,                         !- availability schedule
+ 50.0,                     !- heating supply air temp {C}
+ 13.0,                     !- cooling supply air temp {C}
+ ,                         !- max heating supply air hr {kg-H2O/kg-air}
+ ,                         !- min cooling supply air hr {kg-H2O/kg-air}
+ LimitCapacity,            !- heating limit
+ ,                         !- max heating fow rate {m3/s}
+ Autosize,                 !- max sensible heat capacity
+ LimitFlowRateAndCapacity, !- cooling limit
+ Autosize,                 !- max cooling fow rate {m3/s}
+ Autosize,                 !- max total cooling capacity
+ ,                         !- heating availability schedule
+ ,                         !- cooling availability schedule
+ None,                     !- dehumidification type
+ ,                         !- cooling shr
+ ,                         !- dehumidification setpoint
+ None,                     !- humidification type
+ ,                         !- humidification setpoint
+ DetailedSpecification,    !- outdoor air method
+ ,                         !- oa per person
+ ,                         !- oa per area
+ ,                         !- oa per zone
+ Generic Office Ventilation..Office4, !- outdoor air object name
+ None,                     !- demand controlled vent type
+ DifferentialDryBulb,      !- economizer type
+ None,                     !- heat recovery type
+ 0.0,                      !- sensible heat recovery effectiveness
+ 0.0;                      !- latent heat recovery effectiveness
 
 HVACTemplate:Zone:IdealLoadsAirSystem,
  Flr1_Office1,             !- zone name
@@ -1200,136 +1328,872 @@ HVACTemplate:Zone:IdealLoadsAirSystem,
  0.0,                      !- sensible heat recovery effectiveness
  0.0;                      !- latent heat recovery effectiveness
 
-HVACTemplate:Zone:IdealLoadsAirSystem,
- Flr4_Office1,             !- zone name
- Generic Office Setpoints..Flr4_Office1, !- template thermostat name
- ,                         !- availability schedule
- 50.0,                     !- heating supply air temp {C}
- 13.0,                     !- cooling supply air temp {C}
- ,                         !- max heating supply air hr {kg-H2O/kg-air}
- ,                         !- min cooling supply air hr {kg-H2O/kg-air}
- LimitCapacity,            !- heating limit
- ,                         !- max heating fow rate {m3/s}
- Autosize,                 !- max sensible heat capacity
- LimitFlowRateAndCapacity, !- cooling limit
- Autosize,                 !- max cooling fow rate {m3/s}
- Autosize,                 !- max total cooling capacity
- ,                         !- heating availability schedule
- ,                         !- cooling availability schedule
- None,                     !- dehumidification type
- ,                         !- cooling shr
- ,                         !- dehumidification setpoint
- None,                     !- humidification type
- ,                         !- humidification setpoint
- DetailedSpecification,    !- outdoor air method
- ,                         !- oa per person
- ,                         !- oa per area
- ,                         !- oa per zone
- Generic Office Ventilation..Flr4_Office1, !- outdoor air object name
- None,                     !- demand controlled vent type
- DifferentialDryBulb,      !- economizer type
- None,                     !- heat recovery type
- 0.0,                      !- sensible heat recovery effectiveness
- 0.0;                      !- latent heat recovery effectiveness
+!-   ============ ROOM GEOMETRY ============
 
-HVACTemplate:Zone:IdealLoadsAirSystem,
- Flr4_Office2,             !- zone name
- Generic Office Setpoints..Flr4_Office2, !- template thermostat name
- ,                         !- availability schedule
- 50.0,                     !- heating supply air temp {C}
- 13.0,                     !- cooling supply air temp {C}
- ,                         !- max heating supply air hr {kg-H2O/kg-air}
- ,                         !- min cooling supply air hr {kg-H2O/kg-air}
- LimitCapacity,            !- heating limit
- ,                         !- max heating fow rate {m3/s}
- Autosize,                 !- max sensible heat capacity
- LimitFlowRateAndCapacity, !- cooling limit
- Autosize,                 !- max cooling fow rate {m3/s}
- Autosize,                 !- max total cooling capacity
- ,                         !- heating availability schedule
- ,                         !- cooling availability schedule
- None,                     !- dehumidification type
- ,                         !- cooling shr
- ,                         !- dehumidification setpoint
- None,                     !- humidification type
- ,                         !- humidification setpoint
- DetailedSpecification,    !- outdoor air method
- ,                         !- oa per person
- ,                         !- oa per area
- ,                         !- oa per zone
- Generic Office Ventilation..Flr4_Office2, !- outdoor air object name
- None,                     !- demand controlled vent type
- DifferentialDryBulb,      !- economizer type
- None,                     !- heat recovery type
- 0.0,                      !- sensible heat recovery effectiveness
- 0.0;                      !- latent heat recovery effectiveness
 
-HVACTemplate:Zone:IdealLoadsAirSystem,
- Flr4_Office3,             !- zone name
- Generic Office Setpoints..Flr4_Office3, !- template thermostat name
- ,                         !- availability schedule
- 50.0,                     !- heating supply air temp {C}
- 13.0,                     !- cooling supply air temp {C}
- ,                         !- max heating supply air hr {kg-H2O/kg-air}
- ,                         !- min cooling supply air hr {kg-H2O/kg-air}
- LimitCapacity,            !- heating limit
- ,                         !- max heating fow rate {m3/s}
- Autosize,                 !- max sensible heat capacity
- LimitFlowRateAndCapacity, !- cooling limit
- Autosize,                 !- max cooling fow rate {m3/s}
- Autosize,                 !- max total cooling capacity
- ,                         !- heating availability schedule
- ,                         !- cooling availability schedule
- None,                     !- dehumidification type
- ,                         !- cooling shr
- ,                         !- dehumidification setpoint
- None,                     !- humidification type
- ,                         !- humidification setpoint
- DetailedSpecification,    !- outdoor air method
- ,                         !- oa per person
- ,                         !- oa per area
- ,                         !- oa per zone
- Generic Office Ventilation..Flr4_Office3, !- outdoor air object name
- None,                     !- demand controlled vent type
- DifferentialDryBulb,      !- economizer type
- None,                     !- heat recovery type
- 0.0,                      !- sensible heat recovery effectiveness
- 0.0;                      !- latent heat recovery effectiveness
+!-   ________ZONE:Office1________
 
-HVACTemplate:Zone:IdealLoadsAirSystem,
- Flr4_Office4,             !- zone name
- Generic Office Setpoints..Flr4_Office4, !- template thermostat name
- ,                         !- availability schedule
- 50.0,                     !- heating supply air temp {C}
- 13.0,                     !- cooling supply air temp {C}
- ,                         !- max heating supply air hr {kg-H2O/kg-air}
- ,                         !- min cooling supply air hr {kg-H2O/kg-air}
- LimitCapacity,            !- heating limit
- ,                         !- max heating fow rate {m3/s}
- Autosize,                 !- max sensible heat capacity
- LimitFlowRateAndCapacity, !- cooling limit
- Autosize,                 !- max cooling fow rate {m3/s}
- Autosize,                 !- max total cooling capacity
- ,                         !- heating availability schedule
- ,                         !- cooling availability schedule
- None,                     !- dehumidification type
- ,                         !- cooling shr
- ,                         !- dehumidification setpoint
- None,                     !- humidification type
- ,                         !- humidification setpoint
- DetailedSpecification,    !- outdoor air method
- ,                         !- oa per person
- ,                         !- oa per area
- ,                         !- oa per zone
- Generic Office Ventilation..Flr4_Office4, !- outdoor air object name
- None,                     !- demand controlled vent type
- DifferentialDryBulb,      !- economizer type
- None,                     !- heat recovery type
- 0.0,                      !- sensible heat recovery effectiveness
- 0.0;                      !- latent heat recovery effectiveness
 
-!-   ============ ZONE GEOMETRY ============
+Zone,
+ Office1,                  !- name
+ ,                         !- north
+ ,                         !- x
+ ,                         !- y
+ ,                         !- z
+ ,                         !- type
+ 1,                        !- multiplier
+ 3.0,                      !- ceiling height
+ 300.0,                    !- volume
+ 100.0,                    !- floor area
+ ,                         !- inside convection
+ ,                         !- outside convection
+ Yes;                      !- include floor area
 
+People,
+ Generic Office People..Office1, !- name
+ Office1,                  !- zone name
+ Generic Office Occupancy, !- occupancy schedule name
+ People/Area,              !- occupancy method
+ ,                         !- number of people {ppl}
+ 0.0565,                   !- people per floor area {ppl/m2}
+ ,                         !- floor area per person {m2/ppl}
+ 0.3,                      !- radiant fraction
+ autocalculate,            !- sensible heat fraction
+ Seated Adult Activity;    !- activity schedule name
+
+Lights,
+ Generic Office Lighting..Office1, !- name
+ Office1,                  !- zone name
+ Generic Office Lighting,  !- schedule name
+ Watts/Area,               !- lighting level method
+ ,                         !- lighting power level {W}
+ 10.55,                    !- lighting per floor area {W/m2}
+ ,                         !- lighting per person {W/ppl}
+ 0.0,                      !- return air fraction
+ 0.7,                      !- radiant fraction
+ 0.2;                      !- visible fraction
+
+ElectricEquipment,
+ Generic Office Equipment..Office1, !- name
+ Office1,                  !- zone name
+ Generic Office Equipment, !- schedule name
+ Watts/Area,               !- equipment level method
+ ,                         !- equipment power level {W}
+ 10.33,                    !- equipment per floor area {W/m2}
+ ,                         !- equipment per person {W/ppl}
+ 0.0,                      !- latent fraction
+ 0.5,                      !- radiant fraction
+ 0.0;                      !- lost fraction
+
+ZoneInfiltration:DesignFlowRate,
+ Generic Office Infiltration..Office1, !- name
+ Office1,                  !- zone name
+ Generic Office Infiltration, !- schedule name
+ Flow/ExteriorArea,        !- flow rate method
+ ,                         !- flow rate {m3/s}
+ ,                         !- flow per floor area {m3/s-m2}
+ 0.0002266,                !- flow per exterior area {m3/s-m2}
+ ,                         !- air changes per hour {1/hr}
+ 1.0,                      !- constant term coefficient
+ 0.0,                      !- temperature term coefficient
+ 0.0,                      !- velocity term coefficient
+ ;                         !- velocity squared term coefficient
+
+DesignSpecification:OutdoorAir,
+ Generic Office Ventilation..Office1, !- name
+ Sum,                      !- flow rate method
+ 0.00236,                  !- flow per person {m3/s-person}
+ 0.000305,                 !- flow per floor area {m3/s-m2}
+ 0.0,                      !- flow per zone {m3/s}
+ 0.0,                      !- air changes per hour {1/hr}
+ ;                         !- outdoor air schedule name
+
+HVACTemplate:Thermostat,
+ Generic Office Setpoints..Office1, !- name
+ Generic Office Heating,   !- heating setpoint schedule
+ ,                         !- heating setpoint {C}
+ Generic Office Cooling,   !- cooling setpoint schedule
+ ;                         !- cooling setpoint {C}
+
+BuildingSurface:Detailed,
+ Office1..Face0,           !- name
+ Floor,                    !- surface type
+ Generic Interior Floor,   !- construction name
+ Office1,                  !- zone name
+ ,                         !- space name
+ Adiabatic,                !- boundary condition
+ ,                         !- boundary condition object
+ NoSun,                    !- sun exposure
+ NoWind,                   !- wind exposure
+ autocalculate,            !- view factor to ground
+ 4,                        !- number of vertices
+ 10.000, 10.000, 3.000,
+ 10.000, 0.000, 3.000,
+ 0.000, 0.000, 3.000,
+ 0.000, 10.000, 3.000;
+
+BuildingSurface:Detailed,
+ Office1..Face1,           !- name
+ Wall,                     !- surface type
+ Generic Interior Wall,    !- construction name
+ Office1,                  !- zone name
+ ,                         !- space name
+ Surface,                  !- boundary condition
+ Office2..Face3,           !- boundary condition object
+ NoSun,                    !- sun exposure
+ NoWind,                   !- wind exposure
+ autocalculate,            !- view factor to ground
+ 4,                        !- number of vertices
+ 10.000, 0.000, 6.000,
+ 10.000, 0.000, 3.000,
+ 10.000, 10.000, 3.000,
+ 10.000, 10.000, 6.000;
+
+BuildingSurface:Detailed,
+ Office1..Face2,           !- name
+ Wall,                     !- surface type
+ Generic Interior Wall,    !- construction name
+ Office1,                  !- zone name
+ ,                         !- space name
+ Surface,                  !- boundary condition
+ Office3..Face4,           !- boundary condition object
+ NoSun,                    !- sun exposure
+ NoWind,                   !- wind exposure
+ autocalculate,            !- view factor to ground
+ 4,                        !- number of vertices
+ 10.000, 10.000, 6.000,
+ 10.000, 10.000, 3.000,
+ 0.000, 10.000, 3.000,
+ 0.000, 10.000, 6.000;
+
+BuildingSurface:Detailed,
+ Office1..Face3,           !- name
+ Wall,                     !- surface type
+ Generic Exterior Wall,    !- construction name
+ Office1,                  !- zone name
+ ,                         !- space name
+ Outdoors,                 !- boundary condition
+ ,                         !- boundary condition object
+ SunExposed,               !- sun exposure
+ WindExposed,              !- wind exposure
+ Autocalculate,            !- view factor to ground
+ 4,                        !- number of vertices
+ 0.000, 10.000, 6.000,
+ 0.000, 10.000, 3.000,
+ 0.000, 0.000, 3.000,
+ 0.000, 0.000, 6.000;
+
+FenestrationSurface:Detailed,
+ Office1..Face3_Glz0,      !- name
+ Window,                   !- surface type
+ Generic Double Pane,      !- construction name
+ Office1..Face3,           !- building surface name
+ ,                         !- boundary condition object
+ Autocalculate,            !- view factor to ground
+ ,                         !- frame and divider name
+ 1,                        !- multiplier
+ 4,                        !- number of vertices
+ 0.000, 8.162, 5.449,
+ 0.000, 8.162, 3.551,
+ 0.000, 1.838, 3.551,
+ 0.000, 1.838, 5.449;
+
+BuildingSurface:Detailed,
+ Office1..Face4,           !- name
+ Wall,                     !- surface type
+ Generic Exterior Wall,    !- construction name
+ Office1,                  !- zone name
+ ,                         !- space name
+ Outdoors,                 !- boundary condition
+ ,                         !- boundary condition object
+ SunExposed,               !- sun exposure
+ WindExposed,              !- wind exposure
+ Autocalculate,            !- view factor to ground
+ 4,                        !- number of vertices
+ 0.000, 0.000, 6.000,
+ 0.000, 0.000, 3.000,
+ 10.000, 0.000, 3.000,
+ 10.000, 0.000, 6.000;
+
+FenestrationSurface:Detailed,
+ Office1..Face4_Glz0,      !- name
+ Window,                   !- surface type
+ Generic Double Pane,      !- construction name
+ Office1..Face4,           !- building surface name
+ ,                         !- boundary condition object
+ Autocalculate,            !- view factor to ground
+ ,                         !- frame and divider name
+ 1,                        !- multiplier
+ 4,                        !- number of vertices
+ 1.838, 0.000, 5.449,
+ 1.838, 0.000, 3.551,
+ 8.162, 0.000, 3.551,
+ 8.162, 0.000, 5.449;
+
+BuildingSurface:Detailed,
+ Office1..Face5,           !- name
+ Ceiling,                  !- surface type
+ Generic Interior Ceiling, !- construction name
+ Office1,                  !- zone name
+ ,                         !- space name
+ Adiabatic,                !- boundary condition
+ ,                         !- boundary condition object
+ NoSun,                    !- sun exposure
+ NoWind,                   !- wind exposure
+ autocalculate,            !- view factor to ground
+ 4,                        !- number of vertices
+ 0.000, 10.000, 6.000,
+ 0.000, 0.000, 6.000,
+ 10.000, 0.000, 6.000,
+ 10.000, 10.000, 6.000;
+
+!-   ________ZONE:Office2________
+
+
+Zone,
+ Office2,                  !- name
+ ,                         !- north
+ ,                         !- x
+ ,                         !- y
+ ,                         !- z
+ ,                         !- type
+ 1,                        !- multiplier
+ 3.0,                      !- ceiling height
+ 300.0,                    !- volume
+ 100.0,                    !- floor area
+ ,                         !- inside convection
+ ,                         !- outside convection
+ Yes;                      !- include floor area
+
+People,
+ Generic Office People..Office2, !- name
+ Office2,                  !- zone name
+ Generic Office Occupancy, !- occupancy schedule name
+ People/Area,              !- occupancy method
+ ,                         !- number of people {ppl}
+ 0.0565,                   !- people per floor area {ppl/m2}
+ ,                         !- floor area per person {m2/ppl}
+ 0.3,                      !- radiant fraction
+ autocalculate,            !- sensible heat fraction
+ Seated Adult Activity;    !- activity schedule name
+
+Lights,
+ Generic Office Lighting..Office2, !- name
+ Office2,                  !- zone name
+ Generic Office Lighting,  !- schedule name
+ Watts/Area,               !- lighting level method
+ ,                         !- lighting power level {W}
+ 10.55,                    !- lighting per floor area {W/m2}
+ ,                         !- lighting per person {W/ppl}
+ 0.0,                      !- return air fraction
+ 0.7,                      !- radiant fraction
+ 0.2;                      !- visible fraction
+
+ElectricEquipment,
+ Generic Office Equipment..Office2, !- name
+ Office2,                  !- zone name
+ Generic Office Equipment, !- schedule name
+ Watts/Area,               !- equipment level method
+ ,                         !- equipment power level {W}
+ 10.33,                    !- equipment per floor area {W/m2}
+ ,                         !- equipment per person {W/ppl}
+ 0.0,                      !- latent fraction
+ 0.5,                      !- radiant fraction
+ 0.0;                      !- lost fraction
+
+ZoneInfiltration:DesignFlowRate,
+ Generic Office Infiltration..Office2, !- name
+ Office2,                  !- zone name
+ Generic Office Infiltration, !- schedule name
+ Flow/ExteriorArea,        !- flow rate method
+ ,                         !- flow rate {m3/s}
+ ,                         !- flow per floor area {m3/s-m2}
+ 0.0002266,                !- flow per exterior area {m3/s-m2}
+ ,                         !- air changes per hour {1/hr}
+ 1.0,                      !- constant term coefficient
+ 0.0,                      !- temperature term coefficient
+ 0.0,                      !- velocity term coefficient
+ ;                         !- velocity squared term coefficient
+
+DesignSpecification:OutdoorAir,
+ Generic Office Ventilation..Office2, !- name
+ Sum,                      !- flow rate method
+ 0.00236,                  !- flow per person {m3/s-person}
+ 0.000305,                 !- flow per floor area {m3/s-m2}
+ 0.0,                      !- flow per zone {m3/s}
+ 0.0,                      !- air changes per hour {1/hr}
+ ;                         !- outdoor air schedule name
+
+HVACTemplate:Thermostat,
+ Generic Office Setpoints..Office2, !- name
+ Generic Office Heating,   !- heating setpoint schedule
+ ,                         !- heating setpoint {C}
+ Generic Office Cooling,   !- cooling setpoint schedule
+ ;                         !- cooling setpoint {C}
+
+BuildingSurface:Detailed,
+ Office2..Face0,           !- name
+ Floor,                    !- surface type
+ Generic Interior Floor,   !- construction name
+ Office2,                  !- zone name
+ ,                         !- space name
+ Adiabatic,                !- boundary condition
+ ,                         !- boundary condition object
+ NoSun,                    !- sun exposure
+ NoWind,                   !- wind exposure
+ autocalculate,            !- view factor to ground
+ 4,                        !- number of vertices
+ 20.000, 10.000, 3.000,
+ 20.000, 0.000, 3.000,
+ 10.000, 0.000, 3.000,
+ 10.000, 10.000, 3.000;
+
+BuildingSurface:Detailed,
+ Office2..Face1,           !- name
+ Wall,                     !- surface type
+ Generic Exterior Wall,    !- construction name
+ Office2,                  !- zone name
+ ,                         !- space name
+ Outdoors,                 !- boundary condition
+ ,                         !- boundary condition object
+ SunExposed,               !- sun exposure
+ WindExposed,              !- wind exposure
+ Autocalculate,            !- view factor to ground
+ 4,                        !- number of vertices
+ 20.000, 0.000, 6.000,
+ 20.000, 0.000, 3.000,
+ 20.000, 10.000, 3.000,
+ 20.000, 10.000, 6.000;
+
+FenestrationSurface:Detailed,
+ Office2..Face1_Glz0,      !- name
+ Window,                   !- surface type
+ Generic Double Pane,      !- construction name
+ Office2..Face1,           !- building surface name
+ ,                         !- boundary condition object
+ Autocalculate,            !- view factor to ground
+ ,                         !- frame and divider name
+ 1,                        !- multiplier
+ 4,                        !- number of vertices
+ 20.000, 1.838, 5.449,
+ 20.000, 1.838, 3.551,
+ 20.000, 8.162, 3.551,
+ 20.000, 8.162, 5.449;
+
+BuildingSurface:Detailed,
+ Office2..Face2,           !- name
+ Wall,                     !- surface type
+ Generic Interior Wall,    !- construction name
+ Office2,                  !- zone name
+ ,                         !- space name
+ Surface,                  !- boundary condition
+ Office4..Face4,           !- boundary condition object
+ NoSun,                    !- sun exposure
+ NoWind,                   !- wind exposure
+ autocalculate,            !- view factor to ground
+ 4,                        !- number of vertices
+ 20.000, 10.000, 6.000,
+ 20.000, 10.000, 3.000,
+ 10.000, 10.000, 3.000,
+ 10.000, 10.000, 6.000;
+
+BuildingSurface:Detailed,
+ Office2..Face3,           !- name
+ Wall,                     !- surface type
+ Generic Interior Wall,    !- construction name
+ Office2,                  !- zone name
+ ,                         !- space name
+ Surface,                  !- boundary condition
+ Office1..Face1,           !- boundary condition object
+ NoSun,                    !- sun exposure
+ NoWind,                   !- wind exposure
+ autocalculate,            !- view factor to ground
+ 4,                        !- number of vertices
+ 10.000, 10.000, 6.000,
+ 10.000, 10.000, 3.000,
+ 10.000, 0.000, 3.000,
+ 10.000, 0.000, 6.000;
+
+BuildingSurface:Detailed,
+ Office2..Face4,           !- name
+ Wall,                     !- surface type
+ Generic Exterior Wall,    !- construction name
+ Office2,                  !- zone name
+ ,                         !- space name
+ Outdoors,                 !- boundary condition
+ ,                         !- boundary condition object
+ SunExposed,               !- sun exposure
+ WindExposed,              !- wind exposure
+ Autocalculate,            !- view factor to ground
+ 4,                        !- number of vertices
+ 10.000, 0.000, 6.000,
+ 10.000, 0.000, 3.000,
+ 20.000, 0.000, 3.000,
+ 20.000, 0.000, 6.000;
+
+FenestrationSurface:Detailed,
+ Office2..Face4_Glz0,      !- name
+ Window,                   !- surface type
+ Generic Double Pane,      !- construction name
+ Office2..Face4,           !- building surface name
+ ,                         !- boundary condition object
+ Autocalculate,            !- view factor to ground
+ ,                         !- frame and divider name
+ 1,                        !- multiplier
+ 4,                        !- number of vertices
+ 11.838, 0.000, 5.449,
+ 11.838, 0.000, 3.551,
+ 18.162, 0.000, 3.551,
+ 18.162, 0.000, 5.449;
+
+BuildingSurface:Detailed,
+ Office2..Face5,           !- name
+ Ceiling,                  !- surface type
+ Generic Interior Ceiling, !- construction name
+ Office2,                  !- zone name
+ ,                         !- space name
+ Adiabatic,                !- boundary condition
+ ,                         !- boundary condition object
+ NoSun,                    !- sun exposure
+ NoWind,                   !- wind exposure
+ autocalculate,            !- view factor to ground
+ 4,                        !- number of vertices
+ 10.000, 10.000, 6.000,
+ 10.000, 0.000, 6.000,
+ 20.000, 0.000, 6.000,
+ 20.000, 10.000, 6.000;
+
+!-   ________ZONE:Office3________
+
+
+Zone,
+ Office3,                  !- name
+ ,                         !- north
+ ,                         !- x
+ ,                         !- y
+ ,                         !- z
+ ,                         !- type
+ 1,                        !- multiplier
+ 3.0,                      !- ceiling height
+ 300.0,                    !- volume
+ 100.0,                    !- floor area
+ ,                         !- inside convection
+ ,                         !- outside convection
+ Yes;                      !- include floor area
+
+People,
+ Generic Office People..Office3, !- name
+ Office3,                  !- zone name
+ Generic Office Occupancy, !- occupancy schedule name
+ People/Area,              !- occupancy method
+ ,                         !- number of people {ppl}
+ 0.0565,                   !- people per floor area {ppl/m2}
+ ,                         !- floor area per person {m2/ppl}
+ 0.3,                      !- radiant fraction
+ autocalculate,            !- sensible heat fraction
+ Seated Adult Activity;    !- activity schedule name
+
+Lights,
+ Generic Office Lighting..Office3, !- name
+ Office3,                  !- zone name
+ Generic Office Lighting,  !- schedule name
+ Watts/Area,               !- lighting level method
+ ,                         !- lighting power level {W}
+ 10.55,                    !- lighting per floor area {W/m2}
+ ,                         !- lighting per person {W/ppl}
+ 0.0,                      !- return air fraction
+ 0.7,                      !- radiant fraction
+ 0.2;                      !- visible fraction
+
+ElectricEquipment,
+ Generic Office Equipment..Office3, !- name
+ Office3,                  !- zone name
+ Generic Office Equipment, !- schedule name
+ Watts/Area,               !- equipment level method
+ ,                         !- equipment power level {W}
+ 10.33,                    !- equipment per floor area {W/m2}
+ ,                         !- equipment per person {W/ppl}
+ 0.0,                      !- latent fraction
+ 0.5,                      !- radiant fraction
+ 0.0;                      !- lost fraction
+
+ZoneInfiltration:DesignFlowRate,
+ Generic Office Infiltration..Office3, !- name
+ Office3,                  !- zone name
+ Generic Office Infiltration, !- schedule name
+ Flow/ExteriorArea,        !- flow rate method
+ ,                         !- flow rate {m3/s}
+ ,                         !- flow per floor area {m3/s-m2}
+ 0.0002266,                !- flow per exterior area {m3/s-m2}
+ ,                         !- air changes per hour {1/hr}
+ 1.0,                      !- constant term coefficient
+ 0.0,                      !- temperature term coefficient
+ 0.0,                      !- velocity term coefficient
+ ;                         !- velocity squared term coefficient
+
+DesignSpecification:OutdoorAir,
+ Generic Office Ventilation..Office3, !- name
+ Sum,                      !- flow rate method
+ 0.00236,                  !- flow per person {m3/s-person}
+ 0.000305,                 !- flow per floor area {m3/s-m2}
+ 0.0,                      !- flow per zone {m3/s}
+ 0.0,                      !- air changes per hour {1/hr}
+ ;                         !- outdoor air schedule name
+
+HVACTemplate:Thermostat,
+ Generic Office Setpoints..Office3, !- name
+ Generic Office Heating,   !- heating setpoint schedule
+ ,                         !- heating setpoint {C}
+ Generic Office Cooling,   !- cooling setpoint schedule
+ ;                         !- cooling setpoint {C}
+
+BuildingSurface:Detailed,
+ Office3..Face0,           !- name
+ Floor,                    !- surface type
+ Generic Interior Floor,   !- construction name
+ Office3,                  !- zone name
+ ,                         !- space name
+ Adiabatic,                !- boundary condition
+ ,                         !- boundary condition object
+ NoSun,                    !- sun exposure
+ NoWind,                   !- wind exposure
+ autocalculate,            !- view factor to ground
+ 4,                        !- number of vertices
+ 10.000, 20.000, 3.000,
+ 10.000, 10.000, 3.000,
+ 0.000, 10.000, 3.000,
+ 0.000, 20.000, 3.000;
+
+BuildingSurface:Detailed,
+ Office3..Face1,           !- name
+ Wall,                     !- surface type
+ Generic Interior Wall,    !- construction name
+ Office3,                  !- zone name
+ ,                         !- space name
+ Surface,                  !- boundary condition
+ Office4..Face3,           !- boundary condition object
+ NoSun,                    !- sun exposure
+ NoWind,                   !- wind exposure
+ autocalculate,            !- view factor to ground
+ 4,                        !- number of vertices
+ 10.000, 10.000, 6.000,
+ 10.000, 10.000, 3.000,
+ 10.000, 20.000, 3.000,
+ 10.000, 20.000, 6.000;
+
+BuildingSurface:Detailed,
+ Office3..Face2,           !- name
+ Wall,                     !- surface type
+ Generic Exterior Wall,    !- construction name
+ Office3,                  !- zone name
+ ,                         !- space name
+ Outdoors,                 !- boundary condition
+ ,                         !- boundary condition object
+ SunExposed,               !- sun exposure
+ WindExposed,              !- wind exposure
+ Autocalculate,            !- view factor to ground
+ 4,                        !- number of vertices
+ 10.000, 20.000, 6.000,
+ 10.000, 20.000, 3.000,
+ 0.000, 20.000, 3.000,
+ 0.000, 20.000, 6.000;
+
+FenestrationSurface:Detailed,
+ Office3..Face2_Glz0,      !- name
+ Window,                   !- surface type
+ Generic Double Pane,      !- construction name
+ Office3..Face2,           !- building surface name
+ ,                         !- boundary condition object
+ Autocalculate,            !- view factor to ground
+ ,                         !- frame and divider name
+ 1,                        !- multiplier
+ 4,                        !- number of vertices
+ 8.162, 20.000, 5.449,
+ 8.162, 20.000, 3.551,
+ 1.838, 20.000, 3.551,
+ 1.838, 20.000, 5.449;
+
+BuildingSurface:Detailed,
+ Office3..Face3,           !- name
+ Wall,                     !- surface type
+ Generic Exterior Wall,    !- construction name
+ Office3,                  !- zone name
+ ,                         !- space name
+ Outdoors,                 !- boundary condition
+ ,                         !- boundary condition object
+ SunExposed,               !- sun exposure
+ WindExposed,              !- wind exposure
+ Autocalculate,            !- view factor to ground
+ 4,                        !- number of vertices
+ 0.000, 20.000, 6.000,
+ 0.000, 20.000, 3.000,
+ 0.000, 10.000, 3.000,
+ 0.000, 10.000, 6.000;
+
+FenestrationSurface:Detailed,
+ Office3..Face3_Glz0,      !- name
+ Window,                   !- surface type
+ Generic Double Pane,      !- construction name
+ Office3..Face3,           !- building surface name
+ ,                         !- boundary condition object
+ Autocalculate,            !- view factor to ground
+ ,                         !- frame and divider name
+ 1,                        !- multiplier
+ 4,                        !- number of vertices
+ 0.000, 18.162, 5.449,
+ 0.000, 18.162, 3.551,
+ 0.000, 11.838, 3.551,
+ 0.000, 11.838, 5.449;
+
+BuildingSurface:Detailed,
+ Office3..Face4,           !- name
+ Wall,                     !- surface type
+ Generic Interior Wall,    !- construction name
+ Office3,                  !- zone name
+ ,                         !- space name
+ Surface,                  !- boundary condition
+ Office1..Face2,           !- boundary condition object
+ NoSun,                    !- sun exposure
+ NoWind,                   !- wind exposure
+ autocalculate,            !- view factor to ground
+ 4,                        !- number of vertices
+ 0.000, 10.000, 6.000,
+ 0.000, 10.000, 3.000,
+ 10.000, 10.000, 3.000,
+ 10.000, 10.000, 6.000;
+
+BuildingSurface:Detailed,
+ Office3..Face5,           !- name
+ Ceiling,                  !- surface type
+ Generic Interior Ceiling, !- construction name
+ Office3,                  !- zone name
+ ,                         !- space name
+ Adiabatic,                !- boundary condition
+ ,                         !- boundary condition object
+ NoSun,                    !- sun exposure
+ NoWind,                   !- wind exposure
+ autocalculate,            !- view factor to ground
+ 4,                        !- number of vertices
+ 0.000, 20.000, 6.000,
+ 0.000, 10.000, 6.000,
+ 10.000, 10.000, 6.000,
+ 10.000, 20.000, 6.000;
+
+!-   ________ZONE:Office4________
+
+
+Zone,
+ Office4,                  !- name
+ ,                         !- north
+ ,                         !- x
+ ,                         !- y
+ ,                         !- z
+ ,                         !- type
+ 1,                        !- multiplier
+ 3.0,                      !- ceiling height
+ 300.0,                    !- volume
+ 100.0,                    !- floor area
+ ,                         !- inside convection
+ ,                         !- outside convection
+ Yes;                      !- include floor area
+
+People,
+ Generic Office People..Office4, !- name
+ Office4,                  !- zone name
+ Generic Office Occupancy, !- occupancy schedule name
+ People/Area,              !- occupancy method
+ ,                         !- number of people {ppl}
+ 0.0565,                   !- people per floor area {ppl/m2}
+ ,                         !- floor area per person {m2/ppl}
+ 0.3,                      !- radiant fraction
+ autocalculate,            !- sensible heat fraction
+ Seated Adult Activity;    !- activity schedule name
+
+Lights,
+ Generic Office Lighting..Office4, !- name
+ Office4,                  !- zone name
+ Generic Office Lighting,  !- schedule name
+ Watts/Area,               !- lighting level method
+ ,                         !- lighting power level {W}
+ 10.55,                    !- lighting per floor area {W/m2}
+ ,                         !- lighting per person {W/ppl}
+ 0.0,                      !- return air fraction
+ 0.7,                      !- radiant fraction
+ 0.2;                      !- visible fraction
+
+ElectricEquipment,
+ Generic Office Equipment..Office4, !- name
+ Office4,                  !- zone name
+ Generic Office Equipment, !- schedule name
+ Watts/Area,               !- equipment level method
+ ,                         !- equipment power level {W}
+ 10.33,                    !- equipment per floor area {W/m2}
+ ,                         !- equipment per person {W/ppl}
+ 0.0,                      !- latent fraction
+ 0.5,                      !- radiant fraction
+ 0.0;                      !- lost fraction
+
+ZoneInfiltration:DesignFlowRate,
+ Generic Office Infiltration..Office4, !- name
+ Office4,                  !- zone name
+ Generic Office Infiltration, !- schedule name
+ Flow/ExteriorArea,        !- flow rate method
+ ,                         !- flow rate {m3/s}
+ ,                         !- flow per floor area {m3/s-m2}
+ 0.0002266,                !- flow per exterior area {m3/s-m2}
+ ,                         !- air changes per hour {1/hr}
+ 1.0,                      !- constant term coefficient
+ 0.0,                      !- temperature term coefficient
+ 0.0,                      !- velocity term coefficient
+ ;                         !- velocity squared term coefficient
+
+DesignSpecification:OutdoorAir,
+ Generic Office Ventilation..Office4, !- name
+ Sum,                      !- flow rate method
+ 0.00236,                  !- flow per person {m3/s-person}
+ 0.000305,                 !- flow per floor area {m3/s-m2}
+ 0.0,                      !- flow per zone {m3/s}
+ 0.0,                      !- air changes per hour {1/hr}
+ ;                         !- outdoor air schedule name
+
+HVACTemplate:Thermostat,
+ Generic Office Setpoints..Office4, !- name
+ Generic Office Heating,   !- heating setpoint schedule
+ ,                         !- heating setpoint {C}
+ Generic Office Cooling,   !- cooling setpoint schedule
+ ;                         !- cooling setpoint {C}
+
+BuildingSurface:Detailed,
+ Office4..Face0,           !- name
+ Floor,                    !- surface type
+ Generic Interior Floor,   !- construction name
+ Office4,                  !- zone name
+ ,                         !- space name
+ Adiabatic,                !- boundary condition
+ ,                         !- boundary condition object
+ NoSun,                    !- sun exposure
+ NoWind,                   !- wind exposure
+ autocalculate,            !- view factor to ground
+ 4,                        !- number of vertices
+ 20.000, 20.000, 3.000,
+ 20.000, 10.000, 3.000,
+ 10.000, 10.000, 3.000,
+ 10.000, 20.000, 3.000;
+
+BuildingSurface:Detailed,
+ Office4..Face1,           !- name
+ Wall,                     !- surface type
+ Generic Exterior Wall,    !- construction name
+ Office4,                  !- zone name
+ ,                         !- space name
+ Outdoors,                 !- boundary condition
+ ,                         !- boundary condition object
+ SunExposed,               !- sun exposure
+ WindExposed,              !- wind exposure
+ Autocalculate,            !- view factor to ground
+ 4,                        !- number of vertices
+ 20.000, 10.000, 6.000,
+ 20.000, 10.000, 3.000,
+ 20.000, 20.000, 3.000,
+ 20.000, 20.000, 6.000;
+
+FenestrationSurface:Detailed,
+ Office4..Face1_Glz0,      !- name
+ Window,                   !- surface type
+ Generic Double Pane,      !- construction name
+ Office4..Face1,           !- building surface name
+ ,                         !- boundary condition object
+ Autocalculate,            !- view factor to ground
+ ,                         !- frame and divider name
+ 1,                        !- multiplier
+ 4,                        !- number of vertices
+ 20.000, 11.838, 5.449,
+ 20.000, 11.838, 3.551,
+ 20.000, 18.162, 3.551,
+ 20.000, 18.162, 5.449;
+
+BuildingSurface:Detailed,
+ Office4..Face2,           !- name
+ Wall,                     !- surface type
+ Generic Exterior Wall,    !- construction name
+ Office4,                  !- zone name
+ ,                         !- space name
+ Outdoors,                 !- boundary condition
+ ,                         !- boundary condition object
+ SunExposed,               !- sun exposure
+ WindExposed,              !- wind exposure
+ Autocalculate,            !- view factor to ground
+ 4,                        !- number of vertices
+ 20.000, 20.000, 6.000,
+ 20.000, 20.000, 3.000,
+ 10.000, 20.000, 3.000,
+ 10.000, 20.000, 6.000;
+
+FenestrationSurface:Detailed,
+ Office4..Face2_Glz0,      !- name
+ Window,                   !- surface type
+ Generic Double Pane,      !- construction name
+ Office4..Face2,           !- building surface name
+ ,                         !- boundary condition object
+ Autocalculate,            !- view factor to ground
+ ,                         !- frame and divider name
+ 1,                        !- multiplier
+ 4,                        !- number of vertices
+ 18.162, 20.000, 5.449,
+ 18.162, 20.000, 3.551,
+ 11.838, 20.000, 3.551,
+ 11.838, 20.000, 5.449;
+
+BuildingSurface:Detailed,
+ Office4..Face3,           !- name
+ Wall,                     !- surface type
+ Generic Interior Wall,    !- construction name
+ Office4,                  !- zone name
+ ,                         !- space name
+ Surface,                  !- boundary condition
+ Office3..Face1,           !- boundary condition object
+ NoSun,                    !- sun exposure
+ NoWind,                   !- wind exposure
+ autocalculate,            !- view factor to ground
+ 4,                        !- number of vertices
+ 10.000, 20.000, 6.000,
+ 10.000, 20.000, 3.000,
+ 10.000, 10.000, 3.000,
+ 10.000, 10.000, 6.000;
+
+BuildingSurface:Detailed,
+ Office4..Face4,           !- name
+ Wall,                     !- surface type
+ Generic Interior Wall,    !- construction name
+ Office4,                  !- zone name
+ ,                         !- space name
+ Surface,                  !- boundary condition
+ Office2..Face2,           !- boundary condition object
+ NoSun,                    !- sun exposure
+ NoWind,                   !- wind exposure
+ autocalculate,            !- view factor to ground
+ 4,                        !- number of vertices
+ 10.000, 10.000, 6.000,
+ 10.000, 10.000, 3.000,
+ 20.000, 10.000, 3.000,
+ 20.000, 10.000, 6.000;
+
+BuildingSurface:Detailed,
+ Office4..Face5,           !- name
+ Ceiling,                  !- surface type
+ Generic Interior Ceiling, !- construction name
+ Office4,                  !- zone name
+ ,                         !- space name
+ Adiabatic,                !- boundary condition
+ ,                         !- boundary condition object
+ NoSun,                    !- sun exposure
+ NoWind,                   !- wind exposure
+ autocalculate,            !- view factor to ground
+ 4,                        !- number of vertices
+ 10.000, 20.000, 6.000,
+ 10.000, 10.000, 6.000,
+ 20.000, 10.000, 6.000,
+ 20.000, 20.000, 6.000;
 
 !-   ________ZONE:Flr1_Office1________
 
@@ -1344,7 +2208,10 @@ Zone,
  1,                        !- multiplier
  3.0,                      !- ceiling height
  300.0,                    !- volume
- 100.0;                    !- floor area
+ 100.0,                    !- floor area
+ ,                         !- inside convection
+ ,                         !- outside convection
+ Yes;                      !- include floor area
 
 People,
  Generic Office People..Flr1_Office1, !- name
@@ -1424,10 +2291,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
- 10.000, 10.000, 3.000,
- 10.000, 0.000, 3.000,
- 0.000, 0.000, 3.000,
- 0.000, 10.000, 3.000;
+ 10.000, 10.000, 6.000,
+ 10.000, 0.000, 6.000,
+ 0.000, 0.000, 6.000,
+ 0.000, 10.000, 6.000;
 
 BuildingSurface:Detailed,
  Flr1_Office1..Face1,      !- name
@@ -1441,10 +2308,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 10.000, 0.000, 9.000,
  10.000, 0.000, 6.000,
- 10.000, 0.000, 3.000,
- 10.000, 10.000, 3.000,
- 10.000, 10.000, 6.000;
+ 10.000, 10.000, 6.000,
+ 10.000, 10.000, 9.000;
 
 BuildingSurface:Detailed,
  Flr1_Office1..Face2,      !- name
@@ -1458,10 +2325,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 10.000, 10.000, 9.000,
  10.000, 10.000, 6.000,
- 10.000, 10.000, 3.000,
- 0.000, 10.000, 3.000,
- 0.000, 10.000, 6.000;
+ 0.000, 10.000, 6.000,
+ 0.000, 10.000, 9.000;
 
 BuildingSurface:Detailed,
  Flr1_Office1..Face3,      !- name
@@ -1475,13 +2342,13 @@ BuildingSurface:Detailed,
  WindExposed,              !- wind exposure
  Autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 0.000, 10.000, 9.000,
  0.000, 10.000, 6.000,
- 0.000, 10.000, 3.000,
- 0.000, 0.000, 3.000,
- 0.000, 0.000, 6.000;
+ 0.000, 0.000, 6.000,
+ 0.000, 0.000, 9.000;
 
 FenestrationSurface:Detailed,
- Flr1_Office1..Face3_Glz1, !- name
+ Flr1_Office1..Face3_Glz0, !- name
  Window,                   !- surface type
  Generic Double Pane,      !- construction name
  Flr1_Office1..Face3,      !- building surface name
@@ -1490,10 +2357,10 @@ FenestrationSurface:Detailed,
  ,                         !- frame and divider name
  1,                        !- multiplier
  4,                        !- number of vertices
- 0.000, 8.162, 5.449,
- 0.000, 8.162, 3.551,
- 0.000, 1.838, 3.551,
- 0.000, 1.838, 5.449;
+ 0.000, 8.162, 8.449,
+ 0.000, 8.162, 6.551,
+ 0.000, 1.838, 6.551,
+ 0.000, 1.838, 8.449;
 
 BuildingSurface:Detailed,
  Flr1_Office1..Face4,      !- name
@@ -1507,13 +2374,13 @@ BuildingSurface:Detailed,
  WindExposed,              !- wind exposure
  Autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 0.000, 0.000, 9.000,
  0.000, 0.000, 6.000,
- 0.000, 0.000, 3.000,
- 10.000, 0.000, 3.000,
- 10.000, 0.000, 6.000;
+ 10.000, 0.000, 6.000,
+ 10.000, 0.000, 9.000;
 
 FenestrationSurface:Detailed,
- Flr1_Office1..Face4_Glz1, !- name
+ Flr1_Office1..Face4_Glz0, !- name
  Window,                   !- surface type
  Generic Double Pane,      !- construction name
  Flr1_Office1..Face4,      !- building surface name
@@ -1522,10 +2389,10 @@ FenestrationSurface:Detailed,
  ,                         !- frame and divider name
  1,                        !- multiplier
  4,                        !- number of vertices
- 1.838, 0.000, 5.449,
- 1.838, 0.000, 3.551,
- 8.162, 0.000, 3.551,
- 8.162, 0.000, 5.449;
+ 1.838, 0.000, 8.449,
+ 1.838, 0.000, 6.551,
+ 8.162, 0.000, 6.551,
+ 8.162, 0.000, 8.449;
 
 BuildingSurface:Detailed,
  Flr1_Office1..Face5,      !- name
@@ -1539,10 +2406,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
- 0.000, 10.000, 6.000,
- 0.000, 0.000, 6.000,
- 10.000, 0.000, 6.000,
- 10.000, 10.000, 6.000;
+ 0.000, 10.000, 9.000,
+ 0.000, 0.000, 9.000,
+ 10.000, 0.000, 9.000,
+ 10.000, 10.000, 9.000;
 
 !-   ________ZONE:Flr1_Office2________
 
@@ -1557,7 +2424,10 @@ Zone,
  1,                        !- multiplier
  3.0,                      !- ceiling height
  300.0,                    !- volume
- 100.0;                    !- floor area
+ 100.0,                    !- floor area
+ ,                         !- inside convection
+ ,                         !- outside convection
+ Yes;                      !- include floor area
 
 People,
  Generic Office People..Flr1_Office2, !- name
@@ -1637,10 +2507,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
- 20.000, 10.000, 3.000,
- 20.000, 0.000, 3.000,
- 10.000, 0.000, 3.000,
- 10.000, 10.000, 3.000;
+ 20.000, 10.000, 6.000,
+ 20.000, 0.000, 6.000,
+ 10.000, 0.000, 6.000,
+ 10.000, 10.000, 6.000;
 
 BuildingSurface:Detailed,
  Flr1_Office2..Face1,      !- name
@@ -1654,13 +2524,13 @@ BuildingSurface:Detailed,
  WindExposed,              !- wind exposure
  Autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 20.000, 0.000, 9.000,
  20.000, 0.000, 6.000,
- 20.000, 0.000, 3.000,
- 20.000, 10.000, 3.000,
- 20.000, 10.000, 6.000;
+ 20.000, 10.000, 6.000,
+ 20.000, 10.000, 9.000;
 
 FenestrationSurface:Detailed,
- Flr1_Office2..Face1_Glz1, !- name
+ Flr1_Office2..Face1_Glz0, !- name
  Window,                   !- surface type
  Generic Double Pane,      !- construction name
  Flr1_Office2..Face1,      !- building surface name
@@ -1669,10 +2539,10 @@ FenestrationSurface:Detailed,
  ,                         !- frame and divider name
  1,                        !- multiplier
  4,                        !- number of vertices
- 20.000, 1.838, 5.449,
- 20.000, 1.838, 3.551,
- 20.000, 8.162, 3.551,
- 20.000, 8.162, 5.449;
+ 20.000, 1.838, 8.449,
+ 20.000, 1.838, 6.551,
+ 20.000, 8.162, 6.551,
+ 20.000, 8.162, 8.449;
 
 BuildingSurface:Detailed,
  Flr1_Office2..Face2,      !- name
@@ -1686,10 +2556,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 20.000, 10.000, 9.000,
  20.000, 10.000, 6.000,
- 20.000, 10.000, 3.000,
- 10.000, 10.000, 3.000,
- 10.000, 10.000, 6.000;
+ 10.000, 10.000, 6.000,
+ 10.000, 10.000, 9.000;
 
 BuildingSurface:Detailed,
  Flr1_Office2..Face3,      !- name
@@ -1703,10 +2573,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 10.000, 10.000, 9.000,
  10.000, 10.000, 6.000,
- 10.000, 10.000, 3.000,
- 10.000, 0.000, 3.000,
- 10.000, 0.000, 6.000;
+ 10.000, 0.000, 6.000,
+ 10.000, 0.000, 9.000;
 
 BuildingSurface:Detailed,
  Flr1_Office2..Face4,      !- name
@@ -1720,13 +2590,13 @@ BuildingSurface:Detailed,
  WindExposed,              !- wind exposure
  Autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 10.000, 0.000, 9.000,
  10.000, 0.000, 6.000,
- 10.000, 0.000, 3.000,
- 20.000, 0.000, 3.000,
- 20.000, 0.000, 6.000;
+ 20.000, 0.000, 6.000,
+ 20.000, 0.000, 9.000;
 
 FenestrationSurface:Detailed,
- Flr1_Office2..Face4_Glz1, !- name
+ Flr1_Office2..Face4_Glz0, !- name
  Window,                   !- surface type
  Generic Double Pane,      !- construction name
  Flr1_Office2..Face4,      !- building surface name
@@ -1735,10 +2605,10 @@ FenestrationSurface:Detailed,
  ,                         !- frame and divider name
  1,                        !- multiplier
  4,                        !- number of vertices
- 11.838, 0.000, 5.449,
- 11.838, 0.000, 3.551,
- 18.162, 0.000, 3.551,
- 18.162, 0.000, 5.449;
+ 11.838, 0.000, 8.449,
+ 11.838, 0.000, 6.551,
+ 18.162, 0.000, 6.551,
+ 18.162, 0.000, 8.449;
 
 BuildingSurface:Detailed,
  Flr1_Office2..Face5,      !- name
@@ -1752,10 +2622,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
- 10.000, 10.000, 6.000,
- 10.000, 0.000, 6.000,
- 20.000, 0.000, 6.000,
- 20.000, 10.000, 6.000;
+ 10.000, 10.000, 9.000,
+ 10.000, 0.000, 9.000,
+ 20.000, 0.000, 9.000,
+ 20.000, 10.000, 9.000;
 
 !-   ________ZONE:Flr1_Office3________
 
@@ -1770,7 +2640,10 @@ Zone,
  1,                        !- multiplier
  3.0,                      !- ceiling height
  300.0,                    !- volume
- 100.0;                    !- floor area
+ 100.0,                    !- floor area
+ ,                         !- inside convection
+ ,                         !- outside convection
+ Yes;                      !- include floor area
 
 People,
  Generic Office People..Flr1_Office3, !- name
@@ -1850,10 +2723,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
- 10.000, 20.000, 3.000,
- 10.000, 10.000, 3.000,
- 0.000, 10.000, 3.000,
- 0.000, 20.000, 3.000;
+ 10.000, 20.000, 6.000,
+ 10.000, 10.000, 6.000,
+ 0.000, 10.000, 6.000,
+ 0.000, 20.000, 6.000;
 
 BuildingSurface:Detailed,
  Flr1_Office3..Face1,      !- name
@@ -1867,10 +2740,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 10.000, 10.000, 9.000,
  10.000, 10.000, 6.000,
- 10.000, 10.000, 3.000,
- 10.000, 20.000, 3.000,
- 10.000, 20.000, 6.000;
+ 10.000, 20.000, 6.000,
+ 10.000, 20.000, 9.000;
 
 BuildingSurface:Detailed,
  Flr1_Office3..Face2,      !- name
@@ -1884,13 +2757,13 @@ BuildingSurface:Detailed,
  WindExposed,              !- wind exposure
  Autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 10.000, 20.000, 9.000,
  10.000, 20.000, 6.000,
- 10.000, 20.000, 3.000,
- 0.000, 20.000, 3.000,
- 0.000, 20.000, 6.000;
+ 0.000, 20.000, 6.000,
+ 0.000, 20.000, 9.000;
 
 FenestrationSurface:Detailed,
- Flr1_Office3..Face2_Glz1, !- name
+ Flr1_Office3..Face2_Glz0, !- name
  Window,                   !- surface type
  Generic Double Pane,      !- construction name
  Flr1_Office3..Face2,      !- building surface name
@@ -1899,10 +2772,10 @@ FenestrationSurface:Detailed,
  ,                         !- frame and divider name
  1,                        !- multiplier
  4,                        !- number of vertices
- 8.162, 20.000, 5.449,
- 8.162, 20.000, 3.551,
- 1.838, 20.000, 3.551,
- 1.838, 20.000, 5.449;
+ 8.162, 20.000, 8.449,
+ 8.162, 20.000, 6.551,
+ 1.838, 20.000, 6.551,
+ 1.838, 20.000, 8.449;
 
 BuildingSurface:Detailed,
  Flr1_Office3..Face3,      !- name
@@ -1916,13 +2789,13 @@ BuildingSurface:Detailed,
  WindExposed,              !- wind exposure
  Autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 0.000, 20.000, 9.000,
  0.000, 20.000, 6.000,
- 0.000, 20.000, 3.000,
- 0.000, 10.000, 3.000,
- 0.000, 10.000, 6.000;
+ 0.000, 10.000, 6.000,
+ 0.000, 10.000, 9.000;
 
 FenestrationSurface:Detailed,
- Flr1_Office3..Face3_Glz1, !- name
+ Flr1_Office3..Face3_Glz0, !- name
  Window,                   !- surface type
  Generic Double Pane,      !- construction name
  Flr1_Office3..Face3,      !- building surface name
@@ -1931,10 +2804,10 @@ FenestrationSurface:Detailed,
  ,                         !- frame and divider name
  1,                        !- multiplier
  4,                        !- number of vertices
- 0.000, 18.162, 5.449,
- 0.000, 18.162, 3.551,
- 0.000, 11.838, 3.551,
- 0.000, 11.838, 5.449;
+ 0.000, 18.162, 8.449,
+ 0.000, 18.162, 6.551,
+ 0.000, 11.838, 6.551,
+ 0.000, 11.838, 8.449;
 
 BuildingSurface:Detailed,
  Flr1_Office3..Face4,      !- name
@@ -1948,10 +2821,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 0.000, 10.000, 9.000,
  0.000, 10.000, 6.000,
- 0.000, 10.000, 3.000,
- 10.000, 10.000, 3.000,
- 10.000, 10.000, 6.000;
+ 10.000, 10.000, 6.000,
+ 10.000, 10.000, 9.000;
 
 BuildingSurface:Detailed,
  Flr1_Office3..Face5,      !- name
@@ -1965,10 +2838,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
- 0.000, 20.000, 6.000,
- 0.000, 10.000, 6.000,
- 10.000, 10.000, 6.000,
- 10.000, 20.000, 6.000;
+ 0.000, 20.000, 9.000,
+ 0.000, 10.000, 9.000,
+ 10.000, 10.000, 9.000,
+ 10.000, 20.000, 9.000;
 
 !-   ________ZONE:Flr1_Office4________
 
@@ -1983,7 +2856,10 @@ Zone,
  1,                        !- multiplier
  3.0,                      !- ceiling height
  300.0,                    !- volume
- 100.0;                    !- floor area
+ 100.0,                    !- floor area
+ ,                         !- inside convection
+ ,                         !- outside convection
+ Yes;                      !- include floor area
 
 People,
  Generic Office People..Flr1_Office4, !- name
@@ -2063,10 +2939,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
- 20.000, 20.000, 3.000,
- 20.000, 10.000, 3.000,
- 10.000, 10.000, 3.000,
- 10.000, 20.000, 3.000;
+ 20.000, 20.000, 6.000,
+ 20.000, 10.000, 6.000,
+ 10.000, 10.000, 6.000,
+ 10.000, 20.000, 6.000;
 
 BuildingSurface:Detailed,
  Flr1_Office4..Face1,      !- name
@@ -2080,13 +2956,13 @@ BuildingSurface:Detailed,
  WindExposed,              !- wind exposure
  Autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 20.000, 10.000, 9.000,
  20.000, 10.000, 6.000,
- 20.000, 10.000, 3.000,
- 20.000, 20.000, 3.000,
- 20.000, 20.000, 6.000;
+ 20.000, 20.000, 6.000,
+ 20.000, 20.000, 9.000;
 
 FenestrationSurface:Detailed,
- Flr1_Office4..Face1_Glz1, !- name
+ Flr1_Office4..Face1_Glz0, !- name
  Window,                   !- surface type
  Generic Double Pane,      !- construction name
  Flr1_Office4..Face1,      !- building surface name
@@ -2095,10 +2971,10 @@ FenestrationSurface:Detailed,
  ,                         !- frame and divider name
  1,                        !- multiplier
  4,                        !- number of vertices
- 20.000, 11.838, 5.449,
- 20.000, 11.838, 3.551,
- 20.000, 18.162, 3.551,
- 20.000, 18.162, 5.449;
+ 20.000, 11.838, 8.449,
+ 20.000, 11.838, 6.551,
+ 20.000, 18.162, 6.551,
+ 20.000, 18.162, 8.449;
 
 BuildingSurface:Detailed,
  Flr1_Office4..Face2,      !- name
@@ -2112,13 +2988,13 @@ BuildingSurface:Detailed,
  WindExposed,              !- wind exposure
  Autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 20.000, 20.000, 9.000,
  20.000, 20.000, 6.000,
- 20.000, 20.000, 3.000,
- 10.000, 20.000, 3.000,
- 10.000, 20.000, 6.000;
+ 10.000, 20.000, 6.000,
+ 10.000, 20.000, 9.000;
 
 FenestrationSurface:Detailed,
- Flr1_Office4..Face2_Glz1, !- name
+ Flr1_Office4..Face2_Glz0, !- name
  Window,                   !- surface type
  Generic Double Pane,      !- construction name
  Flr1_Office4..Face2,      !- building surface name
@@ -2127,10 +3003,10 @@ FenestrationSurface:Detailed,
  ,                         !- frame and divider name
  1,                        !- multiplier
  4,                        !- number of vertices
- 18.162, 20.000, 5.449,
- 18.162, 20.000, 3.551,
- 11.838, 20.000, 3.551,
- 11.838, 20.000, 5.449;
+ 18.162, 20.000, 8.449,
+ 18.162, 20.000, 6.551,
+ 11.838, 20.000, 6.551,
+ 11.838, 20.000, 8.449;
 
 BuildingSurface:Detailed,
  Flr1_Office4..Face3,      !- name
@@ -2144,10 +3020,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 10.000, 20.000, 9.000,
  10.000, 20.000, 6.000,
- 10.000, 20.000, 3.000,
- 10.000, 10.000, 3.000,
- 10.000, 10.000, 6.000;
+ 10.000, 10.000, 6.000,
+ 10.000, 10.000, 9.000;
 
 BuildingSurface:Detailed,
  Flr1_Office4..Face4,      !- name
@@ -2161,10 +3037,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 10.000, 10.000, 9.000,
  10.000, 10.000, 6.000,
- 10.000, 10.000, 3.000,
- 20.000, 10.000, 3.000,
- 20.000, 10.000, 6.000;
+ 20.000, 10.000, 6.000,
+ 20.000, 10.000, 9.000;
 
 BuildingSurface:Detailed,
  Flr1_Office4..Face5,      !- name
@@ -2178,10 +3054,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
- 10.000, 20.000, 6.000,
- 10.000, 10.000, 6.000,
- 20.000, 10.000, 6.000,
- 20.000, 20.000, 6.000;
+ 10.000, 20.000, 9.000,
+ 10.000, 10.000, 9.000,
+ 20.000, 10.000, 9.000,
+ 20.000, 20.000, 9.000;
 
 !-   ________ZONE:Flr2_Office1________
 
@@ -2196,7 +3072,10 @@ Zone,
  1,                        !- multiplier
  3.0,                      !- ceiling height
  300.0,                    !- volume
- 100.0;                    !- floor area
+ 100.0,                    !- floor area
+ ,                         !- inside convection
+ ,                         !- outside convection
+ Yes;                      !- include floor area
 
 People,
  Generic Office People..Flr2_Office1, !- name
@@ -2276,10 +3155,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
- 10.000, 10.000, 6.000,
- 10.000, 0.000, 6.000,
- 0.000, 0.000, 6.000,
- 0.000, 10.000, 6.000;
+ 10.000, 10.000, 9.000,
+ 10.000, 0.000, 9.000,
+ 0.000, 0.000, 9.000,
+ 0.000, 10.000, 9.000;
 
 BuildingSurface:Detailed,
  Flr2_Office1..Face1,      !- name
@@ -2293,10 +3172,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 10.000, 0.000, 12.000,
  10.000, 0.000, 9.000,
- 10.000, 0.000, 6.000,
- 10.000, 10.000, 6.000,
- 10.000, 10.000, 9.000;
+ 10.000, 10.000, 9.000,
+ 10.000, 10.000, 12.000;
 
 BuildingSurface:Detailed,
  Flr2_Office1..Face2,      !- name
@@ -2310,10 +3189,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 10.000, 10.000, 12.000,
  10.000, 10.000, 9.000,
- 10.000, 10.000, 6.000,
- 0.000, 10.000, 6.000,
- 0.000, 10.000, 9.000;
+ 0.000, 10.000, 9.000,
+ 0.000, 10.000, 12.000;
 
 BuildingSurface:Detailed,
  Flr2_Office1..Face3,      !- name
@@ -2327,13 +3206,13 @@ BuildingSurface:Detailed,
  WindExposed,              !- wind exposure
  Autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 0.000, 10.000, 12.000,
  0.000, 10.000, 9.000,
- 0.000, 10.000, 6.000,
- 0.000, 0.000, 6.000,
- 0.000, 0.000, 9.000;
+ 0.000, 0.000, 9.000,
+ 0.000, 0.000, 12.000;
 
 FenestrationSurface:Detailed,
- Flr2_Office1..Face3_Glz1, !- name
+ Flr2_Office1..Face3_Glz0, !- name
  Window,                   !- surface type
  Generic Double Pane,      !- construction name
  Flr2_Office1..Face3,      !- building surface name
@@ -2342,10 +3221,10 @@ FenestrationSurface:Detailed,
  ,                         !- frame and divider name
  1,                        !- multiplier
  4,                        !- number of vertices
- 0.000, 8.162, 8.449,
- 0.000, 8.162, 6.551,
- 0.000, 1.838, 6.551,
- 0.000, 1.838, 8.449;
+ 0.000, 8.162, 11.449,
+ 0.000, 8.162, 9.551,
+ 0.000, 1.838, 9.551,
+ 0.000, 1.838, 11.449;
 
 BuildingSurface:Detailed,
  Flr2_Office1..Face4,      !- name
@@ -2359,13 +3238,13 @@ BuildingSurface:Detailed,
  WindExposed,              !- wind exposure
  Autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 0.000, 0.000, 12.000,
  0.000, 0.000, 9.000,
- 0.000, 0.000, 6.000,
- 10.000, 0.000, 6.000,
- 10.000, 0.000, 9.000;
+ 10.000, 0.000, 9.000,
+ 10.000, 0.000, 12.000;
 
 FenestrationSurface:Detailed,
- Flr2_Office1..Face4_Glz1, !- name
+ Flr2_Office1..Face4_Glz0, !- name
  Window,                   !- surface type
  Generic Double Pane,      !- construction name
  Flr2_Office1..Face4,      !- building surface name
@@ -2374,10 +3253,10 @@ FenestrationSurface:Detailed,
  ,                         !- frame and divider name
  1,                        !- multiplier
  4,                        !- number of vertices
- 1.838, 0.000, 8.449,
- 1.838, 0.000, 6.551,
- 8.162, 0.000, 6.551,
- 8.162, 0.000, 8.449;
+ 1.838, 0.000, 11.449,
+ 1.838, 0.000, 9.551,
+ 8.162, 0.000, 9.551,
+ 8.162, 0.000, 11.449;
 
 BuildingSurface:Detailed,
  Flr2_Office1..Face5,      !- name
@@ -2391,10 +3270,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
- 0.000, 10.000, 9.000,
- 0.000, 0.000, 9.000,
- 10.000, 0.000, 9.000,
- 10.000, 10.000, 9.000;
+ 0.000, 10.000, 12.000,
+ 0.000, 0.000, 12.000,
+ 10.000, 0.000, 12.000,
+ 10.000, 10.000, 12.000;
 
 !-   ________ZONE:Flr2_Office2________
 
@@ -2409,7 +3288,10 @@ Zone,
  1,                        !- multiplier
  3.0,                      !- ceiling height
  300.0,                    !- volume
- 100.0;                    !- floor area
+ 100.0,                    !- floor area
+ ,                         !- inside convection
+ ,                         !- outside convection
+ Yes;                      !- include floor area
 
 People,
  Generic Office People..Flr2_Office2, !- name
@@ -2489,10 +3371,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
- 20.000, 10.000, 6.000,
- 20.000, 0.000, 6.000,
- 10.000, 0.000, 6.000,
- 10.000, 10.000, 6.000;
+ 20.000, 10.000, 9.000,
+ 20.000, 0.000, 9.000,
+ 10.000, 0.000, 9.000,
+ 10.000, 10.000, 9.000;
 
 BuildingSurface:Detailed,
  Flr2_Office2..Face1,      !- name
@@ -2506,13 +3388,13 @@ BuildingSurface:Detailed,
  WindExposed,              !- wind exposure
  Autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 20.000, 0.000, 12.000,
  20.000, 0.000, 9.000,
- 20.000, 0.000, 6.000,
- 20.000, 10.000, 6.000,
- 20.000, 10.000, 9.000;
+ 20.000, 10.000, 9.000,
+ 20.000, 10.000, 12.000;
 
 FenestrationSurface:Detailed,
- Flr2_Office2..Face1_Glz1, !- name
+ Flr2_Office2..Face1_Glz0, !- name
  Window,                   !- surface type
  Generic Double Pane,      !- construction name
  Flr2_Office2..Face1,      !- building surface name
@@ -2521,10 +3403,10 @@ FenestrationSurface:Detailed,
  ,                         !- frame and divider name
  1,                        !- multiplier
  4,                        !- number of vertices
- 20.000, 1.838, 8.449,
- 20.000, 1.838, 6.551,
- 20.000, 8.162, 6.551,
- 20.000, 8.162, 8.449;
+ 20.000, 1.838, 11.449,
+ 20.000, 1.838, 9.551,
+ 20.000, 8.162, 9.551,
+ 20.000, 8.162, 11.449;
 
 BuildingSurface:Detailed,
  Flr2_Office2..Face2,      !- name
@@ -2538,10 +3420,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 20.000, 10.000, 12.000,
  20.000, 10.000, 9.000,
- 20.000, 10.000, 6.000,
- 10.000, 10.000, 6.000,
- 10.000, 10.000, 9.000;
+ 10.000, 10.000, 9.000,
+ 10.000, 10.000, 12.000;
 
 BuildingSurface:Detailed,
  Flr2_Office2..Face3,      !- name
@@ -2555,10 +3437,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 10.000, 10.000, 12.000,
  10.000, 10.000, 9.000,
- 10.000, 10.000, 6.000,
- 10.000, 0.000, 6.000,
- 10.000, 0.000, 9.000;
+ 10.000, 0.000, 9.000,
+ 10.000, 0.000, 12.000;
 
 BuildingSurface:Detailed,
  Flr2_Office2..Face4,      !- name
@@ -2572,13 +3454,13 @@ BuildingSurface:Detailed,
  WindExposed,              !- wind exposure
  Autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 10.000, 0.000, 12.000,
  10.000, 0.000, 9.000,
- 10.000, 0.000, 6.000,
- 20.000, 0.000, 6.000,
- 20.000, 0.000, 9.000;
+ 20.000, 0.000, 9.000,
+ 20.000, 0.000, 12.000;
 
 FenestrationSurface:Detailed,
- Flr2_Office2..Face4_Glz1, !- name
+ Flr2_Office2..Face4_Glz0, !- name
  Window,                   !- surface type
  Generic Double Pane,      !- construction name
  Flr2_Office2..Face4,      !- building surface name
@@ -2587,10 +3469,10 @@ FenestrationSurface:Detailed,
  ,                         !- frame and divider name
  1,                        !- multiplier
  4,                        !- number of vertices
- 11.838, 0.000, 8.449,
- 11.838, 0.000, 6.551,
- 18.162, 0.000, 6.551,
- 18.162, 0.000, 8.449;
+ 11.838, 0.000, 11.449,
+ 11.838, 0.000, 9.551,
+ 18.162, 0.000, 9.551,
+ 18.162, 0.000, 11.449;
 
 BuildingSurface:Detailed,
  Flr2_Office2..Face5,      !- name
@@ -2604,10 +3486,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
- 10.000, 10.000, 9.000,
- 10.000, 0.000, 9.000,
- 20.000, 0.000, 9.000,
- 20.000, 10.000, 9.000;
+ 10.000, 10.000, 12.000,
+ 10.000, 0.000, 12.000,
+ 20.000, 0.000, 12.000,
+ 20.000, 10.000, 12.000;
 
 !-   ________ZONE:Flr2_Office3________
 
@@ -2622,7 +3504,10 @@ Zone,
  1,                        !- multiplier
  3.0,                      !- ceiling height
  300.0,                    !- volume
- 100.0;                    !- floor area
+ 100.0,                    !- floor area
+ ,                         !- inside convection
+ ,                         !- outside convection
+ Yes;                      !- include floor area
 
 People,
  Generic Office People..Flr2_Office3, !- name
@@ -2702,10 +3587,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
- 10.000, 20.000, 6.000,
- 10.000, 10.000, 6.000,
- 0.000, 10.000, 6.000,
- 0.000, 20.000, 6.000;
+ 10.000, 20.000, 9.000,
+ 10.000, 10.000, 9.000,
+ 0.000, 10.000, 9.000,
+ 0.000, 20.000, 9.000;
 
 BuildingSurface:Detailed,
  Flr2_Office3..Face1,      !- name
@@ -2719,10 +3604,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 10.000, 10.000, 12.000,
  10.000, 10.000, 9.000,
- 10.000, 10.000, 6.000,
- 10.000, 20.000, 6.000,
- 10.000, 20.000, 9.000;
+ 10.000, 20.000, 9.000,
+ 10.000, 20.000, 12.000;
 
 BuildingSurface:Detailed,
  Flr2_Office3..Face2,      !- name
@@ -2736,13 +3621,13 @@ BuildingSurface:Detailed,
  WindExposed,              !- wind exposure
  Autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 10.000, 20.000, 12.000,
  10.000, 20.000, 9.000,
- 10.000, 20.000, 6.000,
- 0.000, 20.000, 6.000,
- 0.000, 20.000, 9.000;
+ 0.000, 20.000, 9.000,
+ 0.000, 20.000, 12.000;
 
 FenestrationSurface:Detailed,
- Flr2_Office3..Face2_Glz1, !- name
+ Flr2_Office3..Face2_Glz0, !- name
  Window,                   !- surface type
  Generic Double Pane,      !- construction name
  Flr2_Office3..Face2,      !- building surface name
@@ -2751,10 +3636,10 @@ FenestrationSurface:Detailed,
  ,                         !- frame and divider name
  1,                        !- multiplier
  4,                        !- number of vertices
- 8.162, 20.000, 8.449,
- 8.162, 20.000, 6.551,
- 1.838, 20.000, 6.551,
- 1.838, 20.000, 8.449;
+ 8.162, 20.000, 11.449,
+ 8.162, 20.000, 9.551,
+ 1.838, 20.000, 9.551,
+ 1.838, 20.000, 11.449;
 
 BuildingSurface:Detailed,
  Flr2_Office3..Face3,      !- name
@@ -2768,13 +3653,13 @@ BuildingSurface:Detailed,
  WindExposed,              !- wind exposure
  Autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 0.000, 20.000, 12.000,
  0.000, 20.000, 9.000,
- 0.000, 20.000, 6.000,
- 0.000, 10.000, 6.000,
- 0.000, 10.000, 9.000;
+ 0.000, 10.000, 9.000,
+ 0.000, 10.000, 12.000;
 
 FenestrationSurface:Detailed,
- Flr2_Office3..Face3_Glz1, !- name
+ Flr2_Office3..Face3_Glz0, !- name
  Window,                   !- surface type
  Generic Double Pane,      !- construction name
  Flr2_Office3..Face3,      !- building surface name
@@ -2783,10 +3668,10 @@ FenestrationSurface:Detailed,
  ,                         !- frame and divider name
  1,                        !- multiplier
  4,                        !- number of vertices
- 0.000, 18.162, 8.449,
- 0.000, 18.162, 6.551,
- 0.000, 11.838, 6.551,
- 0.000, 11.838, 8.449;
+ 0.000, 18.162, 11.449,
+ 0.000, 18.162, 9.551,
+ 0.000, 11.838, 9.551,
+ 0.000, 11.838, 11.449;
 
 BuildingSurface:Detailed,
  Flr2_Office3..Face4,      !- name
@@ -2800,10 +3685,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 0.000, 10.000, 12.000,
  0.000, 10.000, 9.000,
- 0.000, 10.000, 6.000,
- 10.000, 10.000, 6.000,
- 10.000, 10.000, 9.000;
+ 10.000, 10.000, 9.000,
+ 10.000, 10.000, 12.000;
 
 BuildingSurface:Detailed,
  Flr2_Office3..Face5,      !- name
@@ -2817,10 +3702,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
- 0.000, 20.000, 9.000,
- 0.000, 10.000, 9.000,
- 10.000, 10.000, 9.000,
- 10.000, 20.000, 9.000;
+ 0.000, 20.000, 12.000,
+ 0.000, 10.000, 12.000,
+ 10.000, 10.000, 12.000,
+ 10.000, 20.000, 12.000;
 
 !-   ________ZONE:Flr2_Office4________
 
@@ -2835,7 +3720,10 @@ Zone,
  1,                        !- multiplier
  3.0,                      !- ceiling height
  300.0,                    !- volume
- 100.0;                    !- floor area
+ 100.0,                    !- floor area
+ ,                         !- inside convection
+ ,                         !- outside convection
+ Yes;                      !- include floor area
 
 People,
  Generic Office People..Flr2_Office4, !- name
@@ -2915,10 +3803,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
- 20.000, 20.000, 6.000,
- 20.000, 10.000, 6.000,
- 10.000, 10.000, 6.000,
- 10.000, 20.000, 6.000;
+ 20.000, 20.000, 9.000,
+ 20.000, 10.000, 9.000,
+ 10.000, 10.000, 9.000,
+ 10.000, 20.000, 9.000;
 
 BuildingSurface:Detailed,
  Flr2_Office4..Face1,      !- name
@@ -2932,13 +3820,13 @@ BuildingSurface:Detailed,
  WindExposed,              !- wind exposure
  Autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 20.000, 10.000, 12.000,
  20.000, 10.000, 9.000,
- 20.000, 10.000, 6.000,
- 20.000, 20.000, 6.000,
- 20.000, 20.000, 9.000;
+ 20.000, 20.000, 9.000,
+ 20.000, 20.000, 12.000;
 
 FenestrationSurface:Detailed,
- Flr2_Office4..Face1_Glz1, !- name
+ Flr2_Office4..Face1_Glz0, !- name
  Window,                   !- surface type
  Generic Double Pane,      !- construction name
  Flr2_Office4..Face1,      !- building surface name
@@ -2947,10 +3835,10 @@ FenestrationSurface:Detailed,
  ,                         !- frame and divider name
  1,                        !- multiplier
  4,                        !- number of vertices
- 20.000, 11.838, 8.449,
- 20.000, 11.838, 6.551,
- 20.000, 18.162, 6.551,
- 20.000, 18.162, 8.449;
+ 20.000, 11.838, 11.449,
+ 20.000, 11.838, 9.551,
+ 20.000, 18.162, 9.551,
+ 20.000, 18.162, 11.449;
 
 BuildingSurface:Detailed,
  Flr2_Office4..Face2,      !- name
@@ -2964,13 +3852,13 @@ BuildingSurface:Detailed,
  WindExposed,              !- wind exposure
  Autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 20.000, 20.000, 12.000,
  20.000, 20.000, 9.000,
- 20.000, 20.000, 6.000,
- 10.000, 20.000, 6.000,
- 10.000, 20.000, 9.000;
+ 10.000, 20.000, 9.000,
+ 10.000, 20.000, 12.000;
 
 FenestrationSurface:Detailed,
- Flr2_Office4..Face2_Glz1, !- name
+ Flr2_Office4..Face2_Glz0, !- name
  Window,                   !- surface type
  Generic Double Pane,      !- construction name
  Flr2_Office4..Face2,      !- building surface name
@@ -2979,10 +3867,10 @@ FenestrationSurface:Detailed,
  ,                         !- frame and divider name
  1,                        !- multiplier
  4,                        !- number of vertices
- 18.162, 20.000, 8.449,
- 18.162, 20.000, 6.551,
- 11.838, 20.000, 6.551,
- 11.838, 20.000, 8.449;
+ 18.162, 20.000, 11.449,
+ 18.162, 20.000, 9.551,
+ 11.838, 20.000, 9.551,
+ 11.838, 20.000, 11.449;
 
 BuildingSurface:Detailed,
  Flr2_Office4..Face3,      !- name
@@ -2996,10 +3884,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 10.000, 20.000, 12.000,
  10.000, 20.000, 9.000,
- 10.000, 20.000, 6.000,
- 10.000, 10.000, 6.000,
- 10.000, 10.000, 9.000;
+ 10.000, 10.000, 9.000,
+ 10.000, 10.000, 12.000;
 
 BuildingSurface:Detailed,
  Flr2_Office4..Face4,      !- name
@@ -3013,10 +3901,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 10.000, 10.000, 12.000,
  10.000, 10.000, 9.000,
- 10.000, 10.000, 6.000,
- 20.000, 10.000, 6.000,
- 20.000, 10.000, 9.000;
+ 20.000, 10.000, 9.000,
+ 20.000, 10.000, 12.000;
 
 BuildingSurface:Detailed,
  Flr2_Office4..Face5,      !- name
@@ -3030,10 +3918,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
- 10.000, 20.000, 9.000,
- 10.000, 10.000, 9.000,
- 20.000, 10.000, 9.000,
- 20.000, 20.000, 9.000;
+ 10.000, 20.000, 12.000,
+ 10.000, 10.000, 12.000,
+ 20.000, 10.000, 12.000,
+ 20.000, 20.000, 12.000;
 
 !-   ________ZONE:Flr3_Office1________
 
@@ -3048,7 +3936,10 @@ Zone,
  1,                        !- multiplier
  3.0,                      !- ceiling height
  300.0,                    !- volume
- 100.0;                    !- floor area
+ 100.0,                    !- floor area
+ ,                         !- inside convection
+ ,                         !- outside convection
+ Yes;                      !- include floor area
 
 People,
  Generic Office People..Flr3_Office1, !- name
@@ -3128,10 +4019,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
- 10.000, 10.000, 9.000,
- 10.000, 0.000, 9.000,
- 0.000, 0.000, 9.000,
- 0.000, 10.000, 9.000;
+ 10.000, 10.000, 12.000,
+ 10.000, 0.000, 12.000,
+ 0.000, 0.000, 12.000,
+ 0.000, 10.000, 12.000;
 
 BuildingSurface:Detailed,
  Flr3_Office1..Face1,      !- name
@@ -3145,10 +4036,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 10.000, 0.000, 15.000,
  10.000, 0.000, 12.000,
- 10.000, 0.000, 9.000,
- 10.000, 10.000, 9.000,
- 10.000, 10.000, 12.000;
+ 10.000, 10.000, 12.000,
+ 10.000, 10.000, 15.000;
 
 BuildingSurface:Detailed,
  Flr3_Office1..Face2,      !- name
@@ -3162,10 +4053,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 10.000, 10.000, 15.000,
  10.000, 10.000, 12.000,
- 10.000, 10.000, 9.000,
- 0.000, 10.000, 9.000,
- 0.000, 10.000, 12.000;
+ 0.000, 10.000, 12.000,
+ 0.000, 10.000, 15.000;
 
 BuildingSurface:Detailed,
  Flr3_Office1..Face3,      !- name
@@ -3179,13 +4070,13 @@ BuildingSurface:Detailed,
  WindExposed,              !- wind exposure
  Autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 0.000, 10.000, 15.000,
  0.000, 10.000, 12.000,
- 0.000, 10.000, 9.000,
- 0.000, 0.000, 9.000,
- 0.000, 0.000, 12.000;
+ 0.000, 0.000, 12.000,
+ 0.000, 0.000, 15.000;
 
 FenestrationSurface:Detailed,
- Flr3_Office1..Face3_Glz1, !- name
+ Flr3_Office1..Face3_Glz0, !- name
  Window,                   !- surface type
  Generic Double Pane,      !- construction name
  Flr3_Office1..Face3,      !- building surface name
@@ -3194,10 +4085,10 @@ FenestrationSurface:Detailed,
  ,                         !- frame and divider name
  1,                        !- multiplier
  4,                        !- number of vertices
- 0.000, 8.162, 11.449,
- 0.000, 8.162, 9.551,
- 0.000, 1.838, 9.551,
- 0.000, 1.838, 11.449;
+ 0.000, 8.162, 14.449,
+ 0.000, 8.162, 12.551,
+ 0.000, 1.838, 12.551,
+ 0.000, 1.838, 14.449;
 
 BuildingSurface:Detailed,
  Flr3_Office1..Face4,      !- name
@@ -3211,13 +4102,13 @@ BuildingSurface:Detailed,
  WindExposed,              !- wind exposure
  Autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 0.000, 0.000, 15.000,
  0.000, 0.000, 12.000,
- 0.000, 0.000, 9.000,
- 10.000, 0.000, 9.000,
- 10.000, 0.000, 12.000;
+ 10.000, 0.000, 12.000,
+ 10.000, 0.000, 15.000;
 
 FenestrationSurface:Detailed,
- Flr3_Office1..Face4_Glz1, !- name
+ Flr3_Office1..Face4_Glz0, !- name
  Window,                   !- surface type
  Generic Double Pane,      !- construction name
  Flr3_Office1..Face4,      !- building surface name
@@ -3226,10 +4117,10 @@ FenestrationSurface:Detailed,
  ,                         !- frame and divider name
  1,                        !- multiplier
  4,                        !- number of vertices
- 1.838, 0.000, 11.449,
- 1.838, 0.000, 9.551,
- 8.162, 0.000, 9.551,
- 8.162, 0.000, 11.449;
+ 1.838, 0.000, 14.449,
+ 1.838, 0.000, 12.551,
+ 8.162, 0.000, 12.551,
+ 8.162, 0.000, 14.449;
 
 BuildingSurface:Detailed,
  Flr3_Office1..Face5,      !- name
@@ -3243,10 +4134,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
- 0.000, 10.000, 12.000,
- 0.000, 0.000, 12.000,
- 10.000, 0.000, 12.000,
- 10.000, 10.000, 12.000;
+ 0.000, 10.000, 15.000,
+ 0.000, 0.000, 15.000,
+ 10.000, 0.000, 15.000,
+ 10.000, 10.000, 15.000;
 
 !-   ________ZONE:Flr3_Office2________
 
@@ -3261,7 +4152,10 @@ Zone,
  1,                        !- multiplier
  3.0,                      !- ceiling height
  300.0,                    !- volume
- 100.0;                    !- floor area
+ 100.0,                    !- floor area
+ ,                         !- inside convection
+ ,                         !- outside convection
+ Yes;                      !- include floor area
 
 People,
  Generic Office People..Flr3_Office2, !- name
@@ -3341,10 +4235,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
- 20.000, 10.000, 9.000,
- 20.000, 0.000, 9.000,
- 10.000, 0.000, 9.000,
- 10.000, 10.000, 9.000;
+ 20.000, 10.000, 12.000,
+ 20.000, 0.000, 12.000,
+ 10.000, 0.000, 12.000,
+ 10.000, 10.000, 12.000;
 
 BuildingSurface:Detailed,
  Flr3_Office2..Face1,      !- name
@@ -3358,13 +4252,13 @@ BuildingSurface:Detailed,
  WindExposed,              !- wind exposure
  Autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 20.000, 0.000, 15.000,
  20.000, 0.000, 12.000,
- 20.000, 0.000, 9.000,
- 20.000, 10.000, 9.000,
- 20.000, 10.000, 12.000;
+ 20.000, 10.000, 12.000,
+ 20.000, 10.000, 15.000;
 
 FenestrationSurface:Detailed,
- Flr3_Office2..Face1_Glz1, !- name
+ Flr3_Office2..Face1_Glz0, !- name
  Window,                   !- surface type
  Generic Double Pane,      !- construction name
  Flr3_Office2..Face1,      !- building surface name
@@ -3373,10 +4267,10 @@ FenestrationSurface:Detailed,
  ,                         !- frame and divider name
  1,                        !- multiplier
  4,                        !- number of vertices
- 20.000, 1.838, 11.449,
- 20.000, 1.838, 9.551,
- 20.000, 8.162, 9.551,
- 20.000, 8.162, 11.449;
+ 20.000, 1.838, 14.449,
+ 20.000, 1.838, 12.551,
+ 20.000, 8.162, 12.551,
+ 20.000, 8.162, 14.449;
 
 BuildingSurface:Detailed,
  Flr3_Office2..Face2,      !- name
@@ -3390,10 +4284,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 20.000, 10.000, 15.000,
  20.000, 10.000, 12.000,
- 20.000, 10.000, 9.000,
- 10.000, 10.000, 9.000,
- 10.000, 10.000, 12.000;
+ 10.000, 10.000, 12.000,
+ 10.000, 10.000, 15.000;
 
 BuildingSurface:Detailed,
  Flr3_Office2..Face3,      !- name
@@ -3407,10 +4301,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 10.000, 10.000, 15.000,
  10.000, 10.000, 12.000,
- 10.000, 10.000, 9.000,
- 10.000, 0.000, 9.000,
- 10.000, 0.000, 12.000;
+ 10.000, 0.000, 12.000,
+ 10.000, 0.000, 15.000;
 
 BuildingSurface:Detailed,
  Flr3_Office2..Face4,      !- name
@@ -3424,13 +4318,13 @@ BuildingSurface:Detailed,
  WindExposed,              !- wind exposure
  Autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 10.000, 0.000, 15.000,
  10.000, 0.000, 12.000,
- 10.000, 0.000, 9.000,
- 20.000, 0.000, 9.000,
- 20.000, 0.000, 12.000;
+ 20.000, 0.000, 12.000,
+ 20.000, 0.000, 15.000;
 
 FenestrationSurface:Detailed,
- Flr3_Office2..Face4_Glz1, !- name
+ Flr3_Office2..Face4_Glz0, !- name
  Window,                   !- surface type
  Generic Double Pane,      !- construction name
  Flr3_Office2..Face4,      !- building surface name
@@ -3439,10 +4333,10 @@ FenestrationSurface:Detailed,
  ,                         !- frame and divider name
  1,                        !- multiplier
  4,                        !- number of vertices
- 11.838, 0.000, 11.449,
- 11.838, 0.000, 9.551,
- 18.162, 0.000, 9.551,
- 18.162, 0.000, 11.449;
+ 11.838, 0.000, 14.449,
+ 11.838, 0.000, 12.551,
+ 18.162, 0.000, 12.551,
+ 18.162, 0.000, 14.449;
 
 BuildingSurface:Detailed,
  Flr3_Office2..Face5,      !- name
@@ -3456,10 +4350,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
- 10.000, 10.000, 12.000,
- 10.000, 0.000, 12.000,
- 20.000, 0.000, 12.000,
- 20.000, 10.000, 12.000;
+ 10.000, 10.000, 15.000,
+ 10.000, 0.000, 15.000,
+ 20.000, 0.000, 15.000,
+ 20.000, 10.000, 15.000;
 
 !-   ________ZONE:Flr3_Office3________
 
@@ -3474,7 +4368,10 @@ Zone,
  1,                        !- multiplier
  3.0,                      !- ceiling height
  300.0,                    !- volume
- 100.0;                    !- floor area
+ 100.0,                    !- floor area
+ ,                         !- inside convection
+ ,                         !- outside convection
+ Yes;                      !- include floor area
 
 People,
  Generic Office People..Flr3_Office3, !- name
@@ -3554,10 +4451,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
- 10.000, 20.000, 9.000,
- 10.000, 10.000, 9.000,
- 0.000, 10.000, 9.000,
- 0.000, 20.000, 9.000;
+ 10.000, 20.000, 12.000,
+ 10.000, 10.000, 12.000,
+ 0.000, 10.000, 12.000,
+ 0.000, 20.000, 12.000;
 
 BuildingSurface:Detailed,
  Flr3_Office3..Face1,      !- name
@@ -3571,10 +4468,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 10.000, 10.000, 15.000,
  10.000, 10.000, 12.000,
- 10.000, 10.000, 9.000,
- 10.000, 20.000, 9.000,
- 10.000, 20.000, 12.000;
+ 10.000, 20.000, 12.000,
+ 10.000, 20.000, 15.000;
 
 BuildingSurface:Detailed,
  Flr3_Office3..Face2,      !- name
@@ -3588,13 +4485,13 @@ BuildingSurface:Detailed,
  WindExposed,              !- wind exposure
  Autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 10.000, 20.000, 15.000,
  10.000, 20.000, 12.000,
- 10.000, 20.000, 9.000,
- 0.000, 20.000, 9.000,
- 0.000, 20.000, 12.000;
+ 0.000, 20.000, 12.000,
+ 0.000, 20.000, 15.000;
 
 FenestrationSurface:Detailed,
- Flr3_Office3..Face2_Glz1, !- name
+ Flr3_Office3..Face2_Glz0, !- name
  Window,                   !- surface type
  Generic Double Pane,      !- construction name
  Flr3_Office3..Face2,      !- building surface name
@@ -3603,10 +4500,10 @@ FenestrationSurface:Detailed,
  ,                         !- frame and divider name
  1,                        !- multiplier
  4,                        !- number of vertices
- 8.162, 20.000, 11.449,
- 8.162, 20.000, 9.551,
- 1.838, 20.000, 9.551,
- 1.838, 20.000, 11.449;
+ 8.162, 20.000, 14.449,
+ 8.162, 20.000, 12.551,
+ 1.838, 20.000, 12.551,
+ 1.838, 20.000, 14.449;
 
 BuildingSurface:Detailed,
  Flr3_Office3..Face3,      !- name
@@ -3620,13 +4517,13 @@ BuildingSurface:Detailed,
  WindExposed,              !- wind exposure
  Autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 0.000, 20.000, 15.000,
  0.000, 20.000, 12.000,
- 0.000, 20.000, 9.000,
- 0.000, 10.000, 9.000,
- 0.000, 10.000, 12.000;
+ 0.000, 10.000, 12.000,
+ 0.000, 10.000, 15.000;
 
 FenestrationSurface:Detailed,
- Flr3_Office3..Face3_Glz1, !- name
+ Flr3_Office3..Face3_Glz0, !- name
  Window,                   !- surface type
  Generic Double Pane,      !- construction name
  Flr3_Office3..Face3,      !- building surface name
@@ -3635,10 +4532,10 @@ FenestrationSurface:Detailed,
  ,                         !- frame and divider name
  1,                        !- multiplier
  4,                        !- number of vertices
- 0.000, 18.162, 11.449,
- 0.000, 18.162, 9.551,
- 0.000, 11.838, 9.551,
- 0.000, 11.838, 11.449;
+ 0.000, 18.162, 14.449,
+ 0.000, 18.162, 12.551,
+ 0.000, 11.838, 12.551,
+ 0.000, 11.838, 14.449;
 
 BuildingSurface:Detailed,
  Flr3_Office3..Face4,      !- name
@@ -3652,10 +4549,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 0.000, 10.000, 15.000,
  0.000, 10.000, 12.000,
- 0.000, 10.000, 9.000,
- 10.000, 10.000, 9.000,
- 10.000, 10.000, 12.000;
+ 10.000, 10.000, 12.000,
+ 10.000, 10.000, 15.000;
 
 BuildingSurface:Detailed,
  Flr3_Office3..Face5,      !- name
@@ -3669,10 +4566,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
- 0.000, 20.000, 12.000,
- 0.000, 10.000, 12.000,
- 10.000, 10.000, 12.000,
- 10.000, 20.000, 12.000;
+ 0.000, 20.000, 15.000,
+ 0.000, 10.000, 15.000,
+ 10.000, 10.000, 15.000,
+ 10.000, 20.000, 15.000;
 
 !-   ________ZONE:Flr3_Office4________
 
@@ -3687,7 +4584,10 @@ Zone,
  1,                        !- multiplier
  3.0,                      !- ceiling height
  300.0,                    !- volume
- 100.0;                    !- floor area
+ 100.0,                    !- floor area
+ ,                         !- inside convection
+ ,                         !- outside convection
+ Yes;                      !- include floor area
 
 People,
  Generic Office People..Flr3_Office4, !- name
@@ -3767,10 +4667,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
- 20.000, 20.000, 9.000,
- 20.000, 10.000, 9.000,
- 10.000, 10.000, 9.000,
- 10.000, 20.000, 9.000;
+ 20.000, 20.000, 12.000,
+ 20.000, 10.000, 12.000,
+ 10.000, 10.000, 12.000,
+ 10.000, 20.000, 12.000;
 
 BuildingSurface:Detailed,
  Flr3_Office4..Face1,      !- name
@@ -3784,13 +4684,13 @@ BuildingSurface:Detailed,
  WindExposed,              !- wind exposure
  Autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 20.000, 10.000, 15.000,
  20.000, 10.000, 12.000,
- 20.000, 10.000, 9.000,
- 20.000, 20.000, 9.000,
- 20.000, 20.000, 12.000;
+ 20.000, 20.000, 12.000,
+ 20.000, 20.000, 15.000;
 
 FenestrationSurface:Detailed,
- Flr3_Office4..Face1_Glz1, !- name
+ Flr3_Office4..Face1_Glz0, !- name
  Window,                   !- surface type
  Generic Double Pane,      !- construction name
  Flr3_Office4..Face1,      !- building surface name
@@ -3799,10 +4699,10 @@ FenestrationSurface:Detailed,
  ,                         !- frame and divider name
  1,                        !- multiplier
  4,                        !- number of vertices
- 20.000, 11.838, 11.449,
- 20.000, 11.838, 9.551,
- 20.000, 18.162, 9.551,
- 20.000, 18.162, 11.449;
+ 20.000, 11.838, 14.449,
+ 20.000, 11.838, 12.551,
+ 20.000, 18.162, 12.551,
+ 20.000, 18.162, 14.449;
 
 BuildingSurface:Detailed,
  Flr3_Office4..Face2,      !- name
@@ -3816,13 +4716,13 @@ BuildingSurface:Detailed,
  WindExposed,              !- wind exposure
  Autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 20.000, 20.000, 15.000,
  20.000, 20.000, 12.000,
- 20.000, 20.000, 9.000,
- 10.000, 20.000, 9.000,
- 10.000, 20.000, 12.000;
+ 10.000, 20.000, 12.000,
+ 10.000, 20.000, 15.000;
 
 FenestrationSurface:Detailed,
- Flr3_Office4..Face2_Glz1, !- name
+ Flr3_Office4..Face2_Glz0, !- name
  Window,                   !- surface type
  Generic Double Pane,      !- construction name
  Flr3_Office4..Face2,      !- building surface name
@@ -3831,10 +4731,10 @@ FenestrationSurface:Detailed,
  ,                         !- frame and divider name
  1,                        !- multiplier
  4,                        !- number of vertices
- 18.162, 20.000, 11.449,
- 18.162, 20.000, 9.551,
- 11.838, 20.000, 9.551,
- 11.838, 20.000, 11.449;
+ 18.162, 20.000, 14.449,
+ 18.162, 20.000, 12.551,
+ 11.838, 20.000, 12.551,
+ 11.838, 20.000, 14.449;
 
 BuildingSurface:Detailed,
  Flr3_Office4..Face3,      !- name
@@ -3848,10 +4748,10 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 10.000, 20.000, 15.000,
  10.000, 20.000, 12.000,
- 10.000, 20.000, 9.000,
- 10.000, 10.000, 9.000,
- 10.000, 10.000, 12.000;
+ 10.000, 10.000, 12.000,
+ 10.000, 10.000, 15.000;
 
 BuildingSurface:Detailed,
  Flr3_Office4..Face4,      !- name
@@ -3865,868 +4765,16 @@ BuildingSurface:Detailed,
  NoWind,                   !- wind exposure
  autocalculate,            !- view factor to ground
  4,                        !- number of vertices
+ 10.000, 10.000, 15.000,
  10.000, 10.000, 12.000,
- 10.000, 10.000, 9.000,
- 20.000, 10.000, 9.000,
- 20.000, 10.000, 12.000;
+ 20.000, 10.000, 12.000,
+ 20.000, 10.000, 15.000;
 
 BuildingSurface:Detailed,
  Flr3_Office4..Face5,      !- name
  Ceiling,                  !- surface type
  Generic Interior Ceiling, !- construction name
  Flr3_Office4,             !- zone name
- ,                         !- space name
- Adiabatic,                !- boundary condition
- ,                         !- boundary condition object
- NoSun,                    !- sun exposure
- NoWind,                   !- wind exposure
- autocalculate,            !- view factor to ground
- 4,                        !- number of vertices
- 10.000, 20.000, 12.000,
- 10.000, 10.000, 12.000,
- 20.000, 10.000, 12.000,
- 20.000, 20.000, 12.000;
-
-!-   ________ZONE:Flr4_Office1________
-
-
-Zone,
- Flr4_Office1,             !- name
- ,                         !- north
- ,                         !- x
- ,                         !- y
- ,                         !- z
- ,                         !- type
- 1,                        !- multiplier
- 3.0,                      !- ceiling height
- 300.0,                    !- volume
- 100.0;                    !- floor area
-
-People,
- Generic Office People..Flr4_Office1, !- name
- Flr4_Office1,             !- zone name
- Generic Office Occupancy, !- occupancy schedule name
- People/Area,              !- occupancy method
- ,                         !- number of people {ppl}
- 0.0565,                   !- people per floor area {ppl/m2}
- ,                         !- floor area per person {m2/ppl}
- 0.3,                      !- radiant fraction
- autocalculate,            !- sensible heat fraction
- Seated Adult Activity;    !- activity schedule name
-
-Lights,
- Generic Office Lighting..Flr4_Office1, !- name
- Flr4_Office1,             !- zone name
- Generic Office Lighting,  !- schedule name
- Watts/Area,               !- lighting level method
- ,                         !- lighting power level {W}
- 10.55,                    !- lighting per floor area {W/m2}
- ,                         !- lighting per person {W/ppl}
- 0.0,                      !- return air fraction
- 0.7,                      !- radiant fraction
- 0.2;                      !- visible fraction
-
-ElectricEquipment,
- Generic Office Equipment..Flr4_Office1, !- name
- Flr4_Office1,             !- zone name
- Generic Office Equipment, !- schedule name
- Watts/Area,               !- equipment level method
- ,                         !- equipment power level {W}
- 10.33,                    !- equipment per floor area {W/m2}
- ,                         !- equipment per person {W/ppl}
- 0.0,                      !- latent fraction
- 0.5,                      !- radiant fraction
- 0.0;                      !- lost fraction
-
-ZoneInfiltration:DesignFlowRate,
- Generic Office Infiltration..Flr4_Office1, !- name
- Flr4_Office1,             !- zone name
- Generic Office Infiltration, !- schedule name
- Flow/ExteriorArea,        !- flow rate method
- ,                         !- flow rate {m3/s}
- ,                         !- flow per floor area {m3/s-m2}
- 0.0002266,                !- flow per exterior area {m3/s-m2}
- ,                         !- air changes per hour {1/hr}
- 1.0,                      !- constant term coefficient
- 0.0,                      !- temperature term coefficient
- 0.0,                      !- velocity term coefficient
- ;                         !- velocity squared term coefficient
-
-DesignSpecification:OutdoorAir,
- Generic Office Ventilation..Flr4_Office1, !- name
- Sum,                      !- flow rate method
- 0.00236,                  !- flow per person {m3/s-person}
- 0.000305,                 !- flow per floor area {m3/s-m2}
- 0.0,                      !- flow per zone {m3/s}
- 0.0,                      !- air changes per hour {1/hr}
- ;                         !- outdoor air schedule name
-
-HVACTemplate:Thermostat,
- Generic Office Setpoints..Flr4_Office1, !- name
- Generic Office Heating,   !- heating setpoint schedule
- ,                         !- heating setpoint {C}
- Generic Office Cooling,   !- cooling setpoint schedule
- ;                         !- cooling setpoint {C}
-
-BuildingSurface:Detailed,
- Flr4_Office1..Face0,      !- name
- Floor,                    !- surface type
- Generic Interior Floor,   !- construction name
- Flr4_Office1,             !- zone name
- ,                         !- space name
- Adiabatic,                !- boundary condition
- ,                         !- boundary condition object
- NoSun,                    !- sun exposure
- NoWind,                   !- wind exposure
- autocalculate,            !- view factor to ground
- 4,                        !- number of vertices
- 10.000, 10.000, 12.000,
- 10.000, 0.000, 12.000,
- 0.000, 0.000, 12.000,
- 0.000, 10.000, 12.000;
-
-BuildingSurface:Detailed,
- Flr4_Office1..Face1,      !- name
- Wall,                     !- surface type
- Generic Interior Wall,    !- construction name
- Flr4_Office1,             !- zone name
- ,                         !- space name
- Surface,                  !- boundary condition
- Flr4_Office2..Face3,      !- boundary condition object
- NoSun,                    !- sun exposure
- NoWind,                   !- wind exposure
- autocalculate,            !- view factor to ground
- 4,                        !- number of vertices
- 10.000, 0.000, 15.000,
- 10.000, 0.000, 12.000,
- 10.000, 10.000, 12.000,
- 10.000, 10.000, 15.000;
-
-BuildingSurface:Detailed,
- Flr4_Office1..Face2,      !- name
- Wall,                     !- surface type
- Generic Interior Wall,    !- construction name
- Flr4_Office1,             !- zone name
- ,                         !- space name
- Surface,                  !- boundary condition
- Flr4_Office3..Face4,      !- boundary condition object
- NoSun,                    !- sun exposure
- NoWind,                   !- wind exposure
- autocalculate,            !- view factor to ground
- 4,                        !- number of vertices
- 10.000, 10.000, 15.000,
- 10.000, 10.000, 12.000,
- 0.000, 10.000, 12.000,
- 0.000, 10.000, 15.000;
-
-BuildingSurface:Detailed,
- Flr4_Office1..Face3,      !- name
- Wall,                     !- surface type
- Generic Exterior Wall,    !- construction name
- Flr4_Office1,             !- zone name
- ,                         !- space name
- Outdoors,                 !- boundary condition
- ,                         !- boundary condition object
- SunExposed,               !- sun exposure
- WindExposed,              !- wind exposure
- Autocalculate,            !- view factor to ground
- 4,                        !- number of vertices
- 0.000, 10.000, 15.000,
- 0.000, 10.000, 12.000,
- 0.000, 0.000, 12.000,
- 0.000, 0.000, 15.000;
-
-FenestrationSurface:Detailed,
- Flr4_Office1..Face3_Glz1, !- name
- Window,                   !- surface type
- Generic Double Pane,      !- construction name
- Flr4_Office1..Face3,      !- building surface name
- ,                         !- boundary condition object
- Autocalculate,            !- view factor to ground
- ,                         !- frame and divider name
- 1,                        !- multiplier
- 4,                        !- number of vertices
- 0.000, 8.162, 14.449,
- 0.000, 8.162, 12.551,
- 0.000, 1.838, 12.551,
- 0.000, 1.838, 14.449;
-
-BuildingSurface:Detailed,
- Flr4_Office1..Face4,      !- name
- Wall,                     !- surface type
- Generic Exterior Wall,    !- construction name
- Flr4_Office1,             !- zone name
- ,                         !- space name
- Outdoors,                 !- boundary condition
- ,                         !- boundary condition object
- SunExposed,               !- sun exposure
- WindExposed,              !- wind exposure
- Autocalculate,            !- view factor to ground
- 4,                        !- number of vertices
- 0.000, 0.000, 15.000,
- 0.000, 0.000, 12.000,
- 10.000, 0.000, 12.000,
- 10.000, 0.000, 15.000;
-
-FenestrationSurface:Detailed,
- Flr4_Office1..Face4_Glz1, !- name
- Window,                   !- surface type
- Generic Double Pane,      !- construction name
- Flr4_Office1..Face4,      !- building surface name
- ,                         !- boundary condition object
- Autocalculate,            !- view factor to ground
- ,                         !- frame and divider name
- 1,                        !- multiplier
- 4,                        !- number of vertices
- 1.838, 0.000, 14.449,
- 1.838, 0.000, 12.551,
- 8.162, 0.000, 12.551,
- 8.162, 0.000, 14.449;
-
-BuildingSurface:Detailed,
- Flr4_Office1..Face5,      !- name
- Ceiling,                  !- surface type
- Generic Interior Ceiling, !- construction name
- Flr4_Office1,             !- zone name
- ,                         !- space name
- Adiabatic,                !- boundary condition
- ,                         !- boundary condition object
- NoSun,                    !- sun exposure
- NoWind,                   !- wind exposure
- autocalculate,            !- view factor to ground
- 4,                        !- number of vertices
- 0.000, 10.000, 15.000,
- 0.000, 0.000, 15.000,
- 10.000, 0.000, 15.000,
- 10.000, 10.000, 15.000;
-
-!-   ________ZONE:Flr4_Office2________
-
-
-Zone,
- Flr4_Office2,             !- name
- ,                         !- north
- ,                         !- x
- ,                         !- y
- ,                         !- z
- ,                         !- type
- 1,                        !- multiplier
- 3.0,                      !- ceiling height
- 300.0,                    !- volume
- 100.0;                    !- floor area
-
-People,
- Generic Office People..Flr4_Office2, !- name
- Flr4_Office2,             !- zone name
- Generic Office Occupancy, !- occupancy schedule name
- People/Area,              !- occupancy method
- ,                         !- number of people {ppl}
- 0.0565,                   !- people per floor area {ppl/m2}
- ,                         !- floor area per person {m2/ppl}
- 0.3,                      !- radiant fraction
- autocalculate,            !- sensible heat fraction
- Seated Adult Activity;    !- activity schedule name
-
-Lights,
- Generic Office Lighting..Flr4_Office2, !- name
- Flr4_Office2,             !- zone name
- Generic Office Lighting,  !- schedule name
- Watts/Area,               !- lighting level method
- ,                         !- lighting power level {W}
- 10.55,                    !- lighting per floor area {W/m2}
- ,                         !- lighting per person {W/ppl}
- 0.0,                      !- return air fraction
- 0.7,                      !- radiant fraction
- 0.2;                      !- visible fraction
-
-ElectricEquipment,
- Generic Office Equipment..Flr4_Office2, !- name
- Flr4_Office2,             !- zone name
- Generic Office Equipment, !- schedule name
- Watts/Area,               !- equipment level method
- ,                         !- equipment power level {W}
- 10.33,                    !- equipment per floor area {W/m2}
- ,                         !- equipment per person {W/ppl}
- 0.0,                      !- latent fraction
- 0.5,                      !- radiant fraction
- 0.0;                      !- lost fraction
-
-ZoneInfiltration:DesignFlowRate,
- Generic Office Infiltration..Flr4_Office2, !- name
- Flr4_Office2,             !- zone name
- Generic Office Infiltration, !- schedule name
- Flow/ExteriorArea,        !- flow rate method
- ,                         !- flow rate {m3/s}
- ,                         !- flow per floor area {m3/s-m2}
- 0.0002266,                !- flow per exterior area {m3/s-m2}
- ,                         !- air changes per hour {1/hr}
- 1.0,                      !- constant term coefficient
- 0.0,                      !- temperature term coefficient
- 0.0,                      !- velocity term coefficient
- ;                         !- velocity squared term coefficient
-
-DesignSpecification:OutdoorAir,
- Generic Office Ventilation..Flr4_Office2, !- name
- Sum,                      !- flow rate method
- 0.00236,                  !- flow per person {m3/s-person}
- 0.000305,                 !- flow per floor area {m3/s-m2}
- 0.0,                      !- flow per zone {m3/s}
- 0.0,                      !- air changes per hour {1/hr}
- ;                         !- outdoor air schedule name
-
-HVACTemplate:Thermostat,
- Generic Office Setpoints..Flr4_Office2, !- name
- Generic Office Heating,   !- heating setpoint schedule
- ,                         !- heating setpoint {C}
- Generic Office Cooling,   !- cooling setpoint schedule
- ;                         !- cooling setpoint {C}
-
-BuildingSurface:Detailed,
- Flr4_Office2..Face0,      !- name
- Floor,                    !- surface type
- Generic Interior Floor,   !- construction name
- Flr4_Office2,             !- zone name
- ,                         !- space name
- Adiabatic,                !- boundary condition
- ,                         !- boundary condition object
- NoSun,                    !- sun exposure
- NoWind,                   !- wind exposure
- autocalculate,            !- view factor to ground
- 4,                        !- number of vertices
- 20.000, 10.000, 12.000,
- 20.000, 0.000, 12.000,
- 10.000, 0.000, 12.000,
- 10.000, 10.000, 12.000;
-
-BuildingSurface:Detailed,
- Flr4_Office2..Face1,      !- name
- Wall,                     !- surface type
- Generic Exterior Wall,    !- construction name
- Flr4_Office2,             !- zone name
- ,                         !- space name
- Outdoors,                 !- boundary condition
- ,                         !- boundary condition object
- SunExposed,               !- sun exposure
- WindExposed,              !- wind exposure
- Autocalculate,            !- view factor to ground
- 4,                        !- number of vertices
- 20.000, 0.000, 15.000,
- 20.000, 0.000, 12.000,
- 20.000, 10.000, 12.000,
- 20.000, 10.000, 15.000;
-
-FenestrationSurface:Detailed,
- Flr4_Office2..Face1_Glz1, !- name
- Window,                   !- surface type
- Generic Double Pane,      !- construction name
- Flr4_Office2..Face1,      !- building surface name
- ,                         !- boundary condition object
- Autocalculate,            !- view factor to ground
- ,                         !- frame and divider name
- 1,                        !- multiplier
- 4,                        !- number of vertices
- 20.000, 1.838, 14.449,
- 20.000, 1.838, 12.551,
- 20.000, 8.162, 12.551,
- 20.000, 8.162, 14.449;
-
-BuildingSurface:Detailed,
- Flr4_Office2..Face2,      !- name
- Wall,                     !- surface type
- Generic Interior Wall,    !- construction name
- Flr4_Office2,             !- zone name
- ,                         !- space name
- Surface,                  !- boundary condition
- Flr4_Office4..Face4,      !- boundary condition object
- NoSun,                    !- sun exposure
- NoWind,                   !- wind exposure
- autocalculate,            !- view factor to ground
- 4,                        !- number of vertices
- 20.000, 10.000, 15.000,
- 20.000, 10.000, 12.000,
- 10.000, 10.000, 12.000,
- 10.000, 10.000, 15.000;
-
-BuildingSurface:Detailed,
- Flr4_Office2..Face3,      !- name
- Wall,                     !- surface type
- Generic Interior Wall,    !- construction name
- Flr4_Office2,             !- zone name
- ,                         !- space name
- Surface,                  !- boundary condition
- Flr4_Office1..Face1,      !- boundary condition object
- NoSun,                    !- sun exposure
- NoWind,                   !- wind exposure
- autocalculate,            !- view factor to ground
- 4,                        !- number of vertices
- 10.000, 10.000, 15.000,
- 10.000, 10.000, 12.000,
- 10.000, 0.000, 12.000,
- 10.000, 0.000, 15.000;
-
-BuildingSurface:Detailed,
- Flr4_Office2..Face4,      !- name
- Wall,                     !- surface type
- Generic Exterior Wall,    !- construction name
- Flr4_Office2,             !- zone name
- ,                         !- space name
- Outdoors,                 !- boundary condition
- ,                         !- boundary condition object
- SunExposed,               !- sun exposure
- WindExposed,              !- wind exposure
- Autocalculate,            !- view factor to ground
- 4,                        !- number of vertices
- 10.000, 0.000, 15.000,
- 10.000, 0.000, 12.000,
- 20.000, 0.000, 12.000,
- 20.000, 0.000, 15.000;
-
-FenestrationSurface:Detailed,
- Flr4_Office2..Face4_Glz1, !- name
- Window,                   !- surface type
- Generic Double Pane,      !- construction name
- Flr4_Office2..Face4,      !- building surface name
- ,                         !- boundary condition object
- Autocalculate,            !- view factor to ground
- ,                         !- frame and divider name
- 1,                        !- multiplier
- 4,                        !- number of vertices
- 11.838, 0.000, 14.449,
- 11.838, 0.000, 12.551,
- 18.162, 0.000, 12.551,
- 18.162, 0.000, 14.449;
-
-BuildingSurface:Detailed,
- Flr4_Office2..Face5,      !- name
- Ceiling,                  !- surface type
- Generic Interior Ceiling, !- construction name
- Flr4_Office2,             !- zone name
- ,                         !- space name
- Adiabatic,                !- boundary condition
- ,                         !- boundary condition object
- NoSun,                    !- sun exposure
- NoWind,                   !- wind exposure
- autocalculate,            !- view factor to ground
- 4,                        !- number of vertices
- 10.000, 10.000, 15.000,
- 10.000, 0.000, 15.000,
- 20.000, 0.000, 15.000,
- 20.000, 10.000, 15.000;
-
-!-   ________ZONE:Flr4_Office3________
-
-
-Zone,
- Flr4_Office3,             !- name
- ,                         !- north
- ,                         !- x
- ,                         !- y
- ,                         !- z
- ,                         !- type
- 1,                        !- multiplier
- 3.0,                      !- ceiling height
- 300.0,                    !- volume
- 100.0;                    !- floor area
-
-People,
- Generic Office People..Flr4_Office3, !- name
- Flr4_Office3,             !- zone name
- Generic Office Occupancy, !- occupancy schedule name
- People/Area,              !- occupancy method
- ,                         !- number of people {ppl}
- 0.0565,                   !- people per floor area {ppl/m2}
- ,                         !- floor area per person {m2/ppl}
- 0.3,                      !- radiant fraction
- autocalculate,            !- sensible heat fraction
- Seated Adult Activity;    !- activity schedule name
-
-Lights,
- Generic Office Lighting..Flr4_Office3, !- name
- Flr4_Office3,             !- zone name
- Generic Office Lighting,  !- schedule name
- Watts/Area,               !- lighting level method
- ,                         !- lighting power level {W}
- 10.55,                    !- lighting per floor area {W/m2}
- ,                         !- lighting per person {W/ppl}
- 0.0,                      !- return air fraction
- 0.7,                      !- radiant fraction
- 0.2;                      !- visible fraction
-
-ElectricEquipment,
- Generic Office Equipment..Flr4_Office3, !- name
- Flr4_Office3,             !- zone name
- Generic Office Equipment, !- schedule name
- Watts/Area,               !- equipment level method
- ,                         !- equipment power level {W}
- 10.33,                    !- equipment per floor area {W/m2}
- ,                         !- equipment per person {W/ppl}
- 0.0,                      !- latent fraction
- 0.5,                      !- radiant fraction
- 0.0;                      !- lost fraction
-
-ZoneInfiltration:DesignFlowRate,
- Generic Office Infiltration..Flr4_Office3, !- name
- Flr4_Office3,             !- zone name
- Generic Office Infiltration, !- schedule name
- Flow/ExteriorArea,        !- flow rate method
- ,                         !- flow rate {m3/s}
- ,                         !- flow per floor area {m3/s-m2}
- 0.0002266,                !- flow per exterior area {m3/s-m2}
- ,                         !- air changes per hour {1/hr}
- 1.0,                      !- constant term coefficient
- 0.0,                      !- temperature term coefficient
- 0.0,                      !- velocity term coefficient
- ;                         !- velocity squared term coefficient
-
-DesignSpecification:OutdoorAir,
- Generic Office Ventilation..Flr4_Office3, !- name
- Sum,                      !- flow rate method
- 0.00236,                  !- flow per person {m3/s-person}
- 0.000305,                 !- flow per floor area {m3/s-m2}
- 0.0,                      !- flow per zone {m3/s}
- 0.0,                      !- air changes per hour {1/hr}
- ;                         !- outdoor air schedule name
-
-HVACTemplate:Thermostat,
- Generic Office Setpoints..Flr4_Office3, !- name
- Generic Office Heating,   !- heating setpoint schedule
- ,                         !- heating setpoint {C}
- Generic Office Cooling,   !- cooling setpoint schedule
- ;                         !- cooling setpoint {C}
-
-BuildingSurface:Detailed,
- Flr4_Office3..Face0,      !- name
- Floor,                    !- surface type
- Generic Interior Floor,   !- construction name
- Flr4_Office3,             !- zone name
- ,                         !- space name
- Adiabatic,                !- boundary condition
- ,                         !- boundary condition object
- NoSun,                    !- sun exposure
- NoWind,                   !- wind exposure
- autocalculate,            !- view factor to ground
- 4,                        !- number of vertices
- 10.000, 20.000, 12.000,
- 10.000, 10.000, 12.000,
- 0.000, 10.000, 12.000,
- 0.000, 20.000, 12.000;
-
-BuildingSurface:Detailed,
- Flr4_Office3..Face1,      !- name
- Wall,                     !- surface type
- Generic Interior Wall,    !- construction name
- Flr4_Office3,             !- zone name
- ,                         !- space name
- Surface,                  !- boundary condition
- Flr4_Office4..Face3,      !- boundary condition object
- NoSun,                    !- sun exposure
- NoWind,                   !- wind exposure
- autocalculate,            !- view factor to ground
- 4,                        !- number of vertices
- 10.000, 10.000, 15.000,
- 10.000, 10.000, 12.000,
- 10.000, 20.000, 12.000,
- 10.000, 20.000, 15.000;
-
-BuildingSurface:Detailed,
- Flr4_Office3..Face2,      !- name
- Wall,                     !- surface type
- Generic Exterior Wall,    !- construction name
- Flr4_Office3,             !- zone name
- ,                         !- space name
- Outdoors,                 !- boundary condition
- ,                         !- boundary condition object
- SunExposed,               !- sun exposure
- WindExposed,              !- wind exposure
- Autocalculate,            !- view factor to ground
- 4,                        !- number of vertices
- 10.000, 20.000, 15.000,
- 10.000, 20.000, 12.000,
- 0.000, 20.000, 12.000,
- 0.000, 20.000, 15.000;
-
-FenestrationSurface:Detailed,
- Flr4_Office3..Face2_Glz1, !- name
- Window,                   !- surface type
- Generic Double Pane,      !- construction name
- Flr4_Office3..Face2,      !- building surface name
- ,                         !- boundary condition object
- Autocalculate,            !- view factor to ground
- ,                         !- frame and divider name
- 1,                        !- multiplier
- 4,                        !- number of vertices
- 8.162, 20.000, 14.449,
- 8.162, 20.000, 12.551,
- 1.838, 20.000, 12.551,
- 1.838, 20.000, 14.449;
-
-BuildingSurface:Detailed,
- Flr4_Office3..Face3,      !- name
- Wall,                     !- surface type
- Generic Exterior Wall,    !- construction name
- Flr4_Office3,             !- zone name
- ,                         !- space name
- Outdoors,                 !- boundary condition
- ,                         !- boundary condition object
- SunExposed,               !- sun exposure
- WindExposed,              !- wind exposure
- Autocalculate,            !- view factor to ground
- 4,                        !- number of vertices
- 0.000, 20.000, 15.000,
- 0.000, 20.000, 12.000,
- 0.000, 10.000, 12.000,
- 0.000, 10.000, 15.000;
-
-FenestrationSurface:Detailed,
- Flr4_Office3..Face3_Glz1, !- name
- Window,                   !- surface type
- Generic Double Pane,      !- construction name
- Flr4_Office3..Face3,      !- building surface name
- ,                         !- boundary condition object
- Autocalculate,            !- view factor to ground
- ,                         !- frame and divider name
- 1,                        !- multiplier
- 4,                        !- number of vertices
- 0.000, 18.162, 14.449,
- 0.000, 18.162, 12.551,
- 0.000, 11.838, 12.551,
- 0.000, 11.838, 14.449;
-
-BuildingSurface:Detailed,
- Flr4_Office3..Face4,      !- name
- Wall,                     !- surface type
- Generic Interior Wall,    !- construction name
- Flr4_Office3,             !- zone name
- ,                         !- space name
- Surface,                  !- boundary condition
- Flr4_Office1..Face2,      !- boundary condition object
- NoSun,                    !- sun exposure
- NoWind,                   !- wind exposure
- autocalculate,            !- view factor to ground
- 4,                        !- number of vertices
- 0.000, 10.000, 15.000,
- 0.000, 10.000, 12.000,
- 10.000, 10.000, 12.000,
- 10.000, 10.000, 15.000;
-
-BuildingSurface:Detailed,
- Flr4_Office3..Face5,      !- name
- Ceiling,                  !- surface type
- Generic Interior Ceiling, !- construction name
- Flr4_Office3,             !- zone name
- ,                         !- space name
- Adiabatic,                !- boundary condition
- ,                         !- boundary condition object
- NoSun,                    !- sun exposure
- NoWind,                   !- wind exposure
- autocalculate,            !- view factor to ground
- 4,                        !- number of vertices
- 0.000, 20.000, 15.000,
- 0.000, 10.000, 15.000,
- 10.000, 10.000, 15.000,
- 10.000, 20.000, 15.000;
-
-!-   ________ZONE:Flr4_Office4________
-
-
-Zone,
- Flr4_Office4,             !- name
- ,                         !- north
- ,                         !- x
- ,                         !- y
- ,                         !- z
- ,                         !- type
- 1,                        !- multiplier
- 3.0,                      !- ceiling height
- 300.0,                    !- volume
- 100.0;                    !- floor area
-
-People,
- Generic Office People..Flr4_Office4, !- name
- Flr4_Office4,             !- zone name
- Generic Office Occupancy, !- occupancy schedule name
- People/Area,              !- occupancy method
- ,                         !- number of people {ppl}
- 0.0565,                   !- people per floor area {ppl/m2}
- ,                         !- floor area per person {m2/ppl}
- 0.3,                      !- radiant fraction
- autocalculate,            !- sensible heat fraction
- Seated Adult Activity;    !- activity schedule name
-
-Lights,
- Generic Office Lighting..Flr4_Office4, !- name
- Flr4_Office4,             !- zone name
- Generic Office Lighting,  !- schedule name
- Watts/Area,               !- lighting level method
- ,                         !- lighting power level {W}
- 10.55,                    !- lighting per floor area {W/m2}
- ,                         !- lighting per person {W/ppl}
- 0.0,                      !- return air fraction
- 0.7,                      !- radiant fraction
- 0.2;                      !- visible fraction
-
-ElectricEquipment,
- Generic Office Equipment..Flr4_Office4, !- name
- Flr4_Office4,             !- zone name
- Generic Office Equipment, !- schedule name
- Watts/Area,               !- equipment level method
- ,                         !- equipment power level {W}
- 10.33,                    !- equipment per floor area {W/m2}
- ,                         !- equipment per person {W/ppl}
- 0.0,                      !- latent fraction
- 0.5,                      !- radiant fraction
- 0.0;                      !- lost fraction
-
-ZoneInfiltration:DesignFlowRate,
- Generic Office Infiltration..Flr4_Office4, !- name
- Flr4_Office4,             !- zone name
- Generic Office Infiltration, !- schedule name
- Flow/ExteriorArea,        !- flow rate method
- ,                         !- flow rate {m3/s}
- ,                         !- flow per floor area {m3/s-m2}
- 0.0002266,                !- flow per exterior area {m3/s-m2}
- ,                         !- air changes per hour {1/hr}
- 1.0,                      !- constant term coefficient
- 0.0,                      !- temperature term coefficient
- 0.0,                      !- velocity term coefficient
- ;                         !- velocity squared term coefficient
-
-DesignSpecification:OutdoorAir,
- Generic Office Ventilation..Flr4_Office4, !- name
- Sum,                      !- flow rate method
- 0.00236,                  !- flow per person {m3/s-person}
- 0.000305,                 !- flow per floor area {m3/s-m2}
- 0.0,                      !- flow per zone {m3/s}
- 0.0,                      !- air changes per hour {1/hr}
- ;                         !- outdoor air schedule name
-
-HVACTemplate:Thermostat,
- Generic Office Setpoints..Flr4_Office4, !- name
- Generic Office Heating,   !- heating setpoint schedule
- ,                         !- heating setpoint {C}
- Generic Office Cooling,   !- cooling setpoint schedule
- ;                         !- cooling setpoint {C}
-
-BuildingSurface:Detailed,
- Flr4_Office4..Face0,      !- name
- Floor,                    !- surface type
- Generic Interior Floor,   !- construction name
- Flr4_Office4,             !- zone name
- ,                         !- space name
- Adiabatic,                !- boundary condition
- ,                         !- boundary condition object
- NoSun,                    !- sun exposure
- NoWind,                   !- wind exposure
- autocalculate,            !- view factor to ground
- 4,                        !- number of vertices
- 20.000, 20.000, 12.000,
- 20.000, 10.000, 12.000,
- 10.000, 10.000, 12.000,
- 10.000, 20.000, 12.000;
-
-BuildingSurface:Detailed,
- Flr4_Office4..Face1,      !- name
- Wall,                     !- surface type
- Generic Exterior Wall,    !- construction name
- Flr4_Office4,             !- zone name
- ,                         !- space name
- Outdoors,                 !- boundary condition
- ,                         !- boundary condition object
- SunExposed,               !- sun exposure
- WindExposed,              !- wind exposure
- Autocalculate,            !- view factor to ground
- 4,                        !- number of vertices
- 20.000, 10.000, 15.000,
- 20.000, 10.000, 12.000,
- 20.000, 20.000, 12.000,
- 20.000, 20.000, 15.000;
-
-FenestrationSurface:Detailed,
- Flr4_Office4..Face1_Glz1, !- name
- Window,                   !- surface type
- Generic Double Pane,      !- construction name
- Flr4_Office4..Face1,      !- building surface name
- ,                         !- boundary condition object
- Autocalculate,            !- view factor to ground
- ,                         !- frame and divider name
- 1,                        !- multiplier
- 4,                        !- number of vertices
- 20.000, 11.838, 14.449,
- 20.000, 11.838, 12.551,
- 20.000, 18.162, 12.551,
- 20.000, 18.162, 14.449;
-
-BuildingSurface:Detailed,
- Flr4_Office4..Face2,      !- name
- Wall,                     !- surface type
- Generic Exterior Wall,    !- construction name
- Flr4_Office4,             !- zone name
- ,                         !- space name
- Outdoors,                 !- boundary condition
- ,                         !- boundary condition object
- SunExposed,               !- sun exposure
- WindExposed,              !- wind exposure
- Autocalculate,            !- view factor to ground
- 4,                        !- number of vertices
- 20.000, 20.000, 15.000,
- 20.000, 20.000, 12.000,
- 10.000, 20.000, 12.000,
- 10.000, 20.000, 15.000;
-
-FenestrationSurface:Detailed,
- Flr4_Office4..Face2_Glz1, !- name
- Window,                   !- surface type
- Generic Double Pane,      !- construction name
- Flr4_Office4..Face2,      !- building surface name
- ,                         !- boundary condition object
- Autocalculate,            !- view factor to ground
- ,                         !- frame and divider name
- 1,                        !- multiplier
- 4,                        !- number of vertices
- 18.162, 20.000, 14.449,
- 18.162, 20.000, 12.551,
- 11.838, 20.000, 12.551,
- 11.838, 20.000, 14.449;
-
-BuildingSurface:Detailed,
- Flr4_Office4..Face3,      !- name
- Wall,                     !- surface type
- Generic Interior Wall,    !- construction name
- Flr4_Office4,             !- zone name
- ,                         !- space name
- Surface,                  !- boundary condition
- Flr4_Office3..Face1,      !- boundary condition object
- NoSun,                    !- sun exposure
- NoWind,                   !- wind exposure
- autocalculate,            !- view factor to ground
- 4,                        !- number of vertices
- 10.000, 20.000, 15.000,
- 10.000, 20.000, 12.000,
- 10.000, 10.000, 12.000,
- 10.000, 10.000, 15.000;
-
-BuildingSurface:Detailed,
- Flr4_Office4..Face4,      !- name
- Wall,                     !- surface type
- Generic Interior Wall,    !- construction name
- Flr4_Office4,             !- zone name
- ,                         !- space name
- Surface,                  !- boundary condition
- Flr4_Office2..Face2,      !- boundary condition object
- NoSun,                    !- sun exposure
- NoWind,                   !- wind exposure
- autocalculate,            !- view factor to ground
- 4,                        !- number of vertices
- 10.000, 10.000, 15.000,
- 10.000, 10.000, 12.000,
- 20.000, 10.000, 12.000,
- 20.000, 10.000, 15.000;
-
-BuildingSurface:Detailed,
- Flr4_Office4..Face5,      !- name
- Ceiling,                  !- surface type
- Generic Interior Ceiling, !- construction name
- Flr4_Office4,             !- zone name
  ,                         !- space name
  Adiabatic,                !- boundary condition
  ,                         !- boundary condition object
