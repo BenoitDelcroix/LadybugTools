@@ -1,0 +1,22 @@
+{
+    "name": "OpenStudio Python DevContainer",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "python.defaultInterpreterPath": "/workspaces/Iterative-Runs-OSMs/.venv/bin/python3"
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+				"ms-toolsai.jupyter",
+				"ms-toolsai.datawrangler",
+				"qwtel.sqlite-viewer",
+                "GitHub.vscode-pull-request-github"
+            ]
+        }
+    },
+    "postCreateCommand": "git config --global core.autocrlf input && git config --global core.fileMode false && uv sync"
+}
