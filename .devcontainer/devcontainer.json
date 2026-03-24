@@ -6,7 +6,7 @@
     "customizations": {
         "vscode": {
             "settings": {
-                "python.defaultInterpreterPath": "/workspaces/Iterative-Runs-OSMs/.venv/bin/python3"
+                "python.defaultInterpreterPath": "/workspaces/LadybugTools/.venv/bin/python"
             },
             "extensions": [
                 "ms-python.python",
@@ -14,7 +14,8 @@
 				"ms-toolsai.jupyter",
 				"ms-toolsai.datawrangler",
 				"qwtel.sqlite-viewer",
-                "GitHub.vscode-pull-request-github"
+                "GitHub.vscode-pull-request-github",
+                "BigLadder.energyplus-modelkit"
             ]
         }
     },
