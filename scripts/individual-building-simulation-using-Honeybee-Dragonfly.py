@@ -34,11 +34,19 @@ model = Model('NewDevelopment', [building])
 hb_models = model.to_honeybee('Building', use_multiplier=False, tolerance=0.01)
 idfs = [hb_model.to.idf(hb_model) for hb_model in hb_models]
 
+# save the Honeybee Models to disk
+i = 0
+for hb_model in hb_models:
+    i += 1
+    hb_model.to_hbjson(name='hbmodel'+str(i)+'.hbjson',
+                       folder='.',
+                       indent=2)
+                 
 # write the IDF files to disk
 i = 0
 for idf in idfs:
-    i+=1
+    i += 1
     with open('idf'+str(i)+'.idf', 'w') as f:
-           f.write(idf)
+        f.write(idf)
 
 print('IT WORKS!!!')

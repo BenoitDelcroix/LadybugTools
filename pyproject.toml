@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "ladybug-vtk>=0.16.1",
     "lbt-dragonfly>=0.12.100",
 ]
 
