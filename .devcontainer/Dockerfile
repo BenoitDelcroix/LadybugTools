@@ -1,7 +1,7 @@
 # Dockerfile for VS Code Dev Container
 #FROM nrel/openstudio:3.10.0
-#FROM nrel/energyplus:25.1.0
-FROM ladybugtools/honeybee-energy:1.117.9
+FROM nrel/energyplus:25.1.0
+#FROM ladybugtools/honeybee-energy:1.117.9
 
 USER root
 
@@ -24,8 +24,6 @@ RUN apt-get update && \
 # Install UV package manager
 # RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 RUN pip3 install uv
-
-#USER ladybugbot
 
 # Set working directory
 WORKDIR /workspace

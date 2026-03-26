@@ -1,0 +1,354 @@
+Program Version,EnergyPlus, Version 25.1.0-68a4a7c774, YMD=2026.03.26 21:45
+! <Version>, Version ID
+ Version, 25.1
+! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
+ Timesteps per Hour,  6, 10
+! <System Convergence Limits>, Minimum System TimeStep {minutes}, Max HVAC Iterations, Minimum Plant Iterations, Maximum Plant Iterations
+ System Convergence Limits, 1, 20, 2, 8
+! <Simulation Control>, Do Zone Sizing, Do System Sizing, Do Plant Sizing, Do Design Days, Do Weather Simulation, Do HVAC Sizing Simulation
+ Simulation Control, Yes, Yes, Yes, No, Yes, No
+! <Performance Precision Tradeoffs>, Use Coil Direct Simulation, Zone Radiant Exchange Algorithm, Override Mode, Number of Timestep In Hour, Force Euler Method, Minimum Number of Warmup Days, Force Suppress All Begin Environment Resets, Minimum System Timestep, MaxZoneTempDiff, MaxAllowedDelTemp
+ Performance Precision Tradeoffs, No, ScriptF, Normal, 6, No, 1, No, 1.0, 0.300, 2.0000E-003
+! <Output Reporting Tolerances>, Tolerance for Time Heating Setpoint Not Met, Tolerance for Zone Cooling Setpoint Not Met Time
+ Output Reporting Tolerances, 1.110, 1.110, 
+! <Site:GroundTemperature:BuildingSurface>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:BuildingSurface,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00
+! <Site:GroundTemperature:FCfactorMethod>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:FCfactorMethod,  -4.72,  -5.94,  -3.77,  -0.38,   8.50,  15.36,  19.98,  21.39,  18.99,  13.67,   6.56,  -0.04
+! <Site:GroundTemperature:Shallow>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:Shallow,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00
+! <Site:GroundTemperature:Deep>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:Deep,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00
+! <Site:GroundReflectance>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Site:GroundReflectance:SnowModifier>, Normal, Daylighting {dimensionless}
+ Site:GroundReflectance:SnowModifier,   1.000,   1.000
+! <Site:GroundReflectance:Snow>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance:Snow,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Site:GroundReflectance:Snow:Daylighting>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance:Snow:Daylighting,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Environment:Weather Station>,Wind Sensor Height Above Ground {m},Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Sensor Height Above Ground {m},Wind Speed Modifier Coefficient-Internal,Temperature Modifier Coefficient-Internal
+Environment:Weather Station,10.000,0.140,270.000,1.500,1.586,9.750E-003
+! <Site:Location>, Location Name, Latitude {N+/S- Deg}, Longitude {E+/W- Deg},  Time Zone Number {GMT+/-}, Elevation {m},  Standard Pressure at Elevation {Pa}, Standard RhoAir at Elevation
+Site:Location,Montreal-McTavish QC CAN CWEC2016 WMO#=716120,45.50,-73.58,-5.00,72.80,100453,1.1940
+! <Site Water Mains Temperature Information>,Calculation Method{},Water Mains Temperature Schedule Name{},Annual Average Outdoor Air Temperature{C},Maximum Difference In Monthly Average Outdoor Air Temperatures{deltaC},Fixed Default Water Mains Temperature{C}
+Site Water Mains Temperature Information,CorrelationFromWeatherFile,NA,7.78,30.26,NA
+! <Building Information>, Building Name,North Axis {deg},Terrain,  Loads Convergence Tolerance Value,Temperature Convergence Tolerance Value,  Solar Distribution,Maximum Number of Warmup Days,Minimum Number of Warmup Days
+ Building Information,OfficeBuilding,0.000,City,4.00000E-002,0.40000,FullExteriorWithReflectionsFromExteriorSurfaces,25,1
+! <Inside Convection Algorithm>, Algorithm {Simple | TARP | CeilingDiffuser | AdaptiveConvectionAlgorithm}
+Inside Convection Algorithm,TARP
+! <Outside Convection Algorithm>, Algorithm {SimpleCombined | TARP | MoWitt | DOE-2 | AdaptiveConvectionAlgorithm}
+Outside Convection Algorithm,DOE-2
+! <Sky Radiance Distribution>, Value {Anisotropic}
+Sky Radiance Distribution,Anisotropic
+! <Zone Air Solution Algorithm>, Algorithm {ThirdOrderBackwardDifference | AnalyticalSolution | EulerMethod}, Space Heat Balance Sizing, Space Heat Balance Simulation
+ Zone Air Solution Algorithm, ThirdOrderBackwardDifference, No, No
+! <Zone Air Carbon Dioxide Balance Simulation>, Simulation {Yes/No}, Carbon Dioxide Concentration
+ Zone Air Carbon Dioxide Balance Simulation, No,N/A
+! <Zone Air Generic Contaminant Balance Simulation>, Simulation {Yes/No}, Generic Contaminant Concentration
+ Zone Air Generic Contaminant Balance Simulation, No,N/A
+! <Zone Air Mass Flow Balance Simulation>, Enforce Mass Balance, Adjust Zone Mixing and Return {AdjustMixingOnly | AdjustReturnOnly | AdjustMixingThenReturn | AdjustReturnThenMixing | None}, Adjust Zone Infiltration {AddInfiltration | AdjustInfiltration | None}, Infiltration Zones {MixingSourceZonesOnly | AllZones}
+ Zone Air Mass Flow Balance Simulation, No,N/A,N/A,N/A
+! <HVACSystemRootFindingAlgorithm>, Value {RegulaFalsi | Bisection | BisectionThenRegulaFalsi | RegulaFalsiThenBisection}
+ HVACSystemRootFindingAlgorithm, RegulaFalsi
+! <Environment:Site Atmospheric Variation>,Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Gradient Coefficient {K/m}
+Environment:Site Atmospheric Variation,0.330,460.000,6.500000E-003
+! <Shadowing/Sun Position Calculations Annual Simulations>, Shading Calculation Method, Shading Calculation Update Frequency Method, Shading Calculation Update Frequency {days}, Maximum Figures in Shadow Overlap Calculations {}, Polygon Clipping Algorithm, Pixel Counting Resolution, Sky Diffuse Modeling Algorithm, Output External Shading Calculation Results, Disable Self-Shading Within Shading Zone Groups, Disable Self-Shading From Shading Zone Groups to Other Zones
+Shadowing/Sun Position Calculations Annual Simulations,PolygonClipping,Periodic,30,15000,SutherlandHodgman,512,SimpleSkyDiffuseModeling,No,No,No
+! <Surface Geometry>,Starting Corner,Vertex Input Direction,Coordinate System,Daylight Reference Point Coordinate System,Rectangular (Simple) Surface Coordinate System
+ Surface Geometry,UpperLeftCorner,Counterclockwise,RelativeCoordinateSystem,RelativeCoordinateSystem,RelativeToZoneOrigin
+! <ShadingProperty Reflectance>,Shading Surface Name,Shading Type,Diffuse Solar Reflectance, Diffuse Visible Reflectance,Surface Glazing Fraction,Surface Glazing Construction
+! <Surface Heat Transfer Algorithm>, Value {CTF - ConductionTransferFunction | EMPD - MoisturePenetrationDepthConductionTransferFunction | CondFD - ConductionFiniteDifference | HAMT - CombinedHeatAndMoistureFiniteElement} - Description,Inside Surface Max Temperature Limit{C}, Surface Convection Coefficient Lower Limit {W/m2-K}, Surface Convection Coefficient Upper Limit {W/m2-K}
+Surface Heat Transfer Algorithm, CTF - ConductionTransferFunction,200,0.10,1000.0
+! <Shading Summary>, Number of Fixed Detached Shades, Number of Building Detached Shades, Number of Attached Shades
+ Shading Summary,0,0,0
+! <Zone Summary>, Number of Zones, Number of Zone Surfaces, Number of SubSurfaces
+ Zone Summary,16,128,32
+! <Zone Information>,Zone Name,North Axis {deg},Origin X-Coordinate {m},Origin Y-Coordinate {m},Origin Z-Coordinate {m},Centroid X-Coordinate {m},Centroid Y-Coordinate {m},Centroid Z-Coordinate {m},Type,Zone Multiplier,Zone List Multiplier,Minimum X {m},Maximum X {m},Minimum Y {m},Maximum Y {m},Minimum Z {m},Maximum Z {m},Ceiling Height {m},Volume {m3},Zone Inside Convection Algorithm {Simple-Detailed-CeilingDiffuser-TrombeWall},Zone Outside Convection Algorithm {Simple-Detailed-Tarp-MoWitt-DOE-2-BLAST}, Floor Area {m2},Exterior Gross Wall Area {m2},Exterior Net Wall Area {m2},Exterior Window Area {m2}, Number of Surfaces, Number of SubSurfaces, Number of Shading SubSurfaces,  Part of Total Building Area
+ Zone Information, FLR1_OFFICE1,0.0,0.00,0.00,0.00,5.00,5.00,7.50,1,1,1,0.00,10.00,0.00,10.00,6.00,9.00,3.00,300.00,TARP,DOE-2,100.00,60.00,36.00,24.00,6,2,0,Yes
+ Zone Information, FLR1_OFFICE2,0.0,0.00,0.00,0.00,15.00,5.00,7.50,1,1,1,10.00,20.00,0.00,10.00,6.00,9.00,3.00,300.00,TARP,DOE-2,100.00,60.00,36.00,24.00,6,2,0,Yes
+ Zone Information, FLR1_OFFICE3,0.0,0.00,0.00,0.00,5.00,15.00,7.50,1,1,1,0.00,10.00,10.00,20.00,6.00,9.00,3.00,300.00,TARP,DOE-2,100.00,60.00,36.00,24.00,6,2,0,Yes
+ Zone Information, FLR1_OFFICE4,0.0,0.00,0.00,0.00,15.00,15.00,7.50,1,1,1,10.00,20.00,10.00,20.00,6.00,9.00,3.00,300.00,TARP,DOE-2,100.00,60.00,36.00,24.00,6,2,0,Yes
+ Zone Information, FLR2_OFFICE1,0.0,0.00,0.00,0.00,5.00,5.00,10.50,1,1,1,0.00,10.00,0.00,10.00,9.00,12.00,3.00,300.00,TARP,DOE-2,100.00,60.00,36.00,24.00,6,2,0,Yes
+ Zone Information, FLR2_OFFICE2,0.0,0.00,0.00,0.00,15.00,5.00,10.50,1,1,1,10.00,20.00,0.00,10.00,9.00,12.00,3.00,300.00,TARP,DOE-2,100.00,60.00,36.00,24.00,6,2,0,Yes
+ Zone Information, FLR2_OFFICE3,0.0,0.00,0.00,0.00,5.00,15.00,10.50,1,1,1,0.00,10.00,10.00,20.00,9.00,12.00,3.00,300.00,TARP,DOE-2,100.00,60.00,36.00,24.00,6,2,0,Yes
+ Zone Information, FLR2_OFFICE4,0.0,0.00,0.00,0.00,15.00,15.00,10.50,1,1,1,10.00,20.00,10.00,20.00,9.00,12.00,3.00,300.00,TARP,DOE-2,100.00,60.00,36.00,24.00,6,2,0,Yes
+ Zone Information, FLR3_OFFICE1,0.0,0.00,0.00,0.00,5.00,5.00,13.50,1,1,1,0.00,10.00,0.00,10.00,12.00,15.00,3.00,300.00,TARP,DOE-2,100.00,60.00,36.00,24.00,6,2,0,Yes
+ Zone Information, FLR3_OFFICE2,0.0,0.00,0.00,0.00,15.00,5.00,13.50,1,1,1,10.00,20.00,0.00,10.00,12.00,15.00,3.00,300.00,TARP,DOE-2,100.00,60.00,36.00,24.00,6,2,0,Yes
+ Zone Information, FLR3_OFFICE3,0.0,0.00,0.00,0.00,5.00,15.00,13.50,1,1,1,0.00,10.00,10.00,20.00,12.00,15.00,3.00,300.00,TARP,DOE-2,100.00,60.00,36.00,24.00,6,2,0,Yes
+ Zone Information, FLR3_OFFICE4,0.0,0.00,0.00,0.00,15.00,15.00,13.50,1,1,1,10.00,20.00,10.00,20.00,12.00,15.00,3.00,300.00,TARP,DOE-2,100.00,60.00,36.00,24.00,6,2,0,Yes
+ Zone Information, OFFICE1,0.0,0.00,0.00,0.00,5.00,5.00,4.50,1,1,1,0.00,10.00,0.00,10.00,3.00,6.00,3.00,300.00,TARP,DOE-2,100.00,60.00,36.00,24.00,6,2,0,Yes
+ Zone Information, OFFICE2,0.0,0.00,0.00,0.00,15.00,5.00,4.50,1,1,1,10.00,20.00,0.00,10.00,3.00,6.00,3.00,300.00,TARP,DOE-2,100.00,60.00,36.00,24.00,6,2,0,Yes
+ Zone Information, OFFICE3,0.0,0.00,0.00,0.00,5.00,15.00,4.50,1,1,1,0.00,10.00,10.00,20.00,3.00,6.00,3.00,300.00,TARP,DOE-2,100.00,60.00,36.00,24.00,6,2,0,Yes
+ Zone Information, OFFICE4,0.0,0.00,0.00,0.00,15.00,15.00,4.50,1,1,1,10.00,20.00,10.00,20.00,3.00,6.00,3.00,300.00,TARP,DOE-2,100.00,60.00,36.00,24.00,6,2,0,Yes
+! <Zone Internal Gains Nominal>,Zone Name, Floor Area {m2},# Occupants,Area per Occupant {m2/person},Occupant per Area {person/m2},Interior Lighting {W/m2},Electric Load {W/m2},Gas Load {W/m2},Other Load {W/m2},Hot Water Eq {W/m2},Steam Equipment {W/m2},Sum Loads per Area {W/m2},Outdoor Controlled Baseboard Heat
+ Zone Internal Gains Nominal, FLR1_OFFICE1,100.00,5.7,17.699,5.650E-002,10.550,10.330,0.000,0.000,0.000,0.000,20.880,No
+ Zone Internal Gains Nominal, FLR1_OFFICE2,100.00,5.7,17.699,5.650E-002,10.550,10.330,0.000,0.000,0.000,0.000,20.880,No
+ Zone Internal Gains Nominal, FLR1_OFFICE3,100.00,5.7,17.699,5.650E-002,10.550,10.330,0.000,0.000,0.000,0.000,20.880,No
+ Zone Internal Gains Nominal, FLR1_OFFICE4,100.00,5.7,17.699,5.650E-002,10.550,10.330,0.000,0.000,0.000,0.000,20.880,No
+ Zone Internal Gains Nominal, FLR2_OFFICE1,100.00,5.7,17.699,5.650E-002,10.550,10.330,0.000,0.000,0.000,0.000,20.880,No
+ Zone Internal Gains Nominal, FLR2_OFFICE2,100.00,5.7,17.699,5.650E-002,10.550,10.330,0.000,0.000,0.000,0.000,20.880,No
+ Zone Internal Gains Nominal, FLR2_OFFICE3,100.00,5.7,17.699,5.650E-002,10.550,10.330,0.000,0.000,0.000,0.000,20.880,No
+ Zone Internal Gains Nominal, FLR2_OFFICE4,100.00,5.7,17.699,5.650E-002,10.550,10.330,0.000,0.000,0.000,0.000,20.880,No
+ Zone Internal Gains Nominal, FLR3_OFFICE1,100.00,5.7,17.699,5.650E-002,10.550,10.330,0.000,0.000,0.000,0.000,20.880,No
+ Zone Internal Gains Nominal, FLR3_OFFICE2,100.00,5.7,17.699,5.650E-002,10.550,10.330,0.000,0.000,0.000,0.000,20.880,No
+ Zone Internal Gains Nominal, FLR3_OFFICE3,100.00,5.7,17.699,5.650E-002,10.550,10.330,0.000,0.000,0.000,0.000,20.880,No
+ Zone Internal Gains Nominal, FLR3_OFFICE4,100.00,5.7,17.699,5.650E-002,10.550,10.330,0.000,0.000,0.000,0.000,20.880,No
+ Zone Internal Gains Nominal, OFFICE1,100.00,5.7,17.699,5.650E-002,10.550,10.330,0.000,0.000,0.000,0.000,20.880,No
+ Zone Internal Gains Nominal, OFFICE2,100.00,5.7,17.699,5.650E-002,10.550,10.330,0.000,0.000,0.000,0.000,20.880,No
+ Zone Internal Gains Nominal, OFFICE3,100.00,5.7,17.699,5.650E-002,10.550,10.330,0.000,0.000,0.000,0.000,20.880,No
+ Zone Internal Gains Nominal, OFFICE4,100.00,5.7,17.699,5.650E-002,10.550,10.330,0.000,0.000,0.000,0.000,20.880,No
+! <People Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Number of People {},People/Floor Area {person/m2},Floor Area per person {m2/person},Fraction Radiant,Fraction Convected,Sensible Fraction Calculation,Activity level,ASHRAE 55 Warnings,Carbon Dioxide Generation Rate,Minimum Number of People for All Day Types,Maximum Number of People for All Day Types,Minimum Number of People for Weekdays, Maximum Number of People for Weekdays, Minimum Number of People for Weekends/Holidays, Maximum Number of People for Weekends /Holidays,Minimum Number of People for Summer Design Days, Maximum Number of People for Summer Design Days,Minimum Number of People for Winter Design Days, Maximum Number of People for Winter Design Days
+ People Internal Gains Nominal, OFFICE1_SPACE GENERIC OFFICE PEOPLE,GENERIC OFFICE OCCUPANCY,OFFICE1,100.00,5.7,5.7,5.650E-002,17.699,0.300,0.700,AutoCalculate,SEATED ADULT ACTIVITY,No,3.8200E-008,0.0,5.7,0.0,5.4,0.0,1.7,0.0,5.7,0.0,0.0,
+ People Internal Gains Nominal, FLR3_OFFICE3_SPACE GENERIC OFFICE PEOPLE,GENERIC OFFICE OCCUPANCY,FLR3_OFFICE3,100.00,5.7,5.7,5.650E-002,17.699,0.300,0.700,AutoCalculate,SEATED ADULT ACTIVITY,No,3.8200E-008,0.0,5.7,0.0,5.4,0.0,1.7,0.0,5.7,0.0,0.0,
+ People Internal Gains Nominal, OFFICE3_SPACE GENERIC OFFICE PEOPLE,GENERIC OFFICE OCCUPANCY,OFFICE3,100.00,5.7,5.7,5.650E-002,17.699,0.300,0.700,AutoCalculate,SEATED ADULT ACTIVITY,No,3.8200E-008,0.0,5.7,0.0,5.4,0.0,1.7,0.0,5.7,0.0,0.0,
+ People Internal Gains Nominal, FLR3_OFFICE1_SPACE GENERIC OFFICE PEOPLE,GENERIC OFFICE OCCUPANCY,FLR3_OFFICE1,100.00,5.7,5.7,5.650E-002,17.699,0.300,0.700,AutoCalculate,SEATED ADULT ACTIVITY,No,3.8200E-008,0.0,5.7,0.0,5.4,0.0,1.7,0.0,5.7,0.0,0.0,
+ People Internal Gains Nominal, FLR3_OFFICE2_SPACE GENERIC OFFICE PEOPLE,GENERIC OFFICE OCCUPANCY,FLR3_OFFICE2,100.00,5.7,5.7,5.650E-002,17.699,0.300,0.700,AutoCalculate,SEATED ADULT ACTIVITY,No,3.8200E-008,0.0,5.7,0.0,5.4,0.0,1.7,0.0,5.7,0.0,0.0,
+ People Internal Gains Nominal, FLR2_OFFICE4_SPACE GENERIC OFFICE PEOPLE,GENERIC OFFICE OCCUPANCY,FLR2_OFFICE4,100.00,5.7,5.7,5.650E-002,17.699,0.300,0.700,AutoCalculate,SEATED ADULT ACTIVITY,No,3.8200E-008,0.0,5.7,0.0,5.4,0.0,1.7,0.0,5.7,0.0,0.0,
+ People Internal Gains Nominal, FLR3_OFFICE4_SPACE GENERIC OFFICE PEOPLE,GENERIC OFFICE OCCUPANCY,FLR3_OFFICE4,100.00,5.7,5.7,5.650E-002,17.699,0.300,0.700,AutoCalculate,SEATED ADULT ACTIVITY,No,3.8200E-008,0.0,5.7,0.0,5.4,0.0,1.7,0.0,5.7,0.0,0.0,
+ People Internal Gains Nominal, FLR2_OFFICE3_SPACE GENERIC OFFICE PEOPLE,GENERIC OFFICE OCCUPANCY,FLR2_OFFICE3,100.00,5.7,5.7,5.650E-002,17.699,0.300,0.700,AutoCalculate,SEATED ADULT ACTIVITY,No,3.8200E-008,0.0,5.7,0.0,5.4,0.0,1.7,0.0,5.7,0.0,0.0,
+ People Internal Gains Nominal, FLR1_OFFICE1_SPACE GENERIC OFFICE PEOPLE,GENERIC OFFICE OCCUPANCY,FLR1_OFFICE1,100.00,5.7,5.7,5.650E-002,17.699,0.300,0.700,AutoCalculate,SEATED ADULT ACTIVITY,No,3.8200E-008,0.0,5.7,0.0,5.4,0.0,1.7,0.0,5.7,0.0,0.0,
+ People Internal Gains Nominal, FLR2_OFFICE2_SPACE GENERIC OFFICE PEOPLE,GENERIC OFFICE OCCUPANCY,FLR2_OFFICE2,100.00,5.7,5.7,5.650E-002,17.699,0.300,0.700,AutoCalculate,SEATED ADULT ACTIVITY,No,3.8200E-008,0.0,5.7,0.0,5.4,0.0,1.7,0.0,5.7,0.0,0.0,
+ People Internal Gains Nominal, FLR2_OFFICE1_SPACE GENERIC OFFICE PEOPLE,GENERIC OFFICE OCCUPANCY,FLR2_OFFICE1,100.00,5.7,5.7,5.650E-002,17.699,0.300,0.700,AutoCalculate,SEATED ADULT ACTIVITY,No,3.8200E-008,0.0,5.7,0.0,5.4,0.0,1.7,0.0,5.7,0.0,0.0,
+ People Internal Gains Nominal, FLR1_OFFICE3_SPACE GENERIC OFFICE PEOPLE,GENERIC OFFICE OCCUPANCY,FLR1_OFFICE3,100.00,5.7,5.7,5.650E-002,17.699,0.300,0.700,AutoCalculate,SEATED ADULT ACTIVITY,No,3.8200E-008,0.0,5.7,0.0,5.4,0.0,1.7,0.0,5.7,0.0,0.0,
+ People Internal Gains Nominal, FLR1_OFFICE4_SPACE GENERIC OFFICE PEOPLE,GENERIC OFFICE OCCUPANCY,FLR1_OFFICE4,100.00,5.7,5.7,5.650E-002,17.699,0.300,0.700,AutoCalculate,SEATED ADULT ACTIVITY,No,3.8200E-008,0.0,5.7,0.0,5.4,0.0,1.7,0.0,5.7,0.0,0.0,
+ People Internal Gains Nominal, OFFICE2_SPACE GENERIC OFFICE PEOPLE,GENERIC OFFICE OCCUPANCY,OFFICE2,100.00,5.7,5.7,5.650E-002,17.699,0.300,0.700,AutoCalculate,SEATED ADULT ACTIVITY,No,3.8200E-008,0.0,5.7,0.0,5.4,0.0,1.7,0.0,5.7,0.0,0.0,
+ People Internal Gains Nominal, FLR1_OFFICE2_SPACE GENERIC OFFICE PEOPLE,GENERIC OFFICE OCCUPANCY,FLR1_OFFICE2,100.00,5.7,5.7,5.650E-002,17.699,0.300,0.700,AutoCalculate,SEATED ADULT ACTIVITY,No,3.8200E-008,0.0,5.7,0.0,5.4,0.0,1.7,0.0,5.7,0.0,0.0,
+ People Internal Gains Nominal, OFFICE4_SPACE GENERIC OFFICE PEOPLE,GENERIC OFFICE OCCUPANCY,OFFICE4,100.00,5.7,5.7,5.650E-002,17.699,0.300,0.700,AutoCalculate,SEATED ADULT ACTIVITY,No,3.8200E-008,0.0,5.7,0.0,5.4,0.0,1.7,0.0,5.7,0.0,0.0,
+! <Lights Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Lighting Level {W},Lights/Floor Area {W/m2},Lights per person {W/person},Fraction Return Air,Fraction Radiant,Fraction Short Wave,Fraction Convected,Fraction Replaceable,End-Use, Minimum Lighting Level for All Day Types {W},Maximum Lighting Level for All Day Types {W},Minimum Lighting Level for Weekdays {W}, Maximum Lighting Level for Weekdays {W},Minimum Lighting Level for Weekends/Holidays {W}, Maximum Lighting Level for Weekends /Holidays {W},Minimum Lighting Level for Summer Design Days {W}, Maximum Lighting Level for Summer Design Days {W},Minimum Lighting Level for Winter Design Days {W}, Maximum Lighting Level for Winter Design Days {W}
+ Lights Internal Gains Nominal, OFFICE1_SPACE GENERIC OFFICE LIGHTING,GENERIC OFFICE LIGHTING,OFFICE1,100.00,5.7,1055.000,10.550,186.726,0.000,0.700,0.200,0.100,1.000,General,0.000,1055.000,45.488,818.8,45.488,272.926,1055.000,1055.000,0.000,0.000
+ Lights Internal Gains Nominal, FLR3_OFFICE3_SPACE GENERIC OFFICE LIGHTING,GENERIC OFFICE LIGHTING,FLR3_OFFICE3,100.00,5.7,1055.000,10.550,186.726,0.000,0.700,0.200,0.100,1.000,General,0.000,1055.000,45.488,818.8,45.488,272.926,1055.000,1055.000,0.000,0.000
+ Lights Internal Gains Nominal, OFFICE3_SPACE GENERIC OFFICE LIGHTING,GENERIC OFFICE LIGHTING,OFFICE3,100.00,5.7,1055.000,10.550,186.726,0.000,0.700,0.200,0.100,1.000,General,0.000,1055.000,45.488,818.8,45.488,272.926,1055.000,1055.000,0.000,0.000
+ Lights Internal Gains Nominal, FLR3_OFFICE1_SPACE GENERIC OFFICE LIGHTING,GENERIC OFFICE LIGHTING,FLR3_OFFICE1,100.00,5.7,1055.000,10.550,186.726,0.000,0.700,0.200,0.100,1.000,General,0.000,1055.000,45.488,818.8,45.488,272.926,1055.000,1055.000,0.000,0.000
+ Lights Internal Gains Nominal, FLR3_OFFICE2_SPACE GENERIC OFFICE LIGHTING,GENERIC OFFICE LIGHTING,FLR3_OFFICE2,100.00,5.7,1055.000,10.550,186.726,0.000,0.700,0.200,0.100,1.000,General,0.000,1055.000,45.488,818.8,45.488,272.926,1055.000,1055.000,0.000,0.000
+ Lights Internal Gains Nominal, FLR2_OFFICE4_SPACE GENERIC OFFICE LIGHTING,GENERIC OFFICE LIGHTING,FLR2_OFFICE4,100.00,5.7,1055.000,10.550,186.726,0.000,0.700,0.200,0.100,1.000,General,0.000,1055.000,45.488,818.8,45.488,272.926,1055.000,1055.000,0.000,0.000
+ Lights Internal Gains Nominal, FLR3_OFFICE4_SPACE GENERIC OFFICE LIGHTING,GENERIC OFFICE LIGHTING,FLR3_OFFICE4,100.00,5.7,1055.000,10.550,186.726,0.000,0.700,0.200,0.100,1.000,General,0.000,1055.000,45.488,818.8,45.488,272.926,1055.000,1055.000,0.000,0.000
+ Lights Internal Gains Nominal, FLR2_OFFICE3_SPACE GENERIC OFFICE LIGHTING,GENERIC OFFICE LIGHTING,FLR2_OFFICE3,100.00,5.7,1055.000,10.550,186.726,0.000,0.700,0.200,0.100,1.000,General,0.000,1055.000,45.488,818.8,45.488,272.926,1055.000,1055.000,0.000,0.000
+ Lights Internal Gains Nominal, FLR1_OFFICE1_SPACE GENERIC OFFICE LIGHTING,GENERIC OFFICE LIGHTING,FLR1_OFFICE1,100.00,5.7,1055.000,10.550,186.726,0.000,0.700,0.200,0.100,1.000,General,0.000,1055.000,45.488,818.8,45.488,272.926,1055.000,1055.000,0.000,0.000
+ Lights Internal Gains Nominal, FLR2_OFFICE2_SPACE GENERIC OFFICE LIGHTING,GENERIC OFFICE LIGHTING,FLR2_OFFICE2,100.00,5.7,1055.000,10.550,186.726,0.000,0.700,0.200,0.100,1.000,General,0.000,1055.000,45.488,818.8,45.488,272.926,1055.000,1055.000,0.000,0.000
+ Lights Internal Gains Nominal, FLR2_OFFICE1_SPACE GENERIC OFFICE LIGHTING,GENERIC OFFICE LIGHTING,FLR2_OFFICE1,100.00,5.7,1055.000,10.550,186.726,0.000,0.700,0.200,0.100,1.000,General,0.000,1055.000,45.488,818.8,45.488,272.926,1055.000,1055.000,0.000,0.000
+ Lights Internal Gains Nominal, FLR1_OFFICE3_SPACE GENERIC OFFICE LIGHTING,GENERIC OFFICE LIGHTING,FLR1_OFFICE3,100.00,5.7,1055.000,10.550,186.726,0.000,0.700,0.200,0.100,1.000,General,0.000,1055.000,45.488,818.8,45.488,272.926,1055.000,1055.000,0.000,0.000
+ Lights Internal Gains Nominal, FLR1_OFFICE4_SPACE GENERIC OFFICE LIGHTING,GENERIC OFFICE LIGHTING,FLR1_OFFICE4,100.00,5.7,1055.000,10.550,186.726,0.000,0.700,0.200,0.100,1.000,General,0.000,1055.000,45.488,818.8,45.488,272.926,1055.000,1055.000,0.000,0.000
+ Lights Internal Gains Nominal, OFFICE2_SPACE GENERIC OFFICE LIGHTING,GENERIC OFFICE LIGHTING,OFFICE2,100.00,5.7,1055.000,10.550,186.726,0.000,0.700,0.200,0.100,1.000,General,0.000,1055.000,45.488,818.8,45.488,272.926,1055.000,1055.000,0.000,0.000
+ Lights Internal Gains Nominal, FLR1_OFFICE2_SPACE GENERIC OFFICE LIGHTING,GENERIC OFFICE LIGHTING,FLR1_OFFICE2,100.00,5.7,1055.000,10.550,186.726,0.000,0.700,0.200,0.100,1.000,General,0.000,1055.000,45.488,818.8,45.488,272.926,1055.000,1055.000,0.000,0.000
+ Lights Internal Gains Nominal, OFFICE4_SPACE GENERIC OFFICE LIGHTING,GENERIC OFFICE LIGHTING,OFFICE4,100.00,5.7,1055.000,10.550,186.726,0.000,0.700,0.200,0.100,1.000,General,0.000,1055.000,45.488,818.8,45.488,272.926,1055.000,1055.000,0.000,0.000
+! <ElectricEquipment Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Equipment Level {W},Equipment/Floor Area {W/m2},Equipment per person {W/person},Fraction Latent,Fraction Radiant,Fraction Lost,Fraction Convected,End-Use SubCategory,Minimum Equipment Level for All Day Types {W},Maximum Equipment Level for All Day Types {W},Minimum Equipment Level for Weekdays {W}, Maximum Equipment Level for Weekdays {W},Minimum Equipment Level for Weekends/Holidays {W}, Maximum Equipment Level for Weekends /Holidays {W},Minimum Equipment Level for Summer Design Days {W}, Maximum Equipment Level for Summer Design Days {W},Minimum Equipment Level for Winter Design Days {W}, Maximum Equipment Level for Winter Design Days {W}
+ ElectricEquipment Internal Gains Nominal, OFFICE1_SPACE GENERIC OFFICE EQUIPMENT,GENERIC OFFICE EQUIPMENT,OFFICE1,100.00,5.7,1033.000,10.330,182.832,0.000,0.500,0.000,0.500,Electric Equipment,0.000,1033.000,317.827,886.085,238.370,492.269,1033.000,1033.000,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, FLR3_OFFICE3_SPACE GENERIC OFFICE EQUIPMENT,GENERIC OFFICE EQUIPMENT,FLR3_OFFICE3,100.00,5.7,1033.000,10.330,182.832,0.000,0.500,0.000,0.500,Electric Equipment,0.000,1033.000,317.827,886.085,238.370,492.269,1033.000,1033.000,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, OFFICE3_SPACE GENERIC OFFICE EQUIPMENT,GENERIC OFFICE EQUIPMENT,OFFICE3,100.00,5.7,1033.000,10.330,182.832,0.000,0.500,0.000,0.500,Electric Equipment,0.000,1033.000,317.827,886.085,238.370,492.269,1033.000,1033.000,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, FLR3_OFFICE1_SPACE GENERIC OFFICE EQUIPMENT,GENERIC OFFICE EQUIPMENT,FLR3_OFFICE1,100.00,5.7,1033.000,10.330,182.832,0.000,0.500,0.000,0.500,Electric Equipment,0.000,1033.000,317.827,886.085,238.370,492.269,1033.000,1033.000,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, FLR3_OFFICE2_SPACE GENERIC OFFICE EQUIPMENT,GENERIC OFFICE EQUIPMENT,FLR3_OFFICE2,100.00,5.7,1033.000,10.330,182.832,0.000,0.500,0.000,0.500,Electric Equipment,0.000,1033.000,317.827,886.085,238.370,492.269,1033.000,1033.000,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, FLR2_OFFICE4_SPACE GENERIC OFFICE EQUIPMENT,GENERIC OFFICE EQUIPMENT,FLR2_OFFICE4,100.00,5.7,1033.000,10.330,182.832,0.000,0.500,0.000,0.500,Electric Equipment,0.000,1033.000,317.827,886.085,238.370,492.269,1033.000,1033.000,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, FLR3_OFFICE4_SPACE GENERIC OFFICE EQUIPMENT,GENERIC OFFICE EQUIPMENT,FLR3_OFFICE4,100.00,5.7,1033.000,10.330,182.832,0.000,0.500,0.000,0.500,Electric Equipment,0.000,1033.000,317.827,886.085,238.370,492.269,1033.000,1033.000,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, FLR2_OFFICE3_SPACE GENERIC OFFICE EQUIPMENT,GENERIC OFFICE EQUIPMENT,FLR2_OFFICE3,100.00,5.7,1033.000,10.330,182.832,0.000,0.500,0.000,0.500,Electric Equipment,0.000,1033.000,317.827,886.085,238.370,492.269,1033.000,1033.000,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, FLR1_OFFICE1_SPACE GENERIC OFFICE EQUIPMENT,GENERIC OFFICE EQUIPMENT,FLR1_OFFICE1,100.00,5.7,1033.000,10.330,182.832,0.000,0.500,0.000,0.500,Electric Equipment,0.000,1033.000,317.827,886.085,238.370,492.269,1033.000,1033.000,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, FLR2_OFFICE2_SPACE GENERIC OFFICE EQUIPMENT,GENERIC OFFICE EQUIPMENT,FLR2_OFFICE2,100.00,5.7,1033.000,10.330,182.832,0.000,0.500,0.000,0.500,Electric Equipment,0.000,1033.000,317.827,886.085,238.370,492.269,1033.000,1033.000,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, FLR2_OFFICE1_SPACE GENERIC OFFICE EQUIPMENT,GENERIC OFFICE EQUIPMENT,FLR2_OFFICE1,100.00,5.7,1033.000,10.330,182.832,0.000,0.500,0.000,0.500,Electric Equipment,0.000,1033.000,317.827,886.085,238.370,492.269,1033.000,1033.000,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, FLR1_OFFICE3_SPACE GENERIC OFFICE EQUIPMENT,GENERIC OFFICE EQUIPMENT,FLR1_OFFICE3,100.00,5.7,1033.000,10.330,182.832,0.000,0.500,0.000,0.500,Electric Equipment,0.000,1033.000,317.827,886.085,238.370,492.269,1033.000,1033.000,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, FLR1_OFFICE4_SPACE GENERIC OFFICE EQUIPMENT,GENERIC OFFICE EQUIPMENT,FLR1_OFFICE4,100.00,5.7,1033.000,10.330,182.832,0.000,0.500,0.000,0.500,Electric Equipment,0.000,1033.000,317.827,886.085,238.370,492.269,1033.000,1033.000,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, OFFICE2_SPACE GENERIC OFFICE EQUIPMENT,GENERIC OFFICE EQUIPMENT,OFFICE2,100.00,5.7,1033.000,10.330,182.832,0.000,0.500,0.000,0.500,Electric Equipment,0.000,1033.000,317.827,886.085,238.370,492.269,1033.000,1033.000,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, FLR1_OFFICE2_SPACE GENERIC OFFICE EQUIPMENT,GENERIC OFFICE EQUIPMENT,FLR1_OFFICE2,100.00,5.7,1033.000,10.330,182.832,0.000,0.500,0.000,0.500,Electric Equipment,0.000,1033.000,317.827,886.085,238.370,492.269,1033.000,1033.000,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, OFFICE4_SPACE GENERIC OFFICE EQUIPMENT,GENERIC OFFICE EQUIPMENT,OFFICE4,100.00,5.7,1033.000,10.330,182.832,0.000,0.500,0.000,0.500,Electric Equipment,0.000,1033.000,317.827,886.085,238.370,492.269,1033.000,1033.000,0.000,0.000
+! <ZoneInfiltration Airflow Stats Nominal>,Name,Schedule Name,Zone Name, Zone Floor Area {m2}, # Zone Occupants,Design Volume Flow Rate {m3/s},Volume Flow Rate/Floor Area {m3/s-m2},Volume Flow Rate/Exterior Surface Area {m3/s-m2},ACH - Air Changes per Hour,Equation A - Constant Term Coefficient {},Equation B - Temperature Term Coefficient {1/C},Equation C - Velocity Term Coefficient {s/m}, Equation D - Velocity Squared Term Coefficient {s2/m2}
+ ZoneInfiltration Airflow Stats Nominal, OFFICE1_SPACE GENERIC OFFICE INFILTRATION,GENERIC OFFICE INFILTRATION,OFFICE1,100.00,5.7,1.360E-002,1.360E-004,2.266E-004,0.163,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, FLR3_OFFICE3_SPACE GENERIC OFFICE INFILTRATION,GENERIC OFFICE INFILTRATION,FLR3_OFFICE3,100.00,5.7,1.360E-002,1.360E-004,2.266E-004,0.163,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, OFFICE3_SPACE GENERIC OFFICE INFILTRATION,GENERIC OFFICE INFILTRATION,OFFICE3,100.00,5.7,1.360E-002,1.360E-004,2.266E-004,0.163,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, FLR3_OFFICE1_SPACE GENERIC OFFICE INFILTRATION,GENERIC OFFICE INFILTRATION,FLR3_OFFICE1,100.00,5.7,1.360E-002,1.360E-004,2.266E-004,0.163,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, FLR3_OFFICE2_SPACE GENERIC OFFICE INFILTRATION,GENERIC OFFICE INFILTRATION,FLR3_OFFICE2,100.00,5.7,1.360E-002,1.360E-004,2.266E-004,0.163,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, FLR2_OFFICE4_SPACE GENERIC OFFICE INFILTRATION,GENERIC OFFICE INFILTRATION,FLR2_OFFICE4,100.00,5.7,1.360E-002,1.360E-004,2.266E-004,0.163,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, FLR3_OFFICE4_SPACE GENERIC OFFICE INFILTRATION,GENERIC OFFICE INFILTRATION,FLR3_OFFICE4,100.00,5.7,1.360E-002,1.360E-004,2.266E-004,0.163,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, FLR2_OFFICE3_SPACE GENERIC OFFICE INFILTRATION,GENERIC OFFICE INFILTRATION,FLR2_OFFICE3,100.00,5.7,1.360E-002,1.360E-004,2.266E-004,0.163,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, FLR1_OFFICE1_SPACE GENERIC OFFICE INFILTRATION,GENERIC OFFICE INFILTRATION,FLR1_OFFICE1,100.00,5.7,1.360E-002,1.360E-004,2.266E-004,0.163,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, FLR2_OFFICE2_SPACE GENERIC OFFICE INFILTRATION,GENERIC OFFICE INFILTRATION,FLR2_OFFICE2,100.00,5.7,1.360E-002,1.360E-004,2.266E-004,0.163,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, FLR2_OFFICE1_SPACE GENERIC OFFICE INFILTRATION,GENERIC OFFICE INFILTRATION,FLR2_OFFICE1,100.00,5.7,1.360E-002,1.360E-004,2.266E-004,0.163,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, FLR1_OFFICE3_SPACE GENERIC OFFICE INFILTRATION,GENERIC OFFICE INFILTRATION,FLR1_OFFICE3,100.00,5.7,1.360E-002,1.360E-004,2.266E-004,0.163,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, FLR1_OFFICE4_SPACE GENERIC OFFICE INFILTRATION,GENERIC OFFICE INFILTRATION,FLR1_OFFICE4,100.00,5.7,1.360E-002,1.360E-004,2.266E-004,0.163,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, OFFICE2_SPACE GENERIC OFFICE INFILTRATION,GENERIC OFFICE INFILTRATION,OFFICE2,100.00,5.7,1.360E-002,1.360E-004,2.266E-004,0.163,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, FLR1_OFFICE2_SPACE GENERIC OFFICE INFILTRATION,GENERIC OFFICE INFILTRATION,FLR1_OFFICE2,100.00,5.7,1.360E-002,1.360E-004,2.266E-004,0.163,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, OFFICE4_SPACE GENERIC OFFICE INFILTRATION,GENERIC OFFICE INFILTRATION,OFFICE4,100.00,5.7,1.360E-002,1.360E-004,2.266E-004,0.163,1.000,0.000,0.000,0.000
+! <AirFlow Model>, Simple
+ AirFlow Model, Simple
+! <RoomAir Model>, Zone Name, Mixing/Mundt/UCSDDV/UCSDCV/UCSDUFI/UCSDUFE/User Defined
+RoomAir Model,FLR1_OFFICE1,Mixing/Well-Stirred
+RoomAir Model,FLR1_OFFICE2,Mixing/Well-Stirred
+RoomAir Model,FLR1_OFFICE3,Mixing/Well-Stirred
+RoomAir Model,FLR1_OFFICE4,Mixing/Well-Stirred
+RoomAir Model,FLR2_OFFICE1,Mixing/Well-Stirred
+RoomAir Model,FLR2_OFFICE2,Mixing/Well-Stirred
+RoomAir Model,FLR2_OFFICE3,Mixing/Well-Stirred
+RoomAir Model,FLR2_OFFICE4,Mixing/Well-Stirred
+RoomAir Model,FLR3_OFFICE1,Mixing/Well-Stirred
+RoomAir Model,FLR3_OFFICE2,Mixing/Well-Stirred
+RoomAir Model,FLR3_OFFICE3,Mixing/Well-Stirred
+RoomAir Model,FLR3_OFFICE4,Mixing/Well-Stirred
+RoomAir Model,OFFICE1,Mixing/Well-Stirred
+RoomAir Model,OFFICE2,Mixing/Well-Stirred
+RoomAir Model,OFFICE3,Mixing/Well-Stirred
+RoomAir Model,OFFICE4,Mixing/Well-Stirred
+! <AirflowNetwork Model:Control>, No Multizone or Distribution/Multizone with Distribution/Multizone without Distribution/Multizone with Distribution only during Fan Operation
+AirflowNetwork Model:Control,NoMultizoneOrDistribution
+! <Zone Volume Capacitance Multiplier>, Sensible Heat Capacity Multiplier, Moisture Capacity Multiplier, Carbon Dioxide Capacity Multiplier, Generic Contaminant Capacity Multiplier
+Zone Volume Capacitance Multiplier,   1.000 ,   1.000,   1.000,   1.000
+! <Load Timesteps in Zone Design Calculation Averaging Window>, Value
+ Load Timesteps in Zone Design Calculation Averaging Window,    6
+! <Heating Sizing Factor Information>, Sizing Factor ID, Value
+ Heating Sizing Factor Information, Global,   1.2500    
+ Heating Sizing Factor Information, Zone FLR1_OFFICE1,   1.2500    
+ Heating Sizing Factor Information, Zone FLR1_OFFICE2,   1.2500    
+ Heating Sizing Factor Information, Zone FLR1_OFFICE3,   1.2500    
+ Heating Sizing Factor Information, Zone FLR1_OFFICE4,   1.2500    
+ Heating Sizing Factor Information, Zone FLR2_OFFICE1,   1.2500    
+ Heating Sizing Factor Information, Zone FLR2_OFFICE2,   1.2500    
+ Heating Sizing Factor Information, Zone FLR2_OFFICE3,   1.2500    
+ Heating Sizing Factor Information, Zone FLR2_OFFICE4,   1.2500    
+ Heating Sizing Factor Information, Zone FLR3_OFFICE1,   1.2500    
+ Heating Sizing Factor Information, Zone FLR3_OFFICE2,   1.2500    
+ Heating Sizing Factor Information, Zone FLR3_OFFICE3,   1.2500    
+ Heating Sizing Factor Information, Zone FLR3_OFFICE4,   1.2500    
+ Heating Sizing Factor Information, Zone OFFICE1,   1.2500    
+ Heating Sizing Factor Information, Zone OFFICE2,   1.2500    
+ Heating Sizing Factor Information, Zone OFFICE3,   1.2500    
+ Heating Sizing Factor Information, Zone OFFICE4,   1.2500    
+! <Cooling Sizing Factor Information>, Sizing Factor ID, Value
+ Cooling Sizing Factor Information, Global,   1.1500    
+ Cooling Sizing Factor Information, Zone FLR1_OFFICE1,   1.1500    
+ Cooling Sizing Factor Information, Zone FLR1_OFFICE2,   1.1500    
+ Cooling Sizing Factor Information, Zone FLR1_OFFICE3,   1.1500    
+ Cooling Sizing Factor Information, Zone FLR1_OFFICE4,   1.1500    
+ Cooling Sizing Factor Information, Zone FLR2_OFFICE1,   1.1500    
+ Cooling Sizing Factor Information, Zone FLR2_OFFICE2,   1.1500    
+ Cooling Sizing Factor Information, Zone FLR2_OFFICE3,   1.1500    
+ Cooling Sizing Factor Information, Zone FLR2_OFFICE4,   1.1500    
+ Cooling Sizing Factor Information, Zone FLR3_OFFICE1,   1.1500    
+ Cooling Sizing Factor Information, Zone FLR3_OFFICE2,   1.1500    
+ Cooling Sizing Factor Information, Zone FLR3_OFFICE3,   1.1500    
+ Cooling Sizing Factor Information, Zone FLR3_OFFICE4,   1.1500    
+ Cooling Sizing Factor Information, Zone OFFICE1,   1.1500    
+ Cooling Sizing Factor Information, Zone OFFICE2,   1.1500    
+ Cooling Sizing Factor Information, Zone OFFICE3,   1.1500    
+ Cooling Sizing Factor Information, Zone OFFICE4,   1.1500    
+! <Zone Sizing Information>, Zone Name, Load Type, Calc Des Load {W}, User Des Load {W}, Calc Des Air Flow Rate {m3/s}, User Des Air Flow Rate {m3/s}, Design Day Name, Date/Time of Peak, Temperature at Peak {C}, Humidity Ratio at Peak {kgWater/kgDryAir}, Floor Area {m2}, # Occupants, Calc Outdoor Air Flow Rate {m3/s}, Calc DOAS Heat Addition Rate {W}
+ Zone Sizing Information, FLR1_OFFICE1, Cooling, 7009.01955, 8060.37249, 0.57525, 0.66154, MONTREAL-MCTAVISH SEPTEMBER .4% CONDNS DB=>MCWB, 9/21 15:30:00, 30.16000, 1.34723E-002, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, FLR1_OFFICE1, Heating, 3610.66884, 4513.33605, 0.15496, 0.19370, MONTREAL-MCTAVISH ANN HTG 99.6% CONDNS DB, 1/21 08:00:00, -21.30000, 5.64519E-004, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, FLR1_OFFICE2, Cooling, 6586.91036, 7574.94692, 0.54061, 0.62170, MONTREAL-MCTAVISH SEPTEMBER .4% CONDNS DB=>MCWB, 9/21 10:50:00, 28.36000, 1.34691E-002, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, FLR1_OFFICE2, Heating, 3614.99568, 4518.74460, 0.15515, 0.19393, MONTREAL-MCTAVISH ANN HTG 99.6% CONDNS DB, 1/21 08:00:00, -21.30000, 5.64519E-004, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, FLR1_OFFICE3, Cooling, 5813.54892, 6685.58126, 0.47713, 0.54870, MONTREAL-MCTAVISH JUNE .4% CONDNS DB=>MCWB, 6/21 18:00:00, 29.88400, 1.27040E-002, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, FLR1_OFFICE3, Heating, 3614.99568, 4518.74460, 0.15515, 0.19393, MONTREAL-MCTAVISH ANN HTG 99.6% CONDNS DB, 1/21 08:00:00, -21.30000, 5.64519E-004, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, FLR1_OFFICE4, Cooling, 5802.34061, 6672.69170, 0.47212, 0.54294, MONTREAL-MCTAVISH JUNE .4% CONDNS DB=>MCWB, 6/21 08:00:00, 25.68400, 1.26967E-002, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, FLR1_OFFICE4, Heating, 3619.32262, 4524.15327, 0.15533, 0.19417, MONTREAL-MCTAVISH ANN HTG 99.6% CONDNS DB, 1/21 08:00:00, -21.30000, 5.64519E-004, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, FLR2_OFFICE1, Cooling, 7006.03073, 8056.93534, 0.57500, 0.66125, MONTREAL-MCTAVISH SEPTEMBER .4% CONDNS DB=>MCWB, 9/21 15:30:00, 30.16000, 1.34723E-002, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, FLR2_OFFICE1, Heating, 3618.09830, 4522.62287, 0.15528, 0.19410, MONTREAL-MCTAVISH ANN HTG 99.6% CONDNS DB, 1/21 08:00:00, -21.30000, 5.64519E-004, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, FLR2_OFFICE2, Cooling, 6582.21476, 7569.54698, 0.54022, 0.62125, MONTREAL-MCTAVISH SEPTEMBER .4% CONDNS DB=>MCWB, 9/21 10:50:00, 28.36000, 1.34691E-002, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, FLR2_OFFICE2, Heating, 3621.80310, 4527.25388, 0.15544, 0.19430, MONTREAL-MCTAVISH ANN HTG 99.6% CONDNS DB, 1/21 08:00:00, -21.30000, 5.64519E-004, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, FLR2_OFFICE3, Cooling, 5817.60278, 6690.24319, 0.47747, 0.54909, MONTREAL-MCTAVISH JUNE .4% CONDNS DB=>MCWB, 6/21 18:00:00, 29.88400, 1.27040E-002, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, FLR2_OFFICE3, Heating, 3621.80310, 4527.25388, 0.15544, 0.19430, MONTREAL-MCTAVISH ANN HTG 99.6% CONDNS DB, 1/21 08:00:00, -21.30000, 5.64519E-004, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, FLR2_OFFICE4, Cooling, 5801.05048, 6671.20805, 0.47202, 0.54282, MONTREAL-MCTAVISH JUNE .4% CONDNS DB=>MCWB, 6/21 08:00:00, 25.68400, 1.26967E-002, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, FLR2_OFFICE4, Heating, 3625.50910, 4531.88637, 0.15560, 0.19450, MONTREAL-MCTAVISH ANN HTG 99.6% CONDNS DB, 1/21 08:00:00, -21.30000, 5.64519E-004, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, FLR3_OFFICE1, Cooling, 7001.61510, 8051.85737, 0.57464, 0.66084, MONTREAL-MCTAVISH SEPTEMBER .4% CONDNS DB=>MCWB, 9/21 15:30:00, 30.16000, 1.34723E-002, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, FLR3_OFFICE1, Heating, 3624.37071, 4530.46339, 0.15555, 0.19444, MONTREAL-MCTAVISH ANN HTG 99.6% CONDNS DB, 1/21 08:00:00, -21.30000, 5.64519E-004, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, FLR3_OFFICE2, Cooling, 6577.21701, 7563.79956, 0.53981, 0.62078, MONTREAL-MCTAVISH SEPTEMBER .4% CONDNS DB=>MCWB, 9/21 10:50:00, 28.36000, 1.34691E-002, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, FLR3_OFFICE2, Heating, 3627.50314, 4534.37893, 0.15568, 0.19461, MONTREAL-MCTAVISH ANN HTG 99.6% CONDNS DB, 1/21 08:00:00, -21.30000, 5.64519E-004, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, FLR3_OFFICE3, Cooling, 5820.64114, 6693.73732, 0.47772, 0.54937, MONTREAL-MCTAVISH JUNE .4% CONDNS DB=>MCWB, 6/21 18:00:00, 29.88400, 1.27040E-002, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, FLR3_OFFICE3, Heating, 3627.50314, 4534.37893, 0.15568, 0.19461, MONTREAL-MCTAVISH ANN HTG 99.6% CONDNS DB, 1/21 08:00:00, -21.30000, 5.64519E-004, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, FLR3_OFFICE4, Cooling, 5799.58579, 6669.52366, 0.47599, 0.54738, MONTREAL-MCTAVISH JUNE .4% CONDNS DB=>MCWB, 6/21 09:10:00, 27.51800, 1.26999E-002, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, FLR3_OFFICE4, Heating, 3630.62971, 4538.28713, 0.15582, 0.19477, MONTREAL-MCTAVISH ANN HTG 99.6% CONDNS DB, 1/21 08:00:00, -21.30000, 5.64519E-004, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, OFFICE1, Cooling, 7011.54348, 8063.27501, 0.57546, 0.66177, MONTREAL-MCTAVISH SEPTEMBER .4% CONDNS DB=>MCWB, 9/21 15:30:00, 30.16000, 1.34723E-002, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, OFFICE1, Heating, 3601.21739, 4501.52173, 0.15455, 0.19319, MONTREAL-MCTAVISH ANN HTG 99.6% CONDNS DB, 1/21 08:00:00, -21.30000, 5.64519E-004, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, OFFICE2, Cooling, 6592.35217, 7581.20499, 0.54105, 0.62221, MONTREAL-MCTAVISH SEPTEMBER .4% CONDNS DB=>MCWB, 9/21 10:50:00, 28.36000, 1.34691E-002, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, OFFICE2, Heating, 3606.18423, 4507.73028, 0.15477, 0.19346, MONTREAL-MCTAVISH ANN HTG 99.6% CONDNS DB, 1/21 08:00:00, -21.30000, 5.64519E-004, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, OFFICE3, Cooling, 5798.38649, 6668.14447, 0.47589, 0.54727, MONTREAL-MCTAVISH JUNE .4% CONDNS DB=>MCWB, 6/21 18:00:00, 29.88400, 1.27040E-002, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, OFFICE3, Heating, 3606.18423, 4507.73028, 0.15477, 0.19346, MONTREAL-MCTAVISH ANN HTG 99.6% CONDNS DB, 1/21 08:00:00, -21.30000, 5.64519E-004, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, OFFICE4, Cooling, 5802.27601, 6672.61742, 0.47212, 0.54293, MONTREAL-MCTAVISH JUNE .4% CONDNS DB=>MCWB, 6/21 08:00:00, 25.68400, 1.26967E-002, 100.00000, 5.65000, 4.38340E-002, 0.00000
+ Zone Sizing Information, OFFICE4, Heating, 3611.15073, 4513.93842, 0.15498, 0.19373, MONTREAL-MCTAVISH ANN HTG 99.6% CONDNS DB, 1/21 08:00:00, -21.30000, 5.64519E-004, 100.00000, 5.65000, 4.38340E-002, 0.00000
+! <Component Sizing Information>, Component Type, Component Name, Input Field Description, Value
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR1_OFFICE1 IDEAL LOADS AIR SYSTEM, User-Specified Maximum Heating Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR1_OFFICE1 IDEAL LOADS AIR SYSTEM, Design Size Maximum Sensible Heating Capacity [W], 6738.29966
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR1_OFFICE1 IDEAL LOADS AIR SYSTEM, Design Size Maximum Cooling Air Flow Rate [m3/s], 0.66154
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR1_OFFICE1 IDEAL LOADS AIR SYSTEM, Design Size Maximum Total Cooling Capacity [W], 9407.89077
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR1_OFFICE2 IDEAL LOADS AIR SYSTEM, User-Specified Maximum Heating Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR1_OFFICE2 IDEAL LOADS AIR SYSTEM, Design Size Maximum Sensible Heating Capacity [W], 6743.68884
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR1_OFFICE2 IDEAL LOADS AIR SYSTEM, Design Size Maximum Cooling Air Flow Rate [m3/s], 0.62170
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR1_OFFICE2 IDEAL LOADS AIR SYSTEM, Design Size Maximum Total Cooling Capacity [W], 8824.43325
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR1_OFFICE3 IDEAL LOADS AIR SYSTEM, User-Specified Maximum Heating Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR1_OFFICE3 IDEAL LOADS AIR SYSTEM, Design Size Maximum Sensible Heating Capacity [W], 6743.68884
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR1_OFFICE3 IDEAL LOADS AIR SYSTEM, Design Size Maximum Cooling Air Flow Rate [m3/s], 0.54870
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR1_OFFICE3 IDEAL LOADS AIR SYSTEM, Design Size Maximum Total Cooling Capacity [W], 7902.59902
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR1_OFFICE4 IDEAL LOADS AIR SYSTEM, User-Specified Maximum Heating Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR1_OFFICE4 IDEAL LOADS AIR SYSTEM, Design Size Maximum Sensible Heating Capacity [W], 6749.07811
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR1_OFFICE4 IDEAL LOADS AIR SYSTEM, Design Size Maximum Cooling Air Flow Rate [m3/s], 0.54294
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR1_OFFICE4 IDEAL LOADS AIR SYSTEM, Design Size Maximum Total Cooling Capacity [W], 7607.64891
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR2_OFFICE1 IDEAL LOADS AIR SYSTEM, User-Specified Maximum Heating Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR2_OFFICE1 IDEAL LOADS AIR SYSTEM, Design Size Maximum Sensible Heating Capacity [W], 6747.55305
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR2_OFFICE1 IDEAL LOADS AIR SYSTEM, Design Size Maximum Cooling Air Flow Rate [m3/s], 0.66125
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR2_OFFICE1 IDEAL LOADS AIR SYSTEM, Design Size Maximum Total Cooling Capacity [W], 9404.44869
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR2_OFFICE2 IDEAL LOADS AIR SYSTEM, User-Specified Maximum Heating Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR2_OFFICE2 IDEAL LOADS AIR SYSTEM, Design Size Maximum Sensible Heating Capacity [W], 6752.16743
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR2_OFFICE2 IDEAL LOADS AIR SYSTEM, Design Size Maximum Cooling Air Flow Rate [m3/s], 0.62125
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR2_OFFICE2 IDEAL LOADS AIR SYSTEM, Design Size Maximum Total Cooling Capacity [W], 8819.01296
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR2_OFFICE3 IDEAL LOADS AIR SYSTEM, User-Specified Maximum Heating Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR2_OFFICE3 IDEAL LOADS AIR SYSTEM, Design Size Maximum Sensible Heating Capacity [W], 6752.16743
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR2_OFFICE3 IDEAL LOADS AIR SYSTEM, Design Size Maximum Cooling Air Flow Rate [m3/s], 0.54909
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR2_OFFICE3 IDEAL LOADS AIR SYSTEM, Design Size Maximum Total Cooling Capacity [W], 7907.29354
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR2_OFFICE4 IDEAL LOADS AIR SYSTEM, User-Specified Maximum Heating Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR2_OFFICE4 IDEAL LOADS AIR SYSTEM, Design Size Maximum Sensible Heating Capacity [W], 6756.78327
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR2_OFFICE4 IDEAL LOADS AIR SYSTEM, Design Size Maximum Cooling Air Flow Rate [m3/s], 0.54282
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR2_OFFICE4 IDEAL LOADS AIR SYSTEM, Design Size Maximum Total Cooling Capacity [W], 7606.17129
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR3_OFFICE1 IDEAL LOADS AIR SYSTEM, User-Specified Maximum Heating Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR3_OFFICE1 IDEAL LOADS AIR SYSTEM, Design Size Maximum Sensible Heating Capacity [W], 6755.36525
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR3_OFFICE1 IDEAL LOADS AIR SYSTEM, Design Size Maximum Cooling Air Flow Rate [m3/s], 0.66084
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR3_OFFICE1 IDEAL LOADS AIR SYSTEM, Design Size Maximum Total Cooling Capacity [W], 9399.35713
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR3_OFFICE2 IDEAL LOADS AIR SYSTEM, User-Specified Maximum Heating Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR3_OFFICE2 IDEAL LOADS AIR SYSTEM, Design Size Maximum Sensible Heating Capacity [W], 6759.26670
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR3_OFFICE2 IDEAL LOADS AIR SYSTEM, Design Size Maximum Cooling Air Flow Rate [m3/s], 0.62078
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR3_OFFICE2 IDEAL LOADS AIR SYSTEM, Design Size Maximum Total Cooling Capacity [W], 8813.24599
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR3_OFFICE3 IDEAL LOADS AIR SYSTEM, User-Specified Maximum Heating Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR3_OFFICE3 IDEAL LOADS AIR SYSTEM, Design Size Maximum Sensible Heating Capacity [W], 6759.26670
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR3_OFFICE3 IDEAL LOADS AIR SYSTEM, Design Size Maximum Cooling Air Flow Rate [m3/s], 0.54937
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR3_OFFICE3 IDEAL LOADS AIR SYSTEM, Design Size Maximum Total Cooling Capacity [W], 7910.81410
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR3_OFFICE4 IDEAL LOADS AIR SYSTEM, User-Specified Maximum Heating Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR3_OFFICE4 IDEAL LOADS AIR SYSTEM, Design Size Maximum Sensible Heating Capacity [W], 6763.16082
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR3_OFFICE4 IDEAL LOADS AIR SYSTEM, Design Size Maximum Cooling Air Flow Rate [m3/s], 0.54738
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, FLR3_OFFICE4 IDEAL LOADS AIR SYSTEM, Design Size Maximum Total Cooling Capacity [W], 7760.17623
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, OFFICE1 IDEAL LOADS AIR SYSTEM, User-Specified Maximum Heating Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, OFFICE1 IDEAL LOADS AIR SYSTEM, Design Size Maximum Sensible Heating Capacity [W], 6726.52772
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, OFFICE1 IDEAL LOADS AIR SYSTEM, Design Size Maximum Cooling Air Flow Rate [m3/s], 0.66177
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, OFFICE1 IDEAL LOADS AIR SYSTEM, Design Size Maximum Total Cooling Capacity [W], 9410.79776
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, OFFICE2 IDEAL LOADS AIR SYSTEM, User-Specified Maximum Heating Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, OFFICE2 IDEAL LOADS AIR SYSTEM, Design Size Maximum Sensible Heating Capacity [W], 6732.71412
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, OFFICE2 IDEAL LOADS AIR SYSTEM, Design Size Maximum Cooling Air Flow Rate [m3/s], 0.62221
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, OFFICE2 IDEAL LOADS AIR SYSTEM, Design Size Maximum Total Cooling Capacity [W], 8830.71448
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, OFFICE3 IDEAL LOADS AIR SYSTEM, User-Specified Maximum Heating Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, OFFICE3 IDEAL LOADS AIR SYSTEM, Design Size Maximum Sensible Heating Capacity [W], 6732.71412
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, OFFICE3 IDEAL LOADS AIR SYSTEM, Design Size Maximum Cooling Air Flow Rate [m3/s], 0.54727
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, OFFICE3 IDEAL LOADS AIR SYSTEM, Design Size Maximum Total Cooling Capacity [W], 7885.06034
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, OFFICE4 IDEAL LOADS AIR SYSTEM, User-Specified Maximum Heating Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, OFFICE4 IDEAL LOADS AIR SYSTEM, Design Size Maximum Sensible Heating Capacity [W], 6738.90006
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, OFFICE4 IDEAL LOADS AIR SYSTEM, Design Size Maximum Cooling Air Flow Rate [m3/s], 0.54293
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, OFFICE4 IDEAL LOADS AIR SYSTEM, Design Size Maximum Total Cooling Capacity [W], 7607.57301
+! <Environment>,Environment Name,Environment Type, Start Date, End Date, Start DayOfWeek, Duration {#days}, Source:Start DayOfWeek,  Use Daylight Saving, Use Holidays, Apply Weekend Holiday Rule,  Use Rain Values, Use Snow Values, Sky Temperature Model
+! <Environment:Special Days>, Special Day Name, Special Day Type, Source, Start Date, Duration {#days}
+! <Environment:Daylight Saving>, Daylight Saving Indicator, Source, Start Date, End Date
+! <Environment:WarmupDays>, NumberofWarmupDays
+Environment,RUN PERIOD 1,WeatherFileRunPeriod,01/01/2006,12/31/2006,Sunday,365,Use RunPeriod Specified Day,No,No,No,Yes,Yes,Clark and Allen
+Environment:Daylight Saving,No,RunPeriod Object
+Environment:WarmupDays,  4
+! <Warmup Convergence Information>,Zone Name,Environment Type/Name,Average Warmup Temperature Difference {deltaC},Std Dev Warmup Temperature Difference {deltaC},Max Temperature Pass/Fail Convergence,Min Temperature Pass/Fail Convergence,Average Warmup Load Difference {W},Std Dev Warmup Load Difference {W},Heating Load Pass/Fail Convergence,Cooling Load Pass/Fail Convergence
+ Warmup Convergence Information,FLR1_OFFICE1,RunPeriod: RUN PERIOD 1,1.5049689889E-015,1.3936737436E-015,Pass,Pass,0.1428404163,0.6711670097,Pass,Pass
+ Warmup Convergence Information,FLR1_OFFICE2,RunPeriod: RUN PERIOD 1,1.9120507646E-015,1.4055789642E-015,Pass,Pass,0.1642951836,0.6127248765,Pass,Pass
+ Warmup Convergence Information,FLR1_OFFICE3,RunPeriod: RUN PERIOD 1,1.7640210280E-015,1.5311818117E-015,Pass,Pass,1.3954098575E-002,1.5526063995E-002,Pass,Pass
+ Warmup Convergence Information,FLR1_OFFICE4,RunPeriod: RUN PERIOD 1,1.7763568394E-015,1.5805250815E-015,Pass,Pass,1.1822132294E-002,1.2410302827E-002,Pass,Pass
+ Warmup Convergence Information,FLR2_OFFICE1,RunPeriod: RUN PERIOD 1,1.7886926508E-015,1.5454265904E-015,Pass,Pass,0.2727963374,2.1827403655,Pass,Pass
+ Warmup Convergence Information,FLR2_OFFICE2,RunPeriod: RUN PERIOD 1,1.8133642736E-015,1.5870106446E-015,Pass,Pass,0.7745078337,7.1564172319,Pass,Pass
+ Warmup Convergence Information,FLR2_OFFICE3,RunPeriod: RUN PERIOD 1,1.8627075191E-015,1.4851722645E-015,Pass,Pass,1.3948815887E-002,1.5475270788E-002,Pass,Pass
+ Warmup Convergence Information,FLR2_OFFICE4,RunPeriod: RUN PERIOD 1,1.5296406117E-015,1.4745294168E-015,Pass,Pass,1.1796847643E-002,1.2376596271E-002,Pass,Pass
+ Warmup Convergence Information,FLR3_OFFICE1,RunPeriod: RUN PERIOD 1,1.5173048003E-015,1.4649522642E-015,Pass,Pass,0.1278803243,0.4846353721,Pass,Pass
+ Warmup Convergence Information,FLR3_OFFICE2,RunPeriod: RUN PERIOD 1,1.9490581988E-015,1.6526304514E-015,Pass,Pass,0.1750457507,0.7314893662,Pass,Pass
+ Warmup Convergence Information,FLR3_OFFICE3,RunPeriod: RUN PERIOD 1,1.9120507646E-015,1.6226633392E-015,Pass,Pass,1.3946373500E-002,1.5423446987E-002,Pass,Pass
+ Warmup Convergence Information,FLR3_OFFICE4,RunPeriod: RUN PERIOD 1,1.5913196686E-015,1.3682744972E-015,Pass,Pass,1.1770815237E-002,1.2339399576E-002,Pass,Pass
+ Warmup Convergence Information,OFFICE1,RunPeriod: RUN PERIOD 1,2.0230730671E-015,1.6027062905E-015,Pass,Pass,0.1071659908,0.3024366317,Pass,Pass
+ Warmup Convergence Information,OFFICE2,RunPeriod: RUN PERIOD 1,1.8010284622E-015,1.5664051961E-015,Pass,Pass,0.1747587042,0.7305310476,Pass,Pass
+ Warmup Convergence Information,OFFICE3,RunPeriod: RUN PERIOD 1,1.8750433305E-015,1.6454326297E-015,Pass,Pass,1.3940516289E-002,1.5606949019E-002,Pass,Pass
+ Warmup Convergence Information,OFFICE4,RunPeriod: RUN PERIOD 1,1.7640210280E-015,1.4876292962E-015,Pass,Pass,1.1835158783E-002,1.2471156034E-002,Pass,Pass
+! <Program Control Information:Threads/Parallel Sims>, Threading Supported,Maximum Number of Threads, Env Set Threads (OMP_NUM_THREADS), EP Env Set Threads (EP_OMP_NUM_THREADS), IDF Set Threads, Number of Threads Used (Interior Radiant Exchange), Number Nominal Surfaces, Number Parallel Sims
+Program Control:Threads/Parallel Sims, No,1, N/A, N/A, N/A, N/A, N/A, N/A
+End of Data

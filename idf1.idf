@@ -7,18 +7,18 @@
 
 
 ScheduleTypeLimits,
- Temperature,              !- name
- -273.15,                  !- lower limit value
- ,                         !- upper limit value
- Continuous,               !- numeric type
- Temperature;              !- unit type
-
-ScheduleTypeLimits,
  Activity Level,           !- name
  0.0,                      !- lower limit value
  ,                         !- upper limit value
  Continuous,               !- numeric type
  ActivityLevel;            !- unit type
+
+ScheduleTypeLimits,
+ Temperature,              !- name
+ -273.15,                  !- lower limit value
+ ,                         !- upper limit value
+ Continuous,               !- numeric type
+ Temperature;              !- unit type
 
 ScheduleTypeLimits,
  Fractional,               !- name
@@ -29,11 +29,6 @@ ScheduleTypeLimits,
 
 !-   ============== SCHEDULES ==============
 
-
-Schedule:Constant,
- Seated Adult Activity,    !- schedule name
- Activity Level,           !- schedule type limits
- 120.0;                    !- value
 
 Schedule:Year,
  Generic Office Infiltration, !- schedule name
@@ -202,172 +197,6 @@ Schedule:Day:Interval,
  0.04311628;               !- value until time 10
 
 Schedule:Year,
- Generic Office Cooling,   !- schedule name
- Temperature,              !- schedule type limits
- Generic Office Cooling_Week 1, !- week schedule name 1
- 1,                        !- start month 1
- 1,                        !- start day 1
- 12,                       !- end month 1
- 31;                       !- end day 1
-
-Schedule:Week:Daily,
- Generic Office Cooling_Week 1, !- name
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default, !- sunday
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Wkdy, !- monday
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Wkdy, !- tuesday
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Wkdy, !- wednesday
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Wkdy, !- thursday
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Wkdy, !- friday
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Sat, !- saturday
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default, !- holiday
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_SmrDsn, !- summer design day
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default_WntrDsn, !- winter design day
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default, !- custom day 1
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default; !- custom day 2
-
-Schedule:Day:Interval,
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default, !- schedule name
- Temperature,              !- schedule type limits
- No,                       !- interpolate to timestep
- 24:00,                    !- time 1 {hh:mm}
- 26.7;                     !- value until time 1
-
-Schedule:Day:Interval,
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_SmrDsn, !- schedule name
- Temperature,              !- schedule type limits
- No,                       !- interpolate to timestep
- 05:00,                    !- time 1 {hh:mm}
- 26.7,                     !- value until time 1
- 06:00,                    !- time 2 {hh:mm}
- 25.7,                     !- value until time 2
- 07:00,                    !- time 3 {hh:mm}
- 25.0,                     !- value until time 3
- 22:00,                    !- time 4 {hh:mm}
- 24.0,                     !- value until time 4
- 24:00,                    !- time 5 {hh:mm}
- 26.7;                     !- value until time 5
-
-Schedule:Day:Interval,
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default_WntrDsn, !- schedule name
- Temperature,              !- schedule type limits
- No,                       !- interpolate to timestep
- 24:00,                    !- time 1 {hh:mm}
- 26.7;                     !- value until time 1
-
-Schedule:Day:Interval,
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Wkdy, !- schedule name
- Temperature,              !- schedule type limits
- No,                       !- interpolate to timestep
- 05:00,                    !- time 1 {hh:mm}
- 26.7,                     !- value until time 1
- 06:00,                    !- time 2 {hh:mm}
- 25.6,                     !- value until time 2
- 07:00,                    !- time 3 {hh:mm}
- 25.0,                     !- value until time 3
- 22:00,                    !- time 4 {hh:mm}
- 24.0,                     !- value until time 4
- 24:00,                    !- time 5 {hh:mm}
- 26.7;                     !- value until time 5
-
-Schedule:Day:Interval,
- OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Sat, !- schedule name
- Temperature,              !- schedule type limits
- No,                       !- interpolate to timestep
- 05:00,                    !- time 1 {hh:mm}
- 26.7,                     !- value until time 1
- 06:00,                    !- time 2 {hh:mm}
- 25.7,                     !- value until time 2
- 07:00,                    !- time 3 {hh:mm}
- 25.0,                     !- value until time 3
- 17:00,                    !- time 4 {hh:mm}
- 24.0,                     !- value until time 4
- 24:00,                    !- time 5 {hh:mm}
- 26.7;                     !- value until time 5
-
-Schedule:Year,
- Generic Office Heating,   !- schedule name
- Temperature,              !- schedule type limits
- Generic Office Heating_Week 1, !- week schedule name 1
- 1,                        !- start month 1
- 1,                        !- start day 1
- 12,                       !- end month 1
- 31;                       !- end day 1
-
-Schedule:Week:Daily,
- Generic Office Heating_Week 1, !- name
- OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Default, !- sunday
- OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Wkdy, !- monday
- OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Wkdy, !- tuesday
- OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Wkdy, !- wednesday
- OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Wkdy, !- thursday
- OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Wkdy, !- friday
- OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Sat, !- saturday
- OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Default, !- holiday
- OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Default_SmrDsn, !- summer design day
- OfficeMedium HTGSETP_SCH_YES_OPTIMUM_WntrDsn, !- winter design day
- OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Default, !- custom day 1
- OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Default; !- custom day 2
-
-Schedule:Day:Interval,
- OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Default, !- schedule name
- Temperature,              !- schedule type limits
- No,                       !- interpolate to timestep
- 24:00,                    !- time 1 {hh:mm}
- 15.6;                     !- value until time 1
-
-Schedule:Day:Interval,
- OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Default_SmrDsn, !- schedule name
- Temperature,              !- schedule type limits
- No,                       !- interpolate to timestep
- 24:00,                    !- time 1 {hh:mm}
- 15.6;                     !- value until time 1
-
-Schedule:Day:Interval,
- OfficeMedium HTGSETP_SCH_YES_OPTIMUM_WntrDsn, !- schedule name
- Temperature,              !- schedule type limits
- No,                       !- interpolate to timestep
- 05:00,                    !- time 1 {hh:mm}
- 15.6,                     !- value until time 1
- 06:00,                    !- time 2 {hh:mm}
- 17.6,                     !- value until time 2
- 07:00,                    !- time 3 {hh:mm}
- 19.6,                     !- value until time 3
- 22:00,                    !- time 4 {hh:mm}
- 21.0,                     !- value until time 4
- 24:00,                    !- time 5 {hh:mm}
- 15.6;                     !- value until time 5
-
-Schedule:Day:Interval,
- OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Wkdy, !- schedule name
- Temperature,              !- schedule type limits
- No,                       !- interpolate to timestep
- 05:00,                    !- time 1 {hh:mm}
- 15.6,                     !- value until time 1
- 06:00,                    !- time 2 {hh:mm}
- 17.8,                     !- value until time 2
- 07:00,                    !- time 3 {hh:mm}
- 20.0,                     !- value until time 3
- 22:00,                    !- time 4 {hh:mm}
- 21.0,                     !- value until time 4
- 24:00,                    !- time 5 {hh:mm}
- 15.6;                     !- value until time 5
-
-Schedule:Day:Interval,
- OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Sat, !- schedule name
- Temperature,              !- schedule type limits
- No,                       !- interpolate to timestep
- 05:00,                    !- time 1 {hh:mm}
- 15.6,                     !- value until time 1
- 06:00,                    !- time 2 {hh:mm}
- 17.8,                     !- value until time 2
- 07:00,                    !- time 3 {hh:mm}
- 20.0,                     !- value until time 3
- 17:00,                    !- time 4 {hh:mm}
- 21.0,                     !- value until time 4
- 24:00,                    !- time 5 {hh:mm}
- 15.6;                     !- value until time 5
-
-Schedule:Year,
  Generic Office Equipment, !- schedule name
  Fractional,               !- schedule type limits
  Generic Office Equipment_Week 1, !- week schedule name 1
@@ -451,6 +280,89 @@ Schedule:Day:Interval,
  0.476543495,              !- value until time 6
  24:00,                    !- time 7 {hh:mm}
  0.381234796;              !- value until time 7
+
+Schedule:Year,
+ Generic Office Cooling,   !- schedule name
+ Temperature,              !- schedule type limits
+ Generic Office Cooling_Week 1, !- week schedule name 1
+ 1,                        !- start month 1
+ 1,                        !- start day 1
+ 12,                       !- end month 1
+ 31;                       !- end day 1
+
+Schedule:Week:Daily,
+ Generic Office Cooling_Week 1, !- name
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default, !- sunday
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Wkdy, !- monday
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Wkdy, !- tuesday
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Wkdy, !- wednesday
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Wkdy, !- thursday
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Wkdy, !- friday
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Sat, !- saturday
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default, !- holiday
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_SmrDsn, !- summer design day
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default_WntrDsn, !- winter design day
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default, !- custom day 1
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default; !- custom day 2
+
+Schedule:Day:Interval,
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default, !- schedule name
+ Temperature,              !- schedule type limits
+ No,                       !- interpolate to timestep
+ 24:00,                    !- time 1 {hh:mm}
+ 26.7;                     !- value until time 1
+
+Schedule:Day:Interval,
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_SmrDsn, !- schedule name
+ Temperature,              !- schedule type limits
+ No,                       !- interpolate to timestep
+ 05:00,                    !- time 1 {hh:mm}
+ 26.7,                     !- value until time 1
+ 06:00,                    !- time 2 {hh:mm}
+ 25.7,                     !- value until time 2
+ 07:00,                    !- time 3 {hh:mm}
+ 25.0,                     !- value until time 3
+ 22:00,                    !- time 4 {hh:mm}
+ 24.0,                     !- value until time 4
+ 24:00,                    !- time 5 {hh:mm}
+ 26.7;                     !- value until time 5
+
+Schedule:Day:Interval,
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Default_WntrDsn, !- schedule name
+ Temperature,              !- schedule type limits
+ No,                       !- interpolate to timestep
+ 24:00,                    !- time 1 {hh:mm}
+ 26.7;                     !- value until time 1
+
+Schedule:Day:Interval,
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Wkdy, !- schedule name
+ Temperature,              !- schedule type limits
+ No,                       !- interpolate to timestep
+ 05:00,                    !- time 1 {hh:mm}
+ 26.7,                     !- value until time 1
+ 06:00,                    !- time 2 {hh:mm}
+ 25.6,                     !- value until time 2
+ 07:00,                    !- time 3 {hh:mm}
+ 25.0,                     !- value until time 3
+ 22:00,                    !- time 4 {hh:mm}
+ 24.0,                     !- value until time 4
+ 24:00,                    !- time 5 {hh:mm}
+ 26.7;                     !- value until time 5
+
+Schedule:Day:Interval,
+ OfficeMedium CLGSETP_SCH_YES_OPTIMUM_Sat, !- schedule name
+ Temperature,              !- schedule type limits
+ No,                       !- interpolate to timestep
+ 05:00,                    !- time 1 {hh:mm}
+ 26.7,                     !- value until time 1
+ 06:00,                    !- time 2 {hh:mm}
+ 25.7,                     !- value until time 2
+ 07:00,                    !- time 3 {hh:mm}
+ 25.0,                     !- value until time 3
+ 17:00,                    !- time 4 {hh:mm}
+ 24.0,                     !- value until time 4
+ 24:00,                    !- time 5 {hh:mm}
+ 26.7;                     !- value until time 5
 
 Schedule:Year,
  Generic Office Occupancy, !- schedule name
@@ -546,6 +458,94 @@ Schedule:Day:Interval,
  0.0;                      !- value until time 6
 
 Schedule:Constant,
+ Seated Adult Activity,    !- schedule name
+ Activity Level,           !- schedule type limits
+ 120.0;                    !- value
+
+Schedule:Year,
+ Generic Office Heating,   !- schedule name
+ Temperature,              !- schedule type limits
+ Generic Office Heating_Week 1, !- week schedule name 1
+ 1,                        !- start month 1
+ 1,                        !- start day 1
+ 12,                       !- end month 1
+ 31;                       !- end day 1
+
+Schedule:Week:Daily,
+ Generic Office Heating_Week 1, !- name
+ OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Default, !- sunday
+ OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Wkdy, !- monday
+ OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Wkdy, !- tuesday
+ OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Wkdy, !- wednesday
+ OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Wkdy, !- thursday
+ OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Wkdy, !- friday
+ OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Sat, !- saturday
+ OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Default, !- holiday
+ OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Default_SmrDsn, !- summer design day
+ OfficeMedium HTGSETP_SCH_YES_OPTIMUM_WntrDsn, !- winter design day
+ OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Default, !- custom day 1
+ OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Default; !- custom day 2
+
+Schedule:Day:Interval,
+ OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Default, !- schedule name
+ Temperature,              !- schedule type limits
+ No,                       !- interpolate to timestep
+ 24:00,                    !- time 1 {hh:mm}
+ 15.6;                     !- value until time 1
+
+Schedule:Day:Interval,
+ OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Default_SmrDsn, !- schedule name
+ Temperature,              !- schedule type limits
+ No,                       !- interpolate to timestep
+ 24:00,                    !- time 1 {hh:mm}
+ 15.6;                     !- value until time 1
+
+Schedule:Day:Interval,
+ OfficeMedium HTGSETP_SCH_YES_OPTIMUM_WntrDsn, !- schedule name
+ Temperature,              !- schedule type limits
+ No,                       !- interpolate to timestep
+ 05:00,                    !- time 1 {hh:mm}
+ 15.6,                     !- value until time 1
+ 06:00,                    !- time 2 {hh:mm}
+ 17.6,                     !- value until time 2
+ 07:00,                    !- time 3 {hh:mm}
+ 19.6,                     !- value until time 3
+ 22:00,                    !- time 4 {hh:mm}
+ 21.0,                     !- value until time 4
+ 24:00,                    !- time 5 {hh:mm}
+ 15.6;                     !- value until time 5
+
+Schedule:Day:Interval,
+ OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Wkdy, !- schedule name
+ Temperature,              !- schedule type limits
+ No,                       !- interpolate to timestep
+ 05:00,                    !- time 1 {hh:mm}
+ 15.6,                     !- value until time 1
+ 06:00,                    !- time 2 {hh:mm}
+ 17.8,                     !- value until time 2
+ 07:00,                    !- time 3 {hh:mm}
+ 20.0,                     !- value until time 3
+ 22:00,                    !- time 4 {hh:mm}
+ 21.0,                     !- value until time 4
+ 24:00,                    !- time 5 {hh:mm}
+ 15.6;                     !- value until time 5
+
+Schedule:Day:Interval,
+ OfficeMedium HTGSETP_SCH_YES_OPTIMUM_Sat, !- schedule name
+ Temperature,              !- schedule type limits
+ No,                       !- interpolate to timestep
+ 05:00,                    !- time 1 {hh:mm}
+ 15.6,                     !- value until time 1
+ 06:00,                    !- time 2 {hh:mm}
+ 17.8,                     !- value until time 2
+ 07:00,                    !- time 3 {hh:mm}
+ 20.0,                     !- value until time 3
+ 17:00,                    !- time 4 {hh:mm}
+ 21.0,                     !- value until time 4
+ 24:00,                    !- time 5 {hh:mm}
+ 15.6;                     !- value until time 5
+
+Schedule:Constant,
  Always On,                !- schedule name
  Fractional,               !- schedule type limits
  1.0;                      !- value
@@ -565,87 +565,9 @@ Material,
  0.5;                      !- visible absorptance
 
 Material,
- Generic Wall Air Gap,     !- name
- Smooth,                   !- roughness
- 0.1,                      !- thickness {m}
- 0.667,                    !- conductivity {W/m-K}
- 1.28,                     !- density {kg/m3}
- 1000.0,                   !- specific heat {J/kg-K}
- 0.9,                      !- thermal absorptance
- 0.7,                      !- solar absorptance
- 0.7;                      !- visible absorptance
-
-Material,
  Generic 50mm Insulation,  !- name
  MediumRough,              !- roughness
  0.05,                     !- thickness {m}
- 0.03,                     !- conductivity {W/m-K}
- 43.0,                     !- density {kg/m3}
- 1210.0,                   !- specific heat {J/kg-K}
- 0.9,                      !- thermal absorptance
- 0.7,                      !- solar absorptance
- 0.7;                      !- visible absorptance
-
-Material,
- Generic Painted Metal,    !- name
- Smooth,                   !- roughness
- 0.0015,                   !- thickness {m}
- 45.0,                     !- conductivity {W/m-K}
- 7690.0,                   !- density {kg/m3}
- 410.0,                    !- specific heat {J/kg-K}
- 0.9,                      !- thermal absorptance
- 0.5,                      !- solar absorptance
- 0.5;                      !- visible absorptance
-
-Material,
- Generic 25mm Wood,        !- name
- MediumSmooth,             !- roughness
- 0.0254,                   !- thickness {m}
- 0.15,                     !- conductivity {W/m-K}
- 608.0,                    !- density {kg/m3}
- 1630.0,                   !- specific heat {J/kg-K}
- 0.9,                      !- thermal absorptance
- 0.5,                      !- solar absorptance
- 0.5;                      !- visible absorptance
-
-WindowMaterial:Gas,
- Generic Window Air Gap,   !- name
- Air,                      !- gas type
- 0.0127;                   !- thickness {m}
-
-Material,
- Generic Ceiling Air Gap,  !- name
- Smooth,                   !- roughness
- 0.1,                      !- thickness {m}
- 0.556,                    !- conductivity {W/m-K}
- 1.28,                     !- density {kg/m3}
- 1000.0,                   !- specific heat {J/kg-K}
- 0.9,                      !- thermal absorptance
- 0.7,                      !- solar absorptance
- 0.7;                      !- visible absorptance
-
-WindowMaterial:Glazing,
- Generic Clear Glass,      !- name
- SpectralAverage,          !- optical data type
- ,                         !- spectral data set name
- 0.006,                    !- thickness {m}
- 0.77,                     !- solar transmittance
- 0.07,                     !- solar reflectance front
- 0.07,                     !- solar reflectance back
- 0.88,                     !- visible transmittance
- 0.08,                     !- visible reflectance front
- 0.08,                     !- visible reflectance back
- 0.0,                      !- infrared_transmittance
- 0.84,                     !- emissivity front
- 0.84,                     !- emissivity back
- 1.0,                      !- conductivity {W/m-K}
- 1.0,                      !- dirt correction factor
- No;                       !- solar diffusing
-
-Material,
- Generic 25mm Insulation,  !- name
- MediumRough,              !- roughness
- 0.025,                    !- thickness {m}
  0.03,                     !- conductivity {W/m-K}
  43.0,                     !- density {kg/m3}
  1210.0,                   !- specific heat {J/kg-K}
@@ -663,28 +585,6 @@ Material,
  0.9,                      !- thermal absorptance
  0.2,                      !- solar absorptance
  0.2;                      !- visible absorptance
-
-Material,
- Generic Roof Membrane,    !- name
- MediumRough,              !- roughness
- 0.01,                     !- thickness {m}
- 0.16,                     !- conductivity {W/m-K}
- 1120.0,                   !- density {kg/m3}
- 1460.0,                   !- specific heat {J/kg-K}
- 0.9,                      !- thermal absorptance
- 0.65,                     !- solar absorptance
- 0.65;                     !- visible absorptance
-
-Material,
- Generic LW Concrete,      !- name
- MediumRough,              !- roughness
- 0.1,                      !- thickness {m}
- 0.53,                     !- conductivity {W/m-K}
- 1280.0,                   !- density {kg/m3}
- 840.0,                    !- specific heat {J/kg-K}
- 0.9,                      !- thermal absorptance
- 0.8,                      !- solar absorptance
- 0.8;                      !- visible absorptance
 
 WindowMaterial:Glazing,
  Generic Low-e Glass,      !- name
@@ -705,15 +605,77 @@ WindowMaterial:Glazing,
  No;                       !- solar diffusing
 
 Material,
- Generic HW Concrete,      !- name
- MediumRough,              !- roughness
- 0.2,                      !- thickness {m}
- 1.95,                     !- conductivity {W/m-K}
- 2240.0,                   !- density {kg/m3}
- 900.0,                    !- specific heat {J/kg-K}
+ Generic 25mm Wood,        !- name
+ MediumSmooth,             !- roughness
+ 0.0254,                   !- thickness {m}
+ 0.15,                     !- conductivity {W/m-K}
+ 608.0,                    !- density {kg/m3}
+ 1630.0,                   !- specific heat {J/kg-K}
  0.9,                      !- thermal absorptance
- 0.8,                      !- solar absorptance
- 0.8;                      !- visible absorptance
+ 0.5,                      !- solar absorptance
+ 0.5;                      !- visible absorptance
+
+WindowMaterial:Glazing,
+ Generic Clear Glass,      !- name
+ SpectralAverage,          !- optical data type
+ ,                         !- spectral data set name
+ 0.006,                    !- thickness {m}
+ 0.77,                     !- solar transmittance
+ 0.07,                     !- solar reflectance front
+ 0.07,                     !- solar reflectance back
+ 0.88,                     !- visible transmittance
+ 0.08,                     !- visible reflectance front
+ 0.08,                     !- visible reflectance back
+ 0.0,                      !- infrared_transmittance
+ 0.84,                     !- emissivity front
+ 0.84,                     !- emissivity back
+ 1.0,                      !- conductivity {W/m-K}
+ 1.0,                      !- dirt correction factor
+ No;                       !- solar diffusing
+
+Material,
+ Generic Roof Membrane,    !- name
+ MediumRough,              !- roughness
+ 0.01,                     !- thickness {m}
+ 0.16,                     !- conductivity {W/m-K}
+ 1120.0,                   !- density {kg/m3}
+ 1460.0,                   !- specific heat {J/kg-K}
+ 0.9,                      !- thermal absorptance
+ 0.65,                     !- solar absorptance
+ 0.65;                     !- visible absorptance
+
+Material,
+ Generic Ceiling Air Gap,  !- name
+ Smooth,                   !- roughness
+ 0.1,                      !- thickness {m}
+ 0.556,                    !- conductivity {W/m-K}
+ 1.28,                     !- density {kg/m3}
+ 1000.0,                   !- specific heat {J/kg-K}
+ 0.9,                      !- thermal absorptance
+ 0.7,                      !- solar absorptance
+ 0.7;                      !- visible absorptance
+
+Material,
+ Generic Painted Metal,    !- name
+ Smooth,                   !- roughness
+ 0.0015,                   !- thickness {m}
+ 45.0,                     !- conductivity {W/m-K}
+ 7690.0,                   !- density {kg/m3}
+ 410.0,                    !- specific heat {J/kg-K}
+ 0.9,                      !- thermal absorptance
+ 0.5,                      !- solar absorptance
+ 0.5;                      !- visible absorptance
+
+Material,
+ Generic 25mm Insulation,  !- name
+ MediumRough,              !- roughness
+ 0.025,                    !- thickness {m}
+ 0.03,                     !- conductivity {W/m-K}
+ 43.0,                     !- density {kg/m3}
+ 1210.0,                   !- specific heat {J/kg-K}
+ 0.9,                      !- thermal absorptance
+ 0.7,                      !- solar absorptance
+ 0.7;                      !- visible absorptance
 
 Material,
  Generic Brick,            !- name
@@ -726,13 +688,46 @@ Material,
  0.65,                     !- solar absorptance
  0.65;                     !- visible absorptance
 
+Material,
+ Generic LW Concrete,      !- name
+ MediumRough,              !- roughness
+ 0.1,                      !- thickness {m}
+ 0.53,                     !- conductivity {W/m-K}
+ 1280.0,                   !- density {kg/m3}
+ 840.0,                    !- specific heat {J/kg-K}
+ 0.9,                      !- thermal absorptance
+ 0.8,                      !- solar absorptance
+ 0.8;                      !- visible absorptance
+
+Material,
+ Generic HW Concrete,      !- name
+ MediumRough,              !- roughness
+ 0.2,                      !- thickness {m}
+ 1.95,                     !- conductivity {W/m-K}
+ 2240.0,                   !- density {kg/m3}
+ 900.0,                    !- specific heat {J/kg-K}
+ 0.9,                      !- thermal absorptance
+ 0.8,                      !- solar absorptance
+ 0.8;                      !- visible absorptance
+
+Material,
+ Generic Wall Air Gap,     !- name
+ Smooth,                   !- roughness
+ 0.1,                      !- thickness {m}
+ 0.667,                    !- conductivity {W/m-K}
+ 1.28,                     !- density {kg/m3}
+ 1000.0,                   !- specific heat {J/kg-K}
+ 0.9,                      !- thermal absorptance
+ 0.7,                      !- solar absorptance
+ 0.7;                      !- visible absorptance
+
+WindowMaterial:Gas,
+ Generic Window Air Gap,   !- name
+ Air,                      !- gas type
+ 0.0127;                   !- thickness {m}
+
 !-   ============ CONSTRUCTIONS ============
 
-
-Construction,
- Generic Ground Slab,      !- name
- Generic 50mm Insulation,  !- layer 1
- Generic HW Concrete;      !- layer 2
 
 Construction,
  Generic Roof,             !- name
@@ -743,6 +738,38 @@ Construction,
  Generic Acoustic Tile;    !- layer 5
 
 Construction,
+ Generic Interior Door,    !- name
+ Generic 25mm Wood;        !- layer 1
+
+Construction:AirBoundary,
+ Generic Air Boundary,     !- construction name
+ None;                     !- air exchange method
+
+Construction,
+ Generic Exterior Door,    !- name
+ Generic Painted Metal,    !- layer 1
+ Generic 25mm Insulation,  !- layer 2
+ Generic Painted Metal;    !- layer 3
+
+Construction,
+ Generic Ground Slab,      !- name
+ Generic 50mm Insulation,  !- layer 1
+ Generic HW Concrete;      !- layer 2
+
+Construction,
+ Generic Exposed Floor,    !- name
+ Generic Painted Metal,    !- layer 1
+ Generic Ceiling Air Gap,  !- layer 2
+ Generic 50mm Insulation,  !- layer 3
+ Generic LW Concrete;      !- layer 4
+
+Construction,
+ Generic Interior Ceiling, !- name
+ Generic LW Concrete,      !- layer 1
+ Generic Ceiling Air Gap,  !- layer 2
+ Generic Acoustic Tile;    !- layer 3
+
+Construction,
  Generic Underground Wall, !- name
  Generic 50mm Insulation,  !- layer 1
  Generic HW Concrete,      !- layer 2
@@ -750,21 +777,18 @@ Construction,
  Generic Gypsum Board;     !- layer 4
 
 Construction,
- Generic Underground Roof, !- name
- Generic 50mm Insulation,  !- layer 1
- Generic HW Concrete,      !- layer 2
- Generic Ceiling Air Gap,  !- layer 3
- Generic Acoustic Tile;    !- layer 4
+ Generic Interior Floor,   !- name
+ Generic Acoustic Tile,    !- layer 1
+ Generic Ceiling Air Gap,  !- layer 2
+ Generic LW Concrete;      !- layer 3
 
 Construction,
- Generic Double Pane,      !- name
- Generic Low-e Glass,      !- layer 1
- Generic Window Air Gap,   !- layer 2
- Generic Clear Glass;      !- layer 3
-
-Construction,
- Generic Interior Door,    !- name
- Generic 25mm Wood;        !- layer 1
+ Generic Exterior Wall,    !- name
+ Generic Brick,            !- layer 1
+ Generic LW Concrete,      !- layer 2
+ Generic 50mm Insulation,  !- layer 3
+ Generic Wall Air Gap,     !- layer 4
+ Generic Gypsum Board;     !- layer 5
 
 Construction,
  Generic Single Pane,      !- name
@@ -777,41 +801,17 @@ Construction,
  Generic Gypsum Board;     !- layer 3
 
 Construction,
- Generic Exposed Floor,    !- name
- Generic Painted Metal,    !- layer 1
- Generic Ceiling Air Gap,  !- layer 2
- Generic 50mm Insulation,  !- layer 3
- Generic LW Concrete;      !- layer 4
-
-Construction:AirBoundary,
- Generic Air Boundary,     !- construction name
- None;                     !- air exchange method
+ Generic Double Pane,      !- name
+ Generic Low-e Glass,      !- layer 1
+ Generic Window Air Gap,   !- layer 2
+ Generic Clear Glass;      !- layer 3
 
 Construction,
- Generic Exterior Wall,    !- name
- Generic Brick,            !- layer 1
- Generic LW Concrete,      !- layer 2
- Generic 50mm Insulation,  !- layer 3
- Generic Wall Air Gap,     !- layer 4
- Generic Gypsum Board;     !- layer 5
-
-Construction,
- Generic Interior Ceiling, !- name
- Generic LW Concrete,      !- layer 1
- Generic Ceiling Air Gap,  !- layer 2
- Generic Acoustic Tile;    !- layer 3
-
-Construction,
- Generic Interior Floor,   !- name
- Generic Acoustic Tile,    !- layer 1
- Generic Ceiling Air Gap,  !- layer 2
- Generic LW Concrete;      !- layer 3
-
-Construction,
- Generic Exterior Door,    !- name
- Generic Painted Metal,    !- layer 1
- Generic 25mm Insulation,  !- layer 2
- Generic Painted Metal;    !- layer 3
+ Generic Underground Roof, !- name
+ Generic 50mm Insulation,  !- layer 1
+ Generic HW Concrete,      !- layer 2
+ Generic Ceiling Air Gap,  !- layer 3
+ Generic Acoustic Tile;    !- layer 4
 
 !-   ============ HVAC SYSTEMS ============
 

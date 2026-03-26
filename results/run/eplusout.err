@@ -1,0 +1,140 @@
+Program Version,EnergyPlus, Version 25.1.0-68a4a7c774, YMD=2026.03.26 21:45,
+   ************* Beginning Zone Sizing Calculations
+   ** Warning ** Weather file location will be used rather than entered (IDF) Location object.
+   **   ~~~   ** ..Location object=SITE 1
+   **   ~~~   ** ..Weather File Location=Montreal-McTavish QC CAN CWEC2016 WMO#=716120
+   **   ~~~   ** ..due to location differences, Latitude difference=[45.50] degrees, Longitude difference=[73.58] degrees.
+   **   ~~~   ** ..Time Zone difference=[5.0] hour(s), Elevation difference=[7280.00] percent, [72.80] meters.
+   ** Warning ** CheckUsedConstructions: There are 10 nominally unused constructions in input.
+   **   ~~~   ** For explicit details on each unused construction, use Output:Diagnostics,DisplayExtraWarnings;
+   ** Warning ** ZoneHVAC:IdealLoadsAirSystem "FLR1_OFFICE1 IDEAL LOADS AIR SYSTEM" Requested outdoor air flow rate = 4.38340E-002 [m3/s] exceeds limit.
+   **   ~~~   **  Will be reduced to the Maximum Cooling Air Flow Rate = -99998.99999 [m3/s]
+   **   ~~~   **  During Sizing, Environment=MONTREAL-MCTAVISH SEPTEMBER .4% CONDNS WB=>MCDB, at Simulation time=09/21 24:00 - 24:10
+   ** Warning ** Temperature out of range [-100. to 200.] (PsyPsatFnTemp)
+   **   ~~~   **  Routine=CalcPurchAirLoads, During Sizing, Environment=MONTREAL-MCTAVISH SEPTEMBER .4% CONDNS WB=>MCDB, at Simulation time=09/21 24:00 - 24:10
+   **   ~~~   **  Input Temperature=809.95
+   ** Warning ** ZoneHVAC:IdealLoadsAirSystem "FLR1_OFFICE2 IDEAL LOADS AIR SYSTEM" Requested outdoor air flow rate = 4.38340E-002 [m3/s] exceeds limit.
+   **   ~~~   **  Will be reduced to the Maximum Cooling Air Flow Rate = -99998.99999 [m3/s]
+   **   ~~~   **  During Sizing, Environment=MONTREAL-MCTAVISH SEPTEMBER .4% CONDNS WB=>MCDB, at Simulation time=09/21 24:00 - 24:10
+   ** Warning ** ZoneHVAC:IdealLoadsAirSystem "FLR1_OFFICE3 IDEAL LOADS AIR SYSTEM" Requested outdoor air flow rate = 4.38340E-002 [m3/s] exceeds limit.
+   **   ~~~   **  Will be reduced to the Maximum Cooling Air Flow Rate = -99998.99999 [m3/s]
+   **   ~~~   **  During Sizing, Environment=MONTREAL-MCTAVISH SEPTEMBER .4% CONDNS WB=>MCDB, at Simulation time=09/21 24:00 - 24:10
+   ** Warning ** ZoneHVAC:IdealLoadsAirSystem "FLR1_OFFICE4 IDEAL LOADS AIR SYSTEM" Requested outdoor air flow rate = 4.38340E-002 [m3/s] exceeds limit.
+   **   ~~~   **  Will be reduced to the Maximum Cooling Air Flow Rate = -99998.99999 [m3/s]
+   **   ~~~   **  During Sizing, Environment=MONTREAL-MCTAVISH SEPTEMBER .4% CONDNS WB=>MCDB, at Simulation time=09/21 24:00 - 24:10
+   ** Warning ** ZoneHVAC:IdealLoadsAirSystem "FLR2_OFFICE1 IDEAL LOADS AIR SYSTEM" Requested outdoor air flow rate = 4.38340E-002 [m3/s] exceeds limit.
+   **   ~~~   **  Will be reduced to the Maximum Cooling Air Flow Rate = -99998.99999 [m3/s]
+   **   ~~~   **  During Sizing, Environment=MONTREAL-MCTAVISH SEPTEMBER .4% CONDNS WB=>MCDB, at Simulation time=09/21 24:00 - 24:10
+   ** Warning ** ZoneHVAC:IdealLoadsAirSystem "FLR2_OFFICE2 IDEAL LOADS AIR SYSTEM" Requested outdoor air flow rate = 4.38340E-002 [m3/s] exceeds limit.
+   **   ~~~   **  Will be reduced to the Maximum Cooling Air Flow Rate = -99998.99999 [m3/s]
+   **   ~~~   **  During Sizing, Environment=MONTREAL-MCTAVISH SEPTEMBER .4% CONDNS WB=>MCDB, at Simulation time=09/21 24:00 - 24:10
+   ** Warning ** ZoneHVAC:IdealLoadsAirSystem "FLR2_OFFICE3 IDEAL LOADS AIR SYSTEM" Requested outdoor air flow rate = 4.38340E-002 [m3/s] exceeds limit.
+   **   ~~~   **  Will be reduced to the Maximum Cooling Air Flow Rate = -99998.99999 [m3/s]
+   **   ~~~   **  During Sizing, Environment=MONTREAL-MCTAVISH SEPTEMBER .4% CONDNS WB=>MCDB, at Simulation time=09/21 24:00 - 24:10
+   ** Warning ** ZoneHVAC:IdealLoadsAirSystem "FLR2_OFFICE4 IDEAL LOADS AIR SYSTEM" Requested outdoor air flow rate = 4.38340E-002 [m3/s] exceeds limit.
+   **   ~~~   **  Will be reduced to the Maximum Cooling Air Flow Rate = -99998.99999 [m3/s]
+   **   ~~~   **  During Sizing, Environment=MONTREAL-MCTAVISH SEPTEMBER .4% CONDNS WB=>MCDB, at Simulation time=09/21 24:00 - 24:10
+   ** Warning ** ZoneHVAC:IdealLoadsAirSystem "FLR3_OFFICE1 IDEAL LOADS AIR SYSTEM" Requested outdoor air flow rate = 4.38340E-002 [m3/s] exceeds limit.
+   **   ~~~   **  Will be reduced to the Maximum Cooling Air Flow Rate = -99998.99999 [m3/s]
+   **   ~~~   **  During Sizing, Environment=MONTREAL-MCTAVISH SEPTEMBER .4% CONDNS WB=>MCDB, at Simulation time=09/21 24:00 - 24:10
+   ** Warning ** ZoneHVAC:IdealLoadsAirSystem "FLR3_OFFICE2 IDEAL LOADS AIR SYSTEM" Requested outdoor air flow rate = 4.38340E-002 [m3/s] exceeds limit.
+   **   ~~~   **  Will be reduced to the Maximum Cooling Air Flow Rate = -99998.99999 [m3/s]
+   **   ~~~   **  During Sizing, Environment=MONTREAL-MCTAVISH SEPTEMBER .4% CONDNS WB=>MCDB, at Simulation time=09/21 24:00 - 24:10
+   ** Warning ** ZoneHVAC:IdealLoadsAirSystem "FLR3_OFFICE3 IDEAL LOADS AIR SYSTEM" Requested outdoor air flow rate = 4.38340E-002 [m3/s] exceeds limit.
+   **   ~~~   **  Will be reduced to the Maximum Cooling Air Flow Rate = -99998.99999 [m3/s]
+   **   ~~~   **  During Sizing, Environment=MONTREAL-MCTAVISH SEPTEMBER .4% CONDNS WB=>MCDB, at Simulation time=09/21 24:00 - 24:10
+   ** Warning ** ZoneHVAC:IdealLoadsAirSystem "FLR3_OFFICE4 IDEAL LOADS AIR SYSTEM" Requested outdoor air flow rate = 4.38340E-002 [m3/s] exceeds limit.
+   **   ~~~   **  Will be reduced to the Maximum Cooling Air Flow Rate = -99998.99999 [m3/s]
+   **   ~~~   **  During Sizing, Environment=MONTREAL-MCTAVISH SEPTEMBER .4% CONDNS WB=>MCDB, at Simulation time=09/21 24:00 - 24:10
+   ** Warning ** ZoneHVAC:IdealLoadsAirSystem "OFFICE1 IDEAL LOADS AIR SYSTEM" Requested outdoor air flow rate = 4.38340E-002 [m3/s] exceeds limit.
+   **   ~~~   **  Will be reduced to the Maximum Cooling Air Flow Rate = -99998.99999 [m3/s]
+   **   ~~~   **  During Sizing, Environment=MONTREAL-MCTAVISH SEPTEMBER .4% CONDNS WB=>MCDB, at Simulation time=09/21 24:00 - 24:10
+   ** Warning ** ZoneHVAC:IdealLoadsAirSystem "OFFICE2 IDEAL LOADS AIR SYSTEM" Requested outdoor air flow rate = 4.38340E-002 [m3/s] exceeds limit.
+   **   ~~~   **  Will be reduced to the Maximum Cooling Air Flow Rate = -99998.99999 [m3/s]
+   **   ~~~   **  During Sizing, Environment=MONTREAL-MCTAVISH SEPTEMBER .4% CONDNS WB=>MCDB, at Simulation time=09/21 24:00 - 24:10
+   ** Warning ** ZoneHVAC:IdealLoadsAirSystem "OFFICE3 IDEAL LOADS AIR SYSTEM" Requested outdoor air flow rate = 4.38340E-002 [m3/s] exceeds limit.
+   **   ~~~   **  Will be reduced to the Maximum Cooling Air Flow Rate = -99998.99999 [m3/s]
+   **   ~~~   **  During Sizing, Environment=MONTREAL-MCTAVISH SEPTEMBER .4% CONDNS WB=>MCDB, at Simulation time=09/21 24:00 - 24:10
+   ** Warning ** ZoneHVAC:IdealLoadsAirSystem "OFFICE4 IDEAL LOADS AIR SYSTEM" Requested outdoor air flow rate = 4.38340E-002 [m3/s] exceeds limit.
+   **   ~~~   **  Will be reduced to the Maximum Cooling Air Flow Rate = -99998.99999 [m3/s]
+   **   ~~~   **  During Sizing, Environment=MONTREAL-MCTAVISH SEPTEMBER .4% CONDNS WB=>MCDB, at Simulation time=09/21 24:00 - 24:10
+   ** Warning ** ManageSizing: For a plant sizing run, there must be at least 1 Sizing:Plant object input. SimulationControl Plant Sizing option ignored.
+   ************* Testing Individual Branch Integrity
+   ************* All Branches passed integrity testing
+   ************* Testing Individual Supply Air Path Integrity
+   ************* All Supply Air Paths passed integrity testing
+   ************* Testing Individual Return Air Path Integrity
+   ************* All Return Air Paths passed integrity testing
+   ************* No node connection errors were found.
+   ************* Beginning Simulation
+   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= "U.S. AVG  COMMERCIAL-ELECTRICITY" has no energy cost. 
+   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.
+   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= "U.S. AVG  COMMERCIAL-DISTILLATE OIL" has no energy cost. 
+   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.
+   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= "U.S. AVG  COMMERCIAL-RESIDUAL OIL" has no energy cost. 
+   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.
+   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= "U.S. AVG  COMMERCIAL-NATURAL GAS" has no energy cost. 
+   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.
+   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= "U.S. AVG  COMMERCIAL-COAL" has no energy cost. 
+   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.
+   ************* Simulation Error Summary *************
+   ** Warning ** The following Report Variables were requested but not generated -- check.rdd file
+   **   ~~~   ** Either the IDF did not contain these elements, the variable name is misspelled,
+   **   ~~~   ** or the requested variable is an advanced output which requires Output : Diagnostics, DisplayAdvancedReportVariables;
+   ************* Key=*, VarName=BASEBOARD ELECTRICITY ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=DISTRICT COOLING WATER ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=DISTRICT HEATING WATER ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=EVAPORATIVE COOLER ELECTRICITY ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=FAN ELECTRICITY ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=GENERATOR PRODUCED DC ELECTRICITY ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=HEATING COIL ELECTRICITY ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=HEATING COIL NATURALGAS ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=HEATING COIL TOTAL HEATING ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=BOILER ELECTRICITY ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=HOT_WATER_LOOP_CENTRAL_AIR_SOURCE_HEAT_PUMP ELECTRICITY CONSUMPTION, Frequency=Monthly
+   ************* Key=*, VarName=HUMIDIFIER ELECTRICITY ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=PUMP ELECTRICITY ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=VRF HEAT PUMP COOLING ELECTRICITY ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=VRF HEAT PUMP CRANKCASE HEATER ELECTRICITY ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=VRF HEAT PUMP DEFROST ELECTRICITY ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=VRF HEAT PUMP HEATING ELECTRICITY ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=WATER HEATER ELECTRICITY ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=WATER HEATER NATURALGAS ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=WATER USE EQUIPMENT HEATING ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=BOILER NATURALGAS ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=ZONE GAS EQUIPMENT NATURALGAS ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=ZONE OTHER EQUIPMENT LOST HEAT ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=ZONE OTHER EQUIPMENT TOTAL HEATING ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=ZONE VRF AIR TERMINAL COOLING ELECTRICITY ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=ZONE VRF AIR TERMINAL HEATING ELECTRICITY ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=ZONE VENTILATION FAN ELECTRICITY ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=CHILLER ELECTRICITY ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=CHILLER HEATER SYSTEM COOLING ELECTRICITY ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=CHILLER HEATER SYSTEM HEATING ELECTRICITY ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=COOLING COIL ELECTRICITY ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=COOLING COIL WATER HEATING ELECTRICITY ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=COOLING TOWER FAN ELECTRICITY ENERGY, Frequency=Monthly
+   ************* There are 4 unused schedules in input.
+   ************* There are 24 unused day schedules in input.
+   ************* Use Output:Diagnostics,DisplayUnusedSchedules; to see them.
+   *************
+   ************* ===== Recurring Error Summary =====
+   ************* The following recurring error messages occurred.
+   *************
+   *************  ** Warning ** Temperature out of range [-100. to 200.] (PsyPsatFnTemp)
+   *************  **   ~~~   **   This error occurred 16 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 16 times.
+   *************  **   ~~~   **   Max=1163.872559 C  Min=808.797180 C
+   *************
+   *************
+   ************* ===== Final Error Summary =====
+   ************* The following error categories occurred.  Consider correcting or noting.
+   ************* Nominally Unused Constructions
+   ************* ..The nominally unused constructions warning is provided to alert you to potential conditions that can cause
+   ************* ..extra time during simulation. Each construction is calculated by the algorithm indicated in the HeatBalanceAlgorithm
+   ************* ..object. You may remove the constructions indicated (when you use the DisplayExtraWarnings option).
+   *************
+   ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
+   ************* EnergyPlus Sizing Error Summary. During Sizing: 19 Warning; 0 Severe Errors.
+   ************* EnergyPlus Completed Successfully-- 40 Warning; 0 Severe Errors; Elapsed Time=00hr 00min 10.84sec
