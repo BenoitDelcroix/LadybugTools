@@ -50,3 +50,9 @@ for idf in idfs:
         f.write(idf)
 
 print('IT WORKS!!!')
+
+# Command to set the path to EnergyPlus in Honeybee Energy (run this in your terminal before running the script):
+# honeybee-energy set-config energyplus-path <chemin_vers_energyplus>
+
+# Command  to run hbjson files in Honeybee Energy (run this in your terminal after running the script):
+# honeybee-energy simulate model -sp sim-par.json -f results hbmodel1.hbjson CAN_QC_Montreal-McTavish.716120_CWEC2016/CAN_QC_Montreal-McTavish.716120_CWEC2016.epw
